@@ -6,10 +6,12 @@ $color-grey: #AEAEAE;
 $color-grey-light1: #dee8f3;
 $color-grey-light2: #979ea5;
 $color-red1: #E0154A;
+$color-red2: #ED1C24;
 $color-blue1: #0A4D7C;
 
 $fontFamily-inter: 'Inter', sans-serif;
 $fontWeight-400: 400;
+$fontWeight-500: 500;
 $fontWeight-600: 600;
 $fontWeight-700: 700;
 
@@ -23,6 +25,20 @@ $fontWeight-700: 700;
     background: -webkit-linear-gradient(0deg, #0A4D7C, #011536);
     -webkit-background-clip: border-box;
     -webkit-text-fill-color: transparent;
+}
+
+@mixin titleH1{
+    font-size:4rem; /*64px*/
+    font-weight: $fontWeight-700;
+    font-family: $fontFamily-inter;
+}
+@mixin titleH2{
+    font-size:3.5rem; /*56px*/
+    font-weight: $fontWeight-700;
+    font-family: $fontFamily-inter;
+}
+@mixin titleH3{
+
 }
 
 
@@ -43,7 +59,7 @@ body {
     }
 }
 .parallax-bg{
-    background-image: url("/wp-content/themes/maxcanvas_child/img/body-home-bg.png");
+    background-image: url("/wp-content/themes/maxcanvas_child/img/body-home-bg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 730px;
@@ -54,7 +70,7 @@ body {
 
 
 .button{
-    font-size:15px;
+    font-size:0.94rem /*15px*/;
     font-weight: $fontWeight-600;
     letter-spacing: 1px;
     text-decoration: none;
@@ -79,7 +95,7 @@ body {
 /*#BANNER*/
 .home .header-banner{
     background: rgba(255, 255, 255, 0.55);
-    p{ @include text-linear-gradient-blue; font-size:15px; }
+    p{ @include text-linear-gradient-blue; font-size:0.94rem /*15px*/; }
 }
 .header-banner{
     background: linear-gradient(90deg, #F6FAFF, #D3DAE2);
@@ -91,6 +107,7 @@ body {
 /*#HEADER*/
 nav.navbar{
     .navbar-brand{
+        margin-top: -15px;
         >img{ width: 265px; height: 63px; }
     }
     .navbar-toggler{
@@ -105,7 +122,7 @@ nav.navbar{
         .navbar-nav{
             .nav-item{
                 .nav-link{
-                    font-size: 15px;
+                    font-size:0.94rem /*15px*/;
                     color: $color-black;
                     font-weight: $fontWeight-600;
                     &.dropdown-toggle{
@@ -147,7 +164,7 @@ nav.navbar{
         .dropdown-menu{
             li{
                 >a{
-                    font-size: 15px;
+                    font-size:0.94rem /*15px*/;
                     color: $color-black;
                     font-weight: $fontWeight-600;
                     text-transform: capitalize;
@@ -158,6 +175,13 @@ nav.navbar{
     &.navbar-white--white{ background-color:$color-white; }
 
     ul#desktop_tablet{
+        .nav-item{
+            .nav-link{
+                &:hover, &:active{
+                    @include text-linear-gradient-blue;
+                }
+            }
+        }
         .nav-item.dropdown{
             ul.dropdown-menu{
                 .container-desktop_tablet{
@@ -228,13 +252,62 @@ nav.navbar{
 
 /*#FOOTER*/
 footer.site-footer{
+    h6{
+        font-family: $fontFamily-inter;
+        font-weight: $fontWeight-600;
+        font-size:1.06rem ;
+    }
+    p{
+        font-family: $fontFamily-inter;
+        font-weight: $fontWeight-400;
+        font-size:0.94rem ;
+    }
     .site-footer--address{
-
+        color: $color-white;
+        p{ margin-bottom:1px; }
     }
     .site-footer--info{
-
+        color: $color-white;
+        h3{
+            font-family: $fontFamily-inter;
+            font-weight: $fontWeight-600;
+            font-size:2rem ;
+        }
+        .schedule-consultation{
+            a{
+                font-family: $fontFamily-inter;
+                font-weight: $fontWeight-600;
+                font-size:2.5rem;
+                text-decoration:none;
+                color: $color-red2;
+                line-height: 1.1;
+                transition: all .5s ease-in;
+                &:hover{ color:$color-white; }
+            }
+        }
+        nav.navbar{
+            justify-content:space-around;
+            ul.navbar-nav{
+                width:100%; justify-content:space-between;
+                .nav-item{
+                    .nav-link{
+                        font-family: $fontFamily-inter;
+                        font-weight: $fontWeight-600;
+                        font-size:1rem;
+                        color: $color-white;
+                        &.current-menu-item{
+                            @include text-linear-gradient-blue;
+                        }
+                        &:hover, &:active{
+                            @include text-linear-gradient-blue;
+                        }
+                    }
+                }
+            }
+        }
     }
     .site-footer--services{
+        color: $color-white;
         #services_list_toggle{
             position: relative;
             &.collapsed{
@@ -262,6 +335,49 @@ footer.site-footer{
                 color: $color-red1;
             }
         }
+
+        ul{
+            list-style:none;
+            li{
+                a{
+                    display: inline-block;
+                    font-family: $fontFamily-inter;
+                    font-weight: $fontWeight-500;
+                    font-size:0.94rem;
+                    color: $color-white;
+                    text-decoration:none;
+                    &:hover, &:active{
+                        @include text-linear-gradient-blue;
+                    }
+                }
+            }
+            &.site-footer--services-list--desktop{
+                li{
+                    margin-bottom:4px;
+                    a{ line-height:1.1; }
+                }
+            }
+            &.site-footer--services-list--mobile{
+                li{
+                    margin-bottom:8px;
+                    a{}
+                }
+            }
+        }
+
+    }
+
+    .sub-footer{
+        .copyright-text, .privacy-terms-sitemap a, .privacy-terms-sitemap span{
+            font-family: $fontFamily-inter;
+            font-weight: $fontWeight-400;
+            font-size:0.75rem;
+            color: $color-white;
+            text-decoration: none;
+        }
+        .footer-social-icon{
+            a{ text-decoration:none; }
+        }
     }
 }
 /*__/#FOOTER*/
@@ -279,6 +395,7 @@ footer.site-footer{
 @media screen and (max-width: 991px){ /*from 991px till 768px (Class prefix .col-md-)*/
     #breakpoint_check{ width:991px; } /*100%|1400px|1199px|991px|767px|575px*/
     /*#HEADER*/
+    nav.navbar .navbar-brand{ margin-top:-25px; }
     nav.navbar .navbar-brand > img { width:184px; height:44px; }
     /*__/#HEADER*/
 }
@@ -330,6 +447,7 @@ footer.site-footer{
     nav.navbar{
         .container-lg,.container{ padding-left:0; padding-right:0; }
     }
+    nav.navbar .navbar-brand{ margin-top:0; }
     /*__/#HEADER*/
 }
 @media screen and (max-width: 575px) { /*from 575px and less (Class prefix .col-)*/
@@ -338,5 +456,12 @@ footer.site-footer{
     /*#HEADER*/
 
     /*__/#HEADER*/
+
+    /*#FOOTER*/
+    footer.site-footer .site-footer--info .schedule-consultation a { font-size:1.31rem; }
+    footer.site-footer .site-footer--info nav.navbar ul.navbar-nav { display:block; text-align:center; }
+    footer.site-footer .site-footer--info nav.navbar ul.navbar-nav .nav-item { display:inline; margin-left:10px; margin-right:10px; }
+    footer.site-footer .site-footer--info nav.navbar ul.navbar-nav .nav-item .nav-link { display:inline-block; }
+    /*__/#FOOTER*/
 }
 /** ____________________________________________________/MEDIA QUERY*/

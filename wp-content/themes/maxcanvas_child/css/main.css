@@ -16,7 +16,7 @@ body {
   height: 200vh; }
 
 .parallax-bg {
-  background-image: url("/wp-content/themes/maxcanvas_child/img/body-home-bg.png");
+  background-image: url("/wp-content/themes/maxcanvas_child/img/body-home-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 730px;
@@ -30,7 +30,7 @@ body {
 
 /*100%|1400px|1199px|991px|767px|575px*/
 .button {
-  font-size: 15px;
+  font-size: 0.94rem;
   font-weight: 600;
   letter-spacing: 1px;
   text-decoration: none;
@@ -60,7 +60,7 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     display: inline-block;
-    font-size: 15px; }
+    font-size: 0.94rem; }
 
 .header-banner {
   background: linear-gradient(90deg, #F6FAFF, #D3DAE2); }
@@ -75,9 +75,11 @@ body {
 
 /*__/#BANNER*/
 /*#HEADER*/
-nav.navbar .navbar-brand > img {
-  width: 265px;
-  height: 63px; }
+nav.navbar .navbar-brand {
+  margin-top: -15px; }
+  nav.navbar .navbar-brand > img {
+    width: 265px;
+    height: 63px; }
 nav.navbar .navbar-toggler .navbar-toggler-icon:before {
   content: url("/wp-content/themes/maxcanvas_child/img/gamb_menu_close_icon.svg"); }
 nav.navbar .navbar-toggler.collapsed .navbar-toggler-icon:before {
@@ -89,7 +91,7 @@ nav.navbar .navbar-toggler:hover, nav.navbar .navbar-toggler:focus, nav.navbar .
 nav.navbar .navbar-collapse {
   flex-grow: 0; }
   nav.navbar .navbar-collapse .navbar-nav .nav-item .nav-link {
-    font-size: 15px;
+    font-size: 0.94rem;
     color: #000000;
     font-weight: 600; }
     nav.navbar .navbar-collapse .navbar-nav .nav-item .nav-link.dropdown-toggle:after {
@@ -121,12 +123,17 @@ nav.navbar .navbar-collapse {
       nav.navbar .navbar-collapse .navbar-nav .nav-item.desktop-tablet .dropdown-menu .container-desktop_tablet {
         /*display: flex;*/ }
   nav.navbar .navbar-collapse .dropdown-menu li > a {
-    font-size: 15px;
+    font-size: 0.94rem;
     color: #000000;
     font-weight: 600;
     text-transform: capitalize; }
 nav.navbar.navbar-white--white {
   background-color: #FFFFFF; }
+nav.navbar ul#desktop_tablet .nav-item .nav-link:hover, nav.navbar ul#desktop_tablet .nav-item .nav-link:active {
+  background: -webkit-linear-gradient(0deg, #0A4D7C, #011536);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block; }
 nav.navbar ul#desktop_tablet .nav-item.dropdown ul.dropdown-menu .container-desktop_tablet hr {
   color: #dee8f3;
   opacity: 1; }
@@ -172,28 +179,106 @@ nav.navbar ul#mobile .nav-item.dropdown ul.dropdown-menu li a.dropdown-item:hove
 
 /*__/#HEADER*/
 /*#FOOTER*/
-footer.site-footer .site-footer--services #services_list_toggle {
-  position: relative; }
-  footer.site-footer .site-footer--services #services_list_toggle.collapsed:after {
-    content: "\f107";
-    display: inline-block;
-    position: absolute;
-    right: 0;
-    top: 5px;
-    border-top: none;
-    border-left: 0;
-    font: normal normal normal 17px/1 FontAwesome;
-    color: #E0154A; }
-  footer.site-footer .site-footer--services #services_list_toggle:after {
-    content: "\f106";
-    display: inline-block;
-    position: absolute;
-    right: 0;
-    top: 5px;
-    border-top: none;
-    border-left: 0;
-    font: normal normal normal 17px/1 FontAwesome;
-    color: #E0154A; }
+footer.site-footer h6 {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 1.06rem; }
+footer.site-footer p {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 0.94rem; }
+footer.site-footer .site-footer--address {
+  color: #FFFFFF; }
+  footer.site-footer .site-footer--address p {
+    margin-bottom: 1px; }
+footer.site-footer .site-footer--info {
+  color: #FFFFFF; }
+  footer.site-footer .site-footer--info h3 {
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    font-size: 2rem; }
+  footer.site-footer .site-footer--info .schedule-consultation a {
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    font-size: 2.5rem;
+    text-decoration: none;
+    color: #ED1C24;
+    line-height: 1.1;
+    transition: all .5s ease-in; }
+    footer.site-footer .site-footer--info .schedule-consultation a:hover {
+      color: #FFFFFF; }
+  footer.site-footer .site-footer--info nav.navbar {
+    justify-content: space-around; }
+    footer.site-footer .site-footer--info nav.navbar ul.navbar-nav {
+      width: 100%;
+      justify-content: space-between; }
+      footer.site-footer .site-footer--info nav.navbar ul.navbar-nav .nav-item .nav-link {
+        font-family: "Inter", sans-serif;
+        font-weight: 600;
+        font-size: 1rem;
+        color: #FFFFFF; }
+        footer.site-footer .site-footer--info nav.navbar ul.navbar-nav .nav-item .nav-link.current-menu-item {
+          background: -webkit-linear-gradient(0deg, #0A4D7C, #011536);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          display: inline-block; }
+        footer.site-footer .site-footer--info nav.navbar ul.navbar-nav .nav-item .nav-link:hover, footer.site-footer .site-footer--info nav.navbar ul.navbar-nav .nav-item .nav-link:active {
+          background: -webkit-linear-gradient(0deg, #0A4D7C, #011536);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          display: inline-block; }
+footer.site-footer .site-footer--services {
+  color: #FFFFFF; }
+  footer.site-footer .site-footer--services #services_list_toggle {
+    position: relative; }
+    footer.site-footer .site-footer--services #services_list_toggle.collapsed:after {
+      content: "\f107";
+      display: inline-block;
+      position: absolute;
+      right: 0;
+      top: 5px;
+      border-top: none;
+      border-left: 0;
+      font: normal normal normal 17px/1 FontAwesome;
+      color: #E0154A; }
+    footer.site-footer .site-footer--services #services_list_toggle:after {
+      content: "\f106";
+      display: inline-block;
+      position: absolute;
+      right: 0;
+      top: 5px;
+      border-top: none;
+      border-left: 0;
+      font: normal normal normal 17px/1 FontAwesome;
+      color: #E0154A; }
+  footer.site-footer .site-footer--services ul {
+    list-style: none; }
+    footer.site-footer .site-footer--services ul li a {
+      display: inline-block;
+      font-family: "Inter", sans-serif;
+      font-weight: 500;
+      font-size: 0.94rem;
+      color: #FFFFFF;
+      text-decoration: none; }
+      footer.site-footer .site-footer--services ul li a:hover, footer.site-footer .site-footer--services ul li a:active {
+        background: -webkit-linear-gradient(0deg, #0A4D7C, #011536);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        display: inline-block; }
+    footer.site-footer .site-footer--services ul.site-footer--services-list--desktop li {
+      margin-bottom: 4px; }
+      footer.site-footer .site-footer--services ul.site-footer--services-list--desktop li a {
+        line-height: 1.1; }
+    footer.site-footer .site-footer--services ul.site-footer--services-list--mobile li {
+      margin-bottom: 8px; }
+footer.site-footer .sub-footer .copyright-text, footer.site-footer .sub-footer .privacy-terms-sitemap a, footer.site-footer .sub-footer .privacy-terms-sitemap span {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 0.75rem;
+  color: #FFFFFF;
+  text-decoration: none; }
+footer.site-footer .sub-footer .footer-social-icon a {
+  text-decoration: none; }
 
 /*__/#FOOTER*/
 /**
@@ -218,6 +303,9 @@ footer.site-footer .site-footer--services #services_list_toggle {
 
   /*100%|1400px|1199px|991px|767px|575px*/
   /*#HEADER*/
+  nav.navbar .navbar-brand {
+    margin-top: -25px; }
+
   nav.navbar .navbar-brand > img {
     width: 184px;
     height: 44px; }
@@ -284,6 +372,9 @@ footer.site-footer .site-footer--services #services_list_toggle {
     padding-left: 0;
     padding-right: 0; }
 
+  nav.navbar .navbar-brand {
+    margin-top: 0; }
+
   /*__/#HEADER*/ }
 @media screen and (max-width: 575px) {
   /*from 575px and less (Class prefix .col-)*/
@@ -292,7 +383,24 @@ footer.site-footer .site-footer--services #services_list_toggle {
 
   /*100%|1400px|1199px|991px|767px|575px*/
   /*#HEADER*/
-  /*__/#HEADER*/ }
+  /*__/#HEADER*/
+  /*#FOOTER*/
+  footer.site-footer .site-footer--info .schedule-consultation a {
+    font-size: 1.31rem; }
+
+  footer.site-footer .site-footer--info nav.navbar ul.navbar-nav {
+    display: block;
+    text-align: center; }
+
+  footer.site-footer .site-footer--info nav.navbar ul.navbar-nav .nav-item {
+    display: inline;
+    margin-left: 10px;
+    margin-right: 10px; }
+
+  footer.site-footer .site-footer--info nav.navbar ul.navbar-nav .nav-item .nav-link {
+    display: inline-block; }
+
+  /*__/#FOOTER*/ }
 /** ____________________________________________________/MEDIA QUERY*/
 
 /*# sourceMappingURL=main.css.map */
