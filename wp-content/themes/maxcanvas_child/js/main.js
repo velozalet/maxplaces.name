@@ -19,7 +19,7 @@ document.addEventListener( 'DOMContentLoaded', function () { //console.log('init
 	//window.scroll({ top: 0, behavior: 'smooth' });
 	//const bodyDOM = document.getElementsByTagName("BODY")[0];
 
-	const parallax_bg = document.querySelector('.parallax-bg'); console.log(parallax_bg);
+	const parallax_bg = document.querySelector('.parallax-bg'); //console.log(parallax_bg);
 	const myFunction = () => {
 		let variableY = 1;
 		variableY = variableY - (window.scrollY / 1000);

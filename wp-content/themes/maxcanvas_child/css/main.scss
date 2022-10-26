@@ -190,8 +190,8 @@ nav.navbar{
                         border-right: 1px solid $color-grey-light1;
                     }
                     .dropdown-menu-col{
-                        height:90px;
-                        display:flex; flex-direction:column; justify-content:space-between;
+                        display:flex; flex-direction:column; justify-content:space-around;
+                        /*height:90px; display:flex; flex-direction:column; justify-content:space-around;*/ /*space-between*/
                     }
                     li{
                         a.dropdown-item{

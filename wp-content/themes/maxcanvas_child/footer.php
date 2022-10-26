@@ -105,7 +105,7 @@
 			<div class="col-md-3 col-6 order-md-3 order-1 text-md-end text-start">
 				<span class="me-2 footer-social-icon">
 					<a href="#" class="" target="_blank">
-						<img src="<?php echo get_stylesheet_directory_uri();?>/img/social-icons/facebook-footer-social-icon" alt="facebook">
+						<img src="<?php echo get_stylesheet_directory_uri();?>/img/social-icons/facebook-footer-social-icon.svg" alt="facebook">
 					</a>
 				</span>
 				<span class="me-2 footer-social-icon">

@@ -6,8 +6,7 @@
 define('THEME_URL', get_bloginfo('stylesheet_directory'));
 define('THEME_PATH', get_stylesheet_directory());
 
-/** ADD CPT "__Name CPT__" and taxonomy for them */
-/*
+/** ADD CPT "services" and taxonomy for them */
 	function services_cpt() {
 		$labels = array(
 			'name'                => _x( 'Services', 'Post Type General Name'),
@@ -62,5 +61,4 @@ define('THEME_PATH', get_stylesheet_directory());
 			)
 		);
 	} add_action( 'init', 'services_cpt_taxonomy');
-*/
-/**__/ADD CPT "__Name CPT__" and taxonomy for them */
+/**__/ADD CPT "services" and taxonomy for them */

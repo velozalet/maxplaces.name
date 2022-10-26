@@ -140,10 +140,11 @@ nav.navbar ul#desktop_tablet .nav-item.dropdown ul.dropdown-menu .container-desk
 nav.navbar ul#desktop_tablet .nav-item.dropdown ul.dropdown-menu .container-desktop_tablet .dropdown-menu-col:not(.dropdown-menu-col:last-of-type) {
   border-right: 1px solid #dee8f3; }
 nav.navbar ul#desktop_tablet .nav-item.dropdown ul.dropdown-menu .container-desktop_tablet .dropdown-menu-col {
-  height: 90px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; }
+  justify-content: space-around;
+  /*height:90px; display:flex; flex-direction:column; justify-content:space-around;*/
+  /*space-between*/ }
 nav.navbar ul#desktop_tablet .nav-item.dropdown ul.dropdown-menu .container-desktop_tablet li a.dropdown-item:hover {
   background-color: transparent;
   background: -webkit-linear-gradient(0deg, #0A4D7C, #011536);

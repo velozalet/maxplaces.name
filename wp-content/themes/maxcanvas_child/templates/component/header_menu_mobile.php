@@ -1,55 +1,50 @@
 <?php
-$menuitems = get_all_menu('primary','ASC'); //dd($menuitems);
+$menuitems = get_all_menu('primary','ASC'); $menuitems_count = count($menuitems); //dd($menuitems);
+$currentUrl = $_SERVER['REQUEST_URI']; if( $_SERVER['REQUEST_URI'] == '/' ){ $currentUrl = "/home/"; }
+
+$aboutus_page_id = 34;/*53*/ $aboutus_dropdown_list = array();
+$services_page_id = 35;/*60*/ $services_dropdown_list = array();
+foreach( $menuitems as $menu_item ){
+	if( $menu_item->menu_item_parent == $aboutus_page_id && $menu_item->post_status == 'publish' ){ array_push($aboutus_dropdown_list, $menu_item); }
+	if( $menu_item->menu_item_parent == $services_page_id && $menu_item->post_status == 'publish' ){ array_push($services_dropdown_list, $menu_item); }
+}
+$aboutus_dropdown_list_cnt = count($aboutus_dropdown_list);
+$services_dropdown_list_cnt = count($services_dropdown_list);
 ?>
 <ul id="mobile" class="navbar-nav mb-2 mb-lg-0 mx-md-0 mx-3 d-md-none d-block">
-	<li class="nav-item me-lg-3 me-0 mt-md-2 mt-0 dropdown" data-itemid="55" data-itemobject="page">
-		<a class="nav-link text-uppercase dropdown-toggle " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">About us</a>
-		<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-			<li class="" data-itemid="75" data-itemobject="services">
-				<a class="dropdown-item" href="#">In the News</a>
-			</li>
-			<li class="" data-itemid="74" data-itemobject="services">
-				<a class="dropdown-item" href="#">Cities Served</a>
-			</li>
-			<li class="" data-itemid="73" data-itemobject="services">
-				<a class="dropdown-item" href="#">Industry Served</a>
-			</li>
-		</ul>
-	</li>
+	<?php for( $i=0; $i < $menuitems_count; $i++ ):?>
+		<?php if( $menuitems[$i]->menu_item_parent == '0' && $menuitems[$i]->post_status == 'publish' ):?>
 
-	<li class="nav-item me-lg-3 me-0 mt-md-2 mt-0 dropdown" data-itemid="55" data-itemobject="page">
-		<a class="nav-link text-uppercase dropdown-toggle " href="https://www.naecsol.com/services/" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
-		<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-			<li class="" data-itemid="75" data-itemobject="services">
-				<a class="dropdown-item" href="#">Search Engine Optimization</a>
+			<?php if( $menuitems[$i]->ID == $aboutus_page_id ):?>
+			<li class="nav-item me-lg-3 me-0 mt-md-2 mt-0 dropdown" data-itemid="<?php echo $menuitems[$i]->ID;?>" data-itemobject="<?php echo $menuitems[$i]->object;?>">
+				<a class="nav-link text-uppercase dropdown-toggle <?php echo (strtoupper($currentUrl) == '/'.strtoupper($menuitems[$i]->title).'/') ? 'current-menu-item' : '';?>" href="<?php echo $menuitems[$i]->url;?>" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><?php echo $menuitems[$i]->title;?></a>
+				<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+					<?php foreach( $aboutus_dropdown_list as $aboutus_dropdown_i ):?>
+					<li class="" data-itemid="<?php echo $aboutus_dropdown_i->ID;?>" data-itemobject="<?php echo $aboutus_dropdown_i->object;?>">
+						<a class="dropdown-item ps-0" href="<?=$aboutus_dropdown_i->url;?>"><?=$aboutus_dropdown_i->title;?></a>
+					</li>
+					<?php endforeach;?>
+				</ul>
 			</li>
-			<li class="" data-itemid="74" data-itemobject="services">
-				<a class="dropdown-item" href="#">Search Engine Marketing</a>
+			<?php elseif( $menuitems[$i]->ID == $services_page_id ):?>
+			<li class="nav-item me-lg-3 me-0 mt-md-2 mt-0 dropdown" data-itemid="<?php echo $menuitems[$i]->ID;?>" data-itemobject="<?php echo $menuitems[$i]->object;?>">
+				<a class="nav-link text-uppercase dropdown-toggle <?php echo (strtoupper($currentUrl) == '/'.strtoupper($menuitems[$i]->title).'/') ? 'current-menu-item' : '';?>" href="<?php echo $menuitems[$i]->url;?>" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><?php echo $menuitems[$i]->title;?></a>
+				<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+					<?php foreach( $services_dropdown_list as $services_dropdown_i ):?>
+					<li class="" data-itemid="<?php echo $services_dropdown_i->ID;?>" data-itemobject="<?php echo $services_dropdown_i->object;?>">
+						<a class="dropdown-item ps-0" href="<?=$services_dropdown_i->url;?>"><?=$services_dropdown_i->title;?></a>
+					</li>
+					<?php endforeach;?>
+				</ul>
 			</li>
-			<li class="" data-itemid="73" data-itemobject="services">
-				<a class="dropdown-item" href="#">Local Search</a>
+			<?php else:?>
+			<li class="nav-item me-lg-3 me-0 mt-md-2 mt-0" data-itemid="<?php echo $menuitems[$i]->ID;?>" data-itemobject="<?php echo $menuitems[$i]->object;?>">
+				<a class="nav-link text-uppercase " href="<?php echo $menuitems[$i]->url;?>"><?php echo $menuitems[$i]->title;?></a>
 			</li>
-			<li class="" data-itemid="73" data-itemobject="services">
-				<a class="dropdown-item" href="#">Social Media</a>
-			</li>
-			<li class="" data-itemid="73" data-itemobject="services">
-				<a class="dropdown-item" href="#">Reputation Management</a>
-			</li>
-			<li class="" data-itemid="73" data-itemobject="services">
-				<a class="dropdown-item" href="#">Video Marketing</a>
-			</li>
-			<li class="" data-itemid="73" data-itemobject="services">
-				<a class="dropdown-item" href="#">Google Penalty Recovery</a>
-			</li>
-		</ul>
-	</li>
+			<?php endif;?>
 
-	<li class="nav-item me-lg-3 me-0 mt-md-2 mt-0" data-itemid="54" data-itemobject="page">
-		<a class="nav-link text-uppercase" href="#">Blog</a>
-	</li>
-	<li class="nav-item me-lg-3 me-0 mt-md-2 mt-0" data-itemid="53" data-itemobject="page">
-		<a class="nav-link text-uppercase current-menu-item" href="#">Contact</a>
-	</li>
+		<?php endif;?>
+	<?php endfor;?>
 
 	<li class="nav-item nav-item-btn mt-md-0 mt-4">
 		<a href="#" class="text-center button button--blue-gradient mx-md-2 me-0" target="_self">Request</a>
