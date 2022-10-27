@@ -28,6 +28,11 @@ for( $i=0; $i < $aboutus_dropdown_list_cnt; $i++ ){
 	if($i == 9){ array_push($col2_aboutus, $aboutus_dropdown_list[$i]); }
 	if($i == 10){ array_push($col3_aboutus, $aboutus_dropdown_list[$i]); }
 	if($i == 11){ array_push($col4_aboutus, $aboutus_dropdown_list[$i]); }
+
+	if($i == 12){ array_push($col1_aboutus, $aboutus_dropdown_list[$i]); }
+	if($i == 13){ array_push($col2_aboutus, $aboutus_dropdown_list[$i]); }
+	if($i == 14){ array_push($col3_aboutus, $aboutus_dropdown_list[$i]); }
+	if($i == 15){ array_push($col4_aboutus, $aboutus_dropdown_list[$i]); }
 }
 
 $col1_services = array(); $col2_services = array(); $col3_services = array(); $col4_services = array();
@@ -61,6 +66,11 @@ for( $i=0; $i < $services_dropdown_list_cnt; $i++ ){
 	if($i == 21){ array_push($col2_services, $services_dropdown_list[$i]); }
 	if($i == 22){ array_push($col3_services, $services_dropdown_list[$i]); }
 	if($i == 23){ array_push($col4_services, $services_dropdown_list[$i]); }
+
+	if($i == 24){ array_push($col1_services, $services_dropdown_list[$i]); }
+	if($i == 25){ array_push($col2_services, $services_dropdown_list[$i]); }
+	if($i == 26){ array_push($col3_services, $services_dropdown_list[$i]); }
+	if($i == 27){ array_push($col4_services, $services_dropdown_list[$i]); }
 }
 
 ?>
@@ -80,14 +90,14 @@ for( $i=0; $i < $services_dropdown_list_cnt; $i++ ){
 							<div class="col mb-2 dropdown-menu-col">
 							<?php foreach( $col1_aboutus as $au_i ):?>
 								<li class="mb-4" data-itemid="<?php echo $au_i->ID;?>" data-itemobject="<?php echo $au_i->object;?>">
-									<a class="dropdown-item" href="<?=$au_i->url;?>"><?=$au_i->title;?></a>
+									<a class="dropdown-item text-capitalize" href="<?=$au_i->url;?>"><?=$au_i->title;?></a>
 								</li>
 							<?php endforeach;?>
 							</div>
 							<div class="col mb-2 dropdown-menu-col">
 							<?php foreach( $col2_aboutus as $au_i ):?>
 								<li class="mb-4" data-itemid="<?php echo $au_i->ID;?>" data-itemobject="<?php echo $au_i->object;?>">
-									<a class="dropdown-item" href="<?=$au_i->url;?>"><?=$au_i->title;?></a>
+									<a class="dropdown-item text-capitalize" href="<?=$au_i->url;?>"><?=$au_i->title;?></a>
 								</li>
 							<?php endforeach;?>
 							</div>
@@ -95,7 +105,7 @@ for( $i=0; $i < $services_dropdown_list_cnt; $i++ ){
 							<div class="col mb-2 dropdown-menu-col">
 								<?php foreach( $col3_aboutus as $au_i ):?>
 									<li class="mb-4" data-itemid="<?php echo $au_i->ID;?>" data-itemobject="<?php echo $au_i->object;?>">
-										<a class="dropdown-item" href="<?=$au_i->url;?>"><?=$au_i->title;?></a>
+										<a class="dropdown-item text-capitalize" href="<?=$au_i->url;?>"><?=$au_i->title;?></a>
 									</li>
 								<?php endforeach;?>
 							</div>
@@ -104,7 +114,7 @@ for( $i=0; $i < $services_dropdown_list_cnt; $i++ ){
 								<div class="col mb-2 dropdown-menu-col">
 								<?php foreach( $col4_aboutus as $au_i ):?>
 									<li class="mb-4" data-itemid="<?php echo $au_i->ID;?>" data-itemobject="<?php echo $au_i->object;?>">
-										<a class="dropdown-item" href="<?=$au_i->url;?>"><?=$au_i->title;?></a>
+										<a class="dropdown-item text-capitalize" href="<?=$au_i->url;?>"><?=$au_i->title;?></a>
 									</li>
 								<?php endforeach;?>
 								</div>
@@ -125,28 +135,28 @@ for( $i=0; $i < $services_dropdown_list_cnt; $i++ ){
 							<div class="col mb-2 dropdown-menu-col">
 							<?php foreach( $col1_services as $s_i ):?>
 								<li class="mb-4" data-itemid="<?php echo $s_i->ID;?>" data-itemobject="<?php echo $s_i->object;?>">
-									<a class="dropdown-item" href="<?=$s_i->url;?>"><?=$s_i->title;?></a>
+									<a class="dropdown-item text-capitalize" href="<?=$s_i->url;?>"><?=$s_i->title;?></a>
 								</li>
 							<?php endforeach;?>
 							</div>
 							<div class="col mb-2 dropdown-menu-col">
 							<?php foreach( $col2_services as $s_i ):?>
 								<li class="mb-4" data-itemid="<?php echo $s_i->ID;?>" data-itemobject="<?php echo $s_i->object;?>">
-									<a class="dropdown-item" href="<?=$s_i->url;?>"><?=$s_i->title;?></a>
+									<a class="dropdown-item text-capitalize" href="<?=$s_i->url;?>"><?=$s_i->title;?></a>
 								</li>
 							<?php endforeach;?>
 							</div>
 							<div class="col mb-2 dropdown-menu-col">
 							<?php foreach( $col3_services as $s_i ):?>
 								<li class="mb-4" data-itemid="<?php echo $s_i->ID;?>" data-itemobject="<?php echo $s_i->object;?>">
-									<a class="dropdown-item" href="<?=$s_i->url;?>"><?=$s_i->title;?></a>
+									<a class="dropdown-item text-capitalize" href="<?=$s_i->url;?>"><?=$s_i->title;?></a>
 								</li>
 							<?php endforeach;?>
 							</div>
 							<div class="col mb-2 dropdown-menu-col">
 							<?php foreach( $col4_services as $s_i ):?>
 								<li class="mb-4" data-itemid="<?php echo $s_i->ID;?>" data-itemobject="<?php echo $s_i->object;?>">
-									<a class="dropdown-item" href="<?=$s_i->url;?>"><?=$s_i->title;?></a>
+									<a class="dropdown-item text-capitalize" href="<?=$s_i->url;?>"><?=$s_i->title;?></a>
 								</li>
 							<?php endforeach;?>
 							</div>
@@ -163,9 +173,14 @@ for( $i=0; $i < $services_dropdown_list_cnt; $i++ ){
 		<?php endif;?>
 	<?php endfor;?>
 
-	<li class="nav-item nav-item-btn mt-md-0 mt-4">
-		<a href="#" class="text-center button button--blue-gradient mx-md-2 me-0" target="_self">Request</a>
-	</li>
+	<?php $requestBtnLink = get_field('request_button_link','options'); if($requestBtnLink): $link_target = ($requestBtnLink['target']) ? $requestBtnLink['target'] : '_self'; endif;?>
+	<?php if($requestBtnLink):?>
+		<li class="nav-item nav-item-btn mt-md-0 mt-4">
+			<a class="text-center button button--blue-gradient mx-md-2 me-0" href="<?php echo $requestBtnLink['url'];?>" target="<?=esc_attr($link_target);?>"><?php echo $requestBtnLink['title'];?></a>
+		</li>
+	<?php endif;?>
+
+
 	<li class="nav-item nav-item-social-icons mt-md-0 mt-4 d-md-none d-block">
 		<span class="me-3">
 			<a href="#" class="" target="_blank">

@@ -21,7 +21,7 @@ $services_dropdown_list_cnt = count($services_dropdown_list);
 				<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
 					<?php foreach( $aboutus_dropdown_list as $aboutus_dropdown_i ):?>
 					<li class="" data-itemid="<?php echo $aboutus_dropdown_i->ID;?>" data-itemobject="<?php echo $aboutus_dropdown_i->object;?>">
-						<a class="dropdown-item ps-0" href="<?=$aboutus_dropdown_i->url;?>"><?=$aboutus_dropdown_i->title;?></a>
+						<a class="dropdown-item text-capitalize ps-0" href="<?=$aboutus_dropdown_i->url;?>"><?=$aboutus_dropdown_i->title;?></a>
 					</li>
 					<?php endforeach;?>
 				</ul>
@@ -32,7 +32,7 @@ $services_dropdown_list_cnt = count($services_dropdown_list);
 				<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
 					<?php foreach( $services_dropdown_list as $services_dropdown_i ):?>
 					<li class="" data-itemid="<?php echo $services_dropdown_i->ID;?>" data-itemobject="<?php echo $services_dropdown_i->object;?>">
-						<a class="dropdown-item ps-0" href="<?=$services_dropdown_i->url;?>"><?=$services_dropdown_i->title;?></a>
+						<a class="dropdown-item text-capitalize ps-0" href="<?=$services_dropdown_i->url;?>"><?=$services_dropdown_i->title;?></a>
 					</li>
 					<?php endforeach;?>
 				</ul>
@@ -46,9 +46,15 @@ $services_dropdown_list_cnt = count($services_dropdown_list);
 		<?php endif;?>
 	<?php endfor;?>
 
-	<li class="nav-item nav-item-btn mt-md-0 mt-4">
-		<a href="#" class="text-center button button--blue-gradient mx-md-2 me-0" target="_self">Request</a>
-	</li>
+	<?php $requestBtnLink = get_field('request_button_link','options'); if($requestBtnLink): $link_target = ($requestBtnLink['target']) ? $requestBtnLink['target'] : '_self'; endif;?>
+	<?php if($requestBtnLink):?>
+		<li class="nav-item nav-item-btn mt-md-0 mt-4">
+			<a class="text-center button button--blue-gradient mx-md-2 me-0" href="<?php echo $requestBtnLink['url'];?>"  target="<?=esc_attr($link_target);?>">
+				<?php echo $requestBtnLink['title'];?>
+			</a>
+		</li>
+	<?php endif;?>
+
 	<li class="nav-item nav-item-social-icons mt-md-0 mt-4 d-md-none d-block">
 		<span class="me-3">
 			<a href="#" class="" target="_blank">
@@ -71,4 +77,5 @@ $services_dropdown_list_cnt = count($services_dropdown_list);
 			</a>
 		</span>
 	</li>
+	<li class="bruce-li"></li>
 </ul>

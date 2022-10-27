@@ -8,6 +8,7 @@ $color-grey-light2: #979ea5;
 $color-red1: #E0154A;
 $color-red2: #ED1C24;
 $color-blue1: #0A4D7C;
+$color-blue-dark: #011536;
 
 $fontFamily-inter: 'Inter', sans-serif;
 $fontWeight-400: 400;
@@ -68,6 +69,11 @@ body {
 }
 #breakpoint_check{ width:auto; } /*100%|1400px|1199px|991px|767px|575px*/
 
+.header-banner{
+    .col{
+        >p{ margin-bottom:0; }
+    }
+}
 
 .button{
     font-size:0.94rem /*15px*/;
@@ -238,6 +244,7 @@ nav.navbar{
         .nav-item.dropdown{
             ul.dropdown-menu{
                 li{
+                    margin:5px 0;
                     a.dropdown-item{
                         &:hover{
                             @include text-linear-gradient-blue;
@@ -252,6 +259,7 @@ nav.navbar{
 
 /*#FOOTER*/
 footer.site-footer{
+    background-color:$color-blue-dark;
     h6{
         font-family: $fontFamily-inter;
         font-weight: $fontWeight-600;
@@ -440,7 +448,7 @@ footer.site-footer{
     nav.navbar .navbar-collapse.show{
         background-image: url("/wp-content/themes/maxcanvas_child/img/intersect-bg-mobile.png");
         background-repeat: no-repeat;
-        background-size: 100%;
+        background-size:cover; /*100%*/
         min-height:1px;
         /*background-position-y: 1px;*/
     }
