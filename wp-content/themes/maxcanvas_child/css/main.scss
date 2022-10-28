@@ -273,6 +273,10 @@ footer.site-footer{
     .site-footer--address{
         color: $color-white;
         p{ margin-bottom:1px; }
+        a{
+            color:$color-white; text-decoration:none;
+            &:hover{ @include text-linear-gradient-blue; }
+        }
     }
     .site-footer--info{
         color: $color-white;

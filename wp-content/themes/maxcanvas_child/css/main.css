@@ -199,6 +199,14 @@ footer.site-footer {
     color: #FFFFFF; }
     footer.site-footer .site-footer--address p {
       margin-bottom: 1px; }
+    footer.site-footer .site-footer--address a {
+      color: #FFFFFF;
+      text-decoration: none; }
+      footer.site-footer .site-footer--address a:hover {
+        background: -webkit-linear-gradient(0deg, #0A4D7C, #011536);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        display: inline-block; }
   footer.site-footer .site-footer--info {
     color: #FFFFFF; }
     footer.site-footer .site-footer--info h3 {

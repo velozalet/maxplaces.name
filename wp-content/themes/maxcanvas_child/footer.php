@@ -14,7 +14,7 @@ $menuitems_sub_footer = get_all_menu('sub_secondary','ASC'); $menuitems_sub_foot
 
 $address_1 = get_field('address_-1','options');
 $address_2 = get_field('address_-2','options');
-
+$socialLinks = get_field('social_links','options');
 ?>
 
 <footer class="site-footer">
@@ -26,15 +26,15 @@ $address_2 = get_field('address_-2','options');
 					<h6 class="mb-2"><?php echo $address_1['address_slot_1'];?></h6>
 					<p><?php echo $address_1['address_slot_2'];?></p>
 					<p><?php echo $address_1['address_slot_3'];?></p>
-					<p>Phone: <strong><?php echo $address_1['phone'];?> | <?php echo $address_1['phone_2'];?></strong></p>
-					<p>E-mail: <strong><?php echo $address_1['email'];?></strong></p>
+					<p>Phone: <a href="tel:<?php echo get_numerics($address_1['phone']);?>"><strong><?php echo $address_1['phone'];?></strong></a> | <a href="tel:<?php echo get_numerics($address_1['phone_2']);?>"><strong><?php echo $address_1['phone_2'];?></strong></a> </p>
+					<p>E-mail: <a href="mailto:<?php echo $address_1['email'];?>"><strong><?php echo $address_1['email'];?></strong></a> </p>
 					<?php endif;?>
 					<?php if($address_2):?>
 					<h6 class="mt-4 mb-2"><?php echo $address_2['address_slot_1'];?></h6>
 					<p><?php echo $address_2['address_slot_2'];?></p>
 					<p><?php echo $address_2['address_slot_3'];?></p>
-					<p>Phone: <strong><?php echo $address_2['phone'];?> | <?php echo $address_2['phone_2'];?></strong></p>
-					<p>E-mail: <strong><?php echo $address_2['email'];?></strong></p>
+					<p>Phone: <a href="tel:<?php echo get_numerics($address_2['phone']);?>"><strong><?php echo $address_2['phone'];?></strong></a> | <a href="tel:<?php echo get_numerics($address_2['phone_2']);?>"><strong><?php echo $address_2['phone_2'];?></strong></a> </p>
+					<p>E-mail: <a href="mailto:<?php echo $address_2['email'];?>"><strong><?php echo $address_2['email'];?></strong></a> </p>
 					<?php endif;?>
 				</div>
 			</div>
@@ -43,7 +43,12 @@ $address_2 = get_field('address_-2','options');
 					<h3 class="text-center"><?php echo get_field('footer_text_title','options');?></h3>
 					<p class="text-center"><?php echo get_field('footer_text','options');?></p>
 					<hr>
-					<div class="text-center text-uppercase schedule-consultation"><a href="#">Schedule Consultation</a></div>
+					<div class="text-center text-uppercase schedule-consultation">
+					<?php $link_sc = get_field('footer_banner_text','options'); if($link_sc): $link_target = ($link_sc['target']) ? $link_sc['target'] : '_self'; endif;?>
+						<?php if($link_sc):?>
+						<a href="<?=$link_sc['url'];?>" target="<?=esc_attr($link_target);?>"><?=$link_sc['title'];?></a>
+						<?php endif;?>
+					</div>
 					<hr>
 					<nav class="navbar navbar-expand-sm navbar-white">
 						<ul class="navbar-nav">
@@ -112,22 +117,22 @@ $address_2 = get_field('address_-2','options');
 			</div>
 			<div class="col-md-3 col-6 order-md-3 order-1 text-md-end text-start">
 				<span class="me-2 footer-social-icon">
-					<a href="#" class="" target="_blank">
+					<a href="<?php echo $socialLinks['facebook'];?>" class="" target="_blank">
 						<img src="<?php echo get_stylesheet_directory_uri();?>/img/social-icons/facebook-footer-social-icon.svg" alt="facebook">
 					</a>
 				</span>
 				<span class="me-2 footer-social-icon">
-					<a href="#" class="" target="_blank">
+					<a href="<?php echo $socialLinks['linkedin'];?>" class="" target="_blank">
 						<img src="<?php echo get_stylesheet_directory_uri();?>/img/social-icons/in-footer-social-icon.svg" alt="linkdin">
 					</a>
 				</span>
 					<span class="me-2 footer-social-icon">
-					<a href="#" class="" target="_blank">
+					<a href="<?php echo $socialLinks['twitter'];?>" class="" target="_blank">
 						<img src="<?php echo get_stylesheet_directory_uri();?>/img/social-icons/twitter-footer-social-icon.svg" alt="twitter">
 					</a>
 				</span>
 					<span class="me-2 footer-social-icon">
-					<a href="#" class="" target="_blank">
+					<a href="<?php echo $socialLinks['instagram'];?>" class="" target="_blank">
 						<img src="<?php echo get_stylesheet_directory_uri();?>/img/social-icons/insta-footer-social-icon.svg" alt="instagram">
 					</a>
 				</span>

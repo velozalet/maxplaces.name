@@ -10,6 +10,8 @@ foreach( $menuitems as $menu_item ){
 }
 $aboutus_dropdown_list_cnt = count($aboutus_dropdown_list);
 $services_dropdown_list_cnt = count($services_dropdown_list);
+
+$socialLinks = get_field('social_links','options');
 ?>
 <ul id="mobile" class="navbar-nav mb-2 mb-lg-0 mx-md-0 mx-3 d-md-none d-block">
 	<?php for( $i=0; $i < $menuitems_count; $i++ ):?>
@@ -57,22 +59,22 @@ $services_dropdown_list_cnt = count($services_dropdown_list);
 
 	<li class="nav-item nav-item-social-icons mt-md-0 mt-4 d-md-none d-block">
 		<span class="me-3">
-			<a href="#" class="" target="_blank">
+			<a href="<?php echo $socialLinks['facebook'];?>" class="" target="_blank">
 				<img src="<?php echo get_stylesheet_directory_uri();?>/img/social-icons/facebook-header-mobile-social-icon.png" alt="facebook">
 			</a>
 		</span>
 		<span class="me-3">
-			<a href="#" class="" target="_blank">
+			<a href="<?php echo $socialLinks['linkedin'];?>" class="" target="_blank">
 				<img src="<?php echo get_stylesheet_directory_uri();?>/img/social-icons/in-header-mobile-social-icon.png" alt="linkdin">
 			</a>
 		</span>
 		<span class="me-3">
-			<a href="#" class="" target="_blank">
+			<a href="<?php echo $socialLinks['twitter'];?>" class="" target="_blank">
 				<img src="<?php echo get_stylesheet_directory_uri();?>/img/social-icons/twitter-header-mobile-social-icon.png" alt="twitter">
 			</a>
 		</span>
 		<span class="me-3">
-			<a href="#" class="" target="_blank">
+			<a href="<?php echo $socialLinks['instagram'];?>" class="" target="_blank">
 				<img src="<?php echo get_stylesheet_directory_uri();?>/img/social-icons/insta-header-mobile-social-icon.png" alt="instagram">
 			</a>
 		</span>
