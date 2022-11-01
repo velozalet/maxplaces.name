@@ -107,9 +107,59 @@ document.addEventListener( 'DOMContentLoaded', function () { //console.log('init
 		/*__/Only Mobile*/
 
 	}
-	/*__/#NAVBAR & NAVBAR*/
+	/*__________________________________________________________________/#NAVBAR & NAVBAR*/
 
+	/*__/#HOME*/
+	/*Gear Slider*/
+	let gearSliderDOM = document.getElementById('__section_gear_slider');
+	if(gearSliderDOM){
+		var gearSlider = new Splide( gearSliderDOM,{ //All settings: https://splidejs.com/guides/options
+			type: 'slide', /*'slide'|'loop'|'fade'*/
+			pagination: true,
+			autoplay: false,
+			speed: 2000,
+			omitEnd: true,
+			//interval: 2000,
+			arrows: false,
+			breakpoints: {
+				767: {
+					type: 'loop',
+					drag: true,
+				}
+			},
+		} ); gearSlider.mount();
+	}
+	/*__/Gear Slider*/
 
+	/*Our Services Slider*/
+	let ourservicesSliderDOM = document.getElementById('__section_ourservices_slider'); //console.log(ourservicesSliderDOM);
+	if(ourservicesSliderDOM){
+		var ourservicesSlider = new Splide( ourservicesSliderDOM,{ //All settings: https://splidejs.com/guides/options
+			type: 'loop', /*'slide'|'loop'|'fade'*/
+			pagination: false,
+			autoplay: false,
+			speed: 2000,
+			omitEnd: true,
+			//keyboard: true,
+			//interval: 2000,
+			arrows: true,
+		} ); ourservicesSlider.mount();
+
+		let splideArrows = ourservicesSliderDOM.querySelector('.splide__arrows'); console.log(splideArrows);
+		splideArrows.insertAdjacentHTML('afterBegin', `
+				   	<span>01</span>
+			    `);
+		//let splidePagination = ourservicesSliderDOM.querySelector('.splide__pagination'); if(splidePagination){ let splidePaginationCollection = splidePagination.querySelectorAll('li').length; }
+
+		//let ii = 0;
+		ourservicesSlider.on('move',function(destIndex) {
+			let currentNumSlide = (destIndex+1);
+			if( currentNumSlide < 10 ){ currentNumSlide = `0${currentNumSlide}` }
+			splideArrows.querySelector('span').innerHTML = currentNumSlide;
+		} );
+	}
+	/*__/Our Services Slider*/
+	/*____________________________________________________________________/#HOME*/
 });
 
 new WOW().init(); //initial the WOW animation library
