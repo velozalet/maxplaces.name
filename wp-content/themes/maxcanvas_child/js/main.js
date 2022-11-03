@@ -20,14 +20,40 @@ document.addEventListener( 'DOMContentLoaded', function () { //console.log('init
 	//const bodyDOM = document.getElementsByTagName("BODY")[0];
 
 	const parallax_bg = document.querySelector('.parallax-bg'); //console.log(parallax_bg);
-	const myFunction = () => {
+	const scrollPage = () => {
 		let variableY = 1;
 		variableY = variableY - (window.scrollY / 1000);
 		//console.log(window.scrollY); //Value of scroll Y in px
 		//console.log(variableY);
 		parallax_bg.setAttribute('style', `opacity:${variableY}`);
 	};
-	window.addEventListener("scroll", myFunction);
+	window.addEventListener("scroll", scrollPage);
+
+	/*Сustom PAUSE/PLAY button control for video <video source></video>*/
+	function playPauseVideo(video, btn){
+		if(video.paused){
+			video.play();
+			if( btn.classList.contains('fa') ){ btn.classList.remove('fa-play-circle'); btn.classList.add('fa-pause'); }
+		}else{
+			video.pause();
+			if( btn.classList.contains('fa') ){ btn.classList.remove('fa-pause'); btn.classList.add('fa-play-circle'); }
+		}
+	}
+	/*__/Сustom PAUSE/PLAY button control for video <video source></video>*/
+	/*Open full video-player for video <video source></video> by double click mouse*/
+	function openFullVideo(video){
+		if(video.requestFullscreen) {
+			video.requestFullscreen();
+		}else if(video.mozRequestFullScreen){
+			video.mozRequestFullScreen(); /*Mozilla FF*/
+		}else if(video.webkitRequestFullscreen) { /*Safari*/
+			video.webkitRequestFullscreen();
+		}else if(video.msRequestFullscreen) { /*IE11*/
+			video.msRequestFullscreen();
+		}
+	}
+	/*__/Open full video-player for video <video source></video> by double click mouse*/
+
 
 	/*#BANNER & NAVBAR*/
 	if( document.querySelector('nav.navbar') ){
@@ -145,7 +171,7 @@ document.addEventListener( 'DOMContentLoaded', function () { //console.log('init
 			arrows: true,
 		} ); ourservicesSlider.mount();
 
-		let splideArrows = ourservicesSliderDOM.querySelector('.splide__arrows'); console.log(splideArrows);
+		let splideArrows = ourservicesSliderDOM.querySelector('.splide__arrows'); //console.log(splideArrows);
 		splideArrows.insertAdjacentHTML('afterBegin', `
 				   	<span>01</span>
 			    `);
@@ -159,6 +185,80 @@ document.addEventListener( 'DOMContentLoaded', function () { //console.log('init
 		} );
 	}
 	/*__/Our Services Slider*/
+
+	/*Testimonials Slider*/
+	let testimonialsSliderDOM = document.getElementById('__testimonials_slider'); //console.log(testimonialsSliderDOM);
+	if(testimonialsSliderDOM){
+		var testimonialsSlider = new Splide( testimonialsSliderDOM,{ //All settings: https://splidejs.com/guides/options
+			type: 'loop', /*'slide'|'loop'|'fade'*/
+			pagination: true,
+			autoplay: false,
+			speed: 2000,
+			omitEnd: true,
+			perPage: 3,
+			gap: '1.5rem',
+			//keyboard: true,
+			//interval: 2000,
+			arrows: true,
+			breakpoints: {
+				1199: {
+					perPage: 2,
+				},
+				767: {
+					perPage: 1,
+				}
+			},
+		} ); testimonialsSlider.mount();
+	}
+	/*__/Testimonials Slider*/
+
+	/*__/Blog Slider*/
+	let blogSliderDOM = document.getElementById('__blog_slider'); //console.log(blogSliderDOM);
+	if(blogSliderDOM){
+		var blogSlider = new Splide( blogSliderDOM,{ //All settings: https://splidejs.com/guides/options
+			type: 'loop', /*'slide'|'loop'|'fade'*/
+			pagination: false,
+			autoplay: false,
+			speed: 2000,
+			omitEnd: true,
+			perPage: 2,
+			gap: '1.5rem',
+			//keyboard: true,
+			//interval: 2000,
+			arrows: true,
+			breakpoints: {
+				575: {
+					perPage: 1,
+				}
+			},
+		} ); blogSlider.mount();
+
+		let splideArrows = blogSliderDOM.querySelector('.splide__arrows'); //console.log(splideArrows);
+		splideArrows.insertAdjacentHTML('afterBegin', `
+				   	<span>01</span>
+			    `);
+
+		blogSlider.on('move',function(destIndex) {
+			let currentNumSlide = (destIndex+1);
+			if( currentNumSlide < 10 ){ currentNumSlide = `0${currentNumSlide}` }
+			splideArrows.querySelector('span').innerHTML = currentNumSlide;
+		} );
+	}
+	/*__/Blog Slider*/
+
+	/*Home Video*/
+	const homevideoSectionFxContent = document.getElementById("homevideo_section_fx_content");
+	if(homevideoSectionFxContent) {
+		const homeVideoVideo = homevideoSectionFxContent.querySelector("#home_video__video"),
+			homeVideoVideoBtn = homevideoSectionFxContent.querySelector("#home_video__video_btn"),
+			homevideoSectionContainer = homevideoSectionFxContent.querySelector(".homevideo-section-container");
+
+		//Сustom PAUSE/PLAY button control for video <video source></video>
+		homeVideoVideoBtn.addEventListener('click', () => playPauseVideo(homeVideoVideo, homeVideoVideoBtn));
+		//Open full video-player for video <video source></video> by double click mouse
+		homevideoSectionContainer.addEventListener('dblclick', () => openFullVideo(homeVideoVideo));
+		/*__/Home Video*/
+	}
 	/*____________________________________________________________________/#HOME*/
 });
 
