@@ -660,6 +660,13 @@ footer.site-footer{
         background-position: 0 5%;
         min-height:153px;
     }
+    .home-video-section-mobile-bg{
+        background-image: url(/wp-content/themes/maxcanvas_child/img/home-video-section-mobile-bg.svg);
+        background-repeat: no-repeat;
+        background-size:cover;
+        background-position: 0 -7%;
+        min-height:190px;
+    }
 }
 /*__/Home Video*/
 /*____________________________________________________________________________/#HOME*/
@@ -835,7 +842,7 @@ footer.site-footer{
     /*__/Blog*/
 
     /*Home Video*/
-    .homevideo-section-fx-content { padding-bottom:175px !important; }
+    /*.homevideo-section-fx-content { padding-bottom:175px !important; }*/
     .homevideo-section-fx-content .homeimage-section-container { align-items: end; min-height:280px; }
     .homevideo-section-fx-content .homeimage-section-container .section-image-content { width:100%; top:75px; left:12px; padding:25px 0 0 15px; background:linear-gradient(180deg, white, rgba(255, 255, 255, 0)); }
     .homevideo-section-fx-content .homeimage-section-container > .row { width: 100%; }
@@ -860,8 +867,9 @@ footer.site-footer{
 
     /*_______________________________________________________#HOME*/
     /*Home Video*/
-    .homevideo-section-fx-content { padding-bottom:275px !important; }
+    /*.homevideo-section-fx-content { padding-bottom:275px !important; }*/
     .homevideo-section-fx-content .homeimage-section-container .section-image-content { top:115px; }
+    .homevideo-section-fx-content .home-video-section-mobile-bg { min-height:260px; background-position:0 -20%; }
     /*__/Home Video*/
     /*_______________________________________________________/#HOME*/
 }
@@ -874,6 +882,10 @@ footer.site-footer{
 
     .ourservices-section-fx-content .__section-ourservices-slider .splide__arrows.splide__arrows--ltr { top:55%; }
     /*__/Our Services Slider*/
+
+    /*Home Video*/
+    .homevideo-section-fx-content .home-video-section-mobile-bg { min-height:295px; background-position:0 -37%; }
+    /*__/Home Video*/
     /*_______________________________________________________/#HOME*/
 }
 
@@ -881,6 +893,7 @@ footer.site-footer{
     /*_______________________________________________________#HOME*/
     /*Home Video*/
     .homevideo-section-fx-content .homeimage-section-container .section-image-content { top:155px; }
+    .homevideo-section-fx-content .home-video-section-mobile-bg { min-height:375px; background-position:0 -175%; }
     /*__/Home Video*/
     /*_______________________________________________________/#HOME*/
 }

@@ -416,6 +416,7 @@ $video_src = 'https://www.naecsol.com/wp-content/uploads/2022/09/sample-5s.mp4';
 	<?php endif;?>
 
 	<div class="home-video-section-bg d-md-block d-none"></div>
+	<div class="home-video-section-mobile-bg d-md-none d-block"></div>
 </section>
 
 <?php get_footer(); ?>
