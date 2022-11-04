@@ -21,6 +21,9 @@ $socialLinks = get_field('social_links','options');
 			<li class="nav-item me-lg-3 me-0 mt-md-2 mt-0 dropdown" data-itemid="<?php echo $menuitems[$i]->ID;?>" data-itemobject="<?php echo $menuitems[$i]->object;?>">
 				<a class="nav-link text-uppercase dropdown-toggle <?php echo (strtoupper($currentUrl) == '/'.strtoupper($menuitems[$i]->title).'/') ? 'current-menu-item' : '';?>" href="<?php echo $menuitems[$i]->url;?>" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><?php echo $menuitems[$i]->title;?></a>
 				<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+					<li data-itemid="<?php echo $menuitems[$i]->ID;?>" data-itemobject="<?php echo $menuitems[$i]->object;?>">
+						<a class="dropdown-item text-capitalize ps-0" href="<?php echo $menuitems[$i]->url;?>" style="letter-spacing:5px;"><?php echo $menuitems[$i]->title;?></a>
+					</li>
 					<?php foreach( $aboutus_dropdown_list as $aboutus_dropdown_i ):?>
 					<li class="" data-itemid="<?php echo $aboutus_dropdown_i->ID;?>" data-itemobject="<?php echo $aboutus_dropdown_i->object;?>">
 						<a class="dropdown-item text-capitalize ps-0" href="<?=$aboutus_dropdown_i->url;?>"><?=$aboutus_dropdown_i->title;?></a>
@@ -32,6 +35,9 @@ $socialLinks = get_field('social_links','options');
 			<li class="nav-item me-lg-3 me-0 mt-md-2 mt-0 dropdown" data-itemid="<?php echo $menuitems[$i]->ID;?>" data-itemobject="<?php echo $menuitems[$i]->object;?>">
 				<a class="nav-link text-uppercase dropdown-toggle <?php echo (strtoupper($currentUrl) == '/'.strtoupper($menuitems[$i]->title).'/') ? 'current-menu-item' : '';?>" href="<?php echo $menuitems[$i]->url;?>" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><?php echo $menuitems[$i]->title;?></a>
 				<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+					<li data-itemid="<?php echo $menuitems[$i]->ID;?>" data-itemobject="<?php echo $menuitems[$i]->object;?>">
+						<a class="dropdown-item text-capitalize ps-0" href="<?php echo $menuitems[$i]->url;?>" style="letter-spacing:5px;"><?php echo $menuitems[$i]->title;?></a>
+					</li>
 					<?php foreach( $services_dropdown_list as $services_dropdown_i ):?>
 					<li class="" data-itemid="<?php echo $services_dropdown_i->ID;?>" data-itemobject="<?php echo $services_dropdown_i->object;?>">
 						<a class="dropdown-item text-capitalize ps-0" href="<?=$services_dropdown_i->url;?>"><?=$services_dropdown_i->title;?></a>

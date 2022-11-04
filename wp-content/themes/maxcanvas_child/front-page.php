@@ -21,8 +21,6 @@
 								<p class="mt-3">Read how we've helped clients in all industries get the results they needed
 									to show up first on Google and other search engines organically.</p>
 								<a class="text-center button button--blue-gradient" href="#" target="_self">start now</a>
-								<br>
-								<code>Slide - 1</code>
 							</div>
 							<div class="col-md col-12 text-md-end text-center">
 								<img src="<?php echo get_stylesheet_directory_uri();?>/img/gear.png" alt="gear" class="img-fluid">
@@ -39,8 +37,6 @@
 								<p class="mt-3">Read how we've helped clients in all industries get the results they needed
 									to show up first on Google and other search engines organically.</p>
 								<a class="text-center button button--blue-gradient" href="#" target="_self">start now</a>
-								<br>
-								<code>Slide - 2</code>
 							</div>
 							<div class="col-md col-12 text-md-end text-center">
 								<img src="<?php echo get_stylesheet_directory_uri();?>/img/gear-2.png" alt="gear" class="img-fluid">
@@ -57,8 +53,6 @@
 								<p class="mt-3">Read how we've helped clients in all industries get the results they needed
 									to show up first on Google and other search engines organically.</p>
 								<a class="text-center button button--blue-gradient" href="#" target="_self">start now</a>
-								<br>
-								<code>Slide - 3</code>
 							</div>
 							<div class="col-md col-12 text-md-end text-center">
 								<img src="<?php echo get_stylesheet_directory_uri();?>/img/gear-3.png" alt="gear" class="img-fluid">
@@ -75,8 +69,6 @@
 								<p class="mt-3">Read how we've helped clients in all industries get the results they needed
 									to show up first on Google and other search engines organically.</p>
 								<a class="text-center button button--blue-gradient" href="#" target="_self">start now</a>
-								<br>
-								<code>Slide - 4</code>
 							</div>
 							<div class="col-md col-12 text-md-end text-center">
 								<img src="<?php echo get_stylesheet_directory_uri();?>/img/gear-4.png" alt="gear" class="img-fluid">

@@ -68,12 +68,42 @@ h2 {
   font-family: "Inter", sans-serif;
   line-height: 1; }
 
+.header-page-title {
+  font-size: 3.5rem;
+  /*56px*/
+  font-weight: 700;
+  font-family: "Inter", sans-serif;
+  line-height: 1;
+  color: #000000; }
+
 .sup-title {
   letter-spacing: .2rem;
   font-weight: 600; }
 
 .section-divider-100 {
   margin-bottom: 100px; }
+
+.section-divider-padding-100 {
+  padding-bottom: 100px; }
+
+.page-banner-section .page-banner-bg {
+  min-height: 510px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%; }
+.page-banner-section .page-banner-content-wrapper {
+  position: absolute;
+  bottom: -40px; }
+  .page-banner-section .page-banner-content-wrapper .page-banner-content {
+    background: linear-gradient(0deg, white, rgba(255, 255, 255, 0.6));
+    padding: 40px 40px 0 40px; }
+  .page-banner-section .page-banner-content-wrapper .learn-more-link-pipirka {
+    background: -webkit-linear-gradient(0deg, #0A4D7C, #011536);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    font-size: 0.94rem;
+    font-weight: 600; }
 
 /*_______________________________________________________________________________/#GENERAL*/
 /*_______________________________________________________________________________#BANNER*/
@@ -88,7 +118,7 @@ h2 {
 
 .header-banner {
   background: linear-gradient(90deg, #F6FAFF, #D3DAE2); }
-  .header-banner p {
+  .header-banner p, .header-banner a {
     background: -webkit-linear-gradient(0deg, #0A4D7C, #011536);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -117,16 +147,24 @@ nav.navbar .navbar-collapse {
   nav.navbar .navbar-collapse .navbar-nav .nav-item .nav-link {
     font-size: 0.94rem;
     color: #000000;
-    font-weight: 600; }
+    font-weight: 600;
+    position: relative; }
     nav.navbar .navbar-collapse .navbar-nav .nav-item .nav-link.dropdown-toggle:after {
       display: none; }
     nav.navbar .navbar-collapse .navbar-nav .nav-item .nav-link.dropdown-toggle.show:after {
       display: none; }
+    nav.navbar .navbar-collapse .navbar-nav .nav-item .nav-link img.active-item-menu-icon {
+      display: none;
+      position: absolute;
+      top: 13px;
+      left: 0; }
     nav.navbar .navbar-collapse .navbar-nav .nav-item .nav-link.current-menu-item {
       background: -webkit-linear-gradient(0deg, #0A4D7C, #011536);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       display: inline-block; }
+      nav.navbar .navbar-collapse .navbar-nav .nav-item .nav-link.current-menu-item img.active-item-menu-icon {
+        display: block; }
     nav.navbar .navbar-collapse .navbar-nav .nav-item .nav-link.show.current-menu-item-mobile {
       color: #0A4D7C; }
   nav.navbar .navbar-collapse .navbar-nav .nav-item.nav-item-social-icons a {
@@ -578,6 +616,19 @@ footer.site-footer {
 
 /*__/Home Video*/
 /*____________________________________________________________________________/#HOME*/
+/*_____________________________________________________#ABOUT US*/
+.aboutus-page-wrapper .aboutus-single-cst-section {
+  background-image: url(/wp-content/themes/maxcanvas_child/img/as471.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 50% 50%;
+  padding-top: 65px; }
+  .aboutus-page-wrapper .aboutus-single-cst-section .row p {
+    position: relative;
+    top: -25px;
+    width: 75%; }
+
+/*_____________________________________________________#ABOUT US*/
 /**
 	MEDIA QUERIES:
 */
@@ -609,7 +660,12 @@ footer.site-footer {
     width: 270px;
     height: 270px; }
 
-  /*_______________________________________________________/#HEADER*/ }
+  /*_______________________________________________________/#HEADER*/
+  /*Home Video*/
+  .homevideo-section-fx-content .homevideo-section-container .section-video-content {
+    top: 10%; }
+
+  /*__/Home Video*/ }
 @media screen and (max-width: 1199px) {
   /*from 1199px till 992px (Class prefix .col-lg-)*/
   #breakpoint_check {
@@ -695,6 +751,9 @@ footer.site-footer {
   .homevideo-section-fx-content .homevideo-section-container .section-video-content h2 {
     font-size: 2.12rem; }
 
+  .homevideo-section-fx-content .homevideo-section-container .section-video-content {
+    top: 20%; }
+
   /*__/Home Video*/
   /*_______________________________________________________/#HOME*/ }
 @media screen and (max-width: 891px) {
@@ -719,11 +778,24 @@ footer.site-footer {
   h2 {
     font-size: 2.12rem; }
 
+  .header-page-title {
+    font-size: 2.37rem; }
+
   p, .sup-title {
     font-size: 0.87rem; }
 
   .section-divider-100 {
     margin-bottom: 65px; }
+
+  .page-banner-section .page-banner-bg {
+    min-height: 270px; }
+
+  .page-banner-section .page-banner-content-wrapper {
+    position: absolute;
+    top: -100px; }
+
+  .page-banner-section .page-banner-content-wrapper .page-banner-content {
+    padding: 40px 15px 0 15px; }
 
   /*_______________________________________________________________________________/#GENERAL*/
   /*_____________________________________________________#HEADER*/
@@ -851,7 +923,15 @@ footer.site-footer {
     font-size: 55px; }
 
   /*__/Home Video*/
-  /*_______________________________________________________/#HOME*/ }
+  /*_______________________________________________________/#HOME*/
+  /*_____________________________________________________#ABOUT US*/
+  .aboutus-page-wrapper .aboutus-single-cst-section {
+    margin-top: 195px; }
+
+  .aboutus-page-wrapper .aboutus-single-cst-section .row p {
+    width: 100%; }
+
+  /*_____________________________________________________/#ABOUT US*/ }
 @media screen and (max-width: 575px) {
   /*from 575px and less (Class prefix .col-)*/
   #breakpoint_check {
@@ -888,7 +968,12 @@ footer.site-footer {
     background-position: 0 -20%; }
 
   /*__/Home Video*/
-  /*_______________________________________________________/#HOME*/ }
+  /*_______________________________________________________/#HOME*/
+  /*_____________________________________________________#ABOUT US*/
+  .aboutus-page-wrapper .aboutus-single-cst-section {
+    margin-top: 354px; }
+
+  /*_____________________________________________________/#ABOUT US*/ }
 @media screen and (max-width: 455px) {
   /*_____________________________________________________#HOME*/
   /*Our Services Slider*/

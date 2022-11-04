@@ -80,7 +80,8 @@ for( $i=0; $i < $services_dropdown_list_cnt; $i++ ){
 
 			<?php if( $menuitems[$i]->ID == $aboutus_page_id ):?>
 			<li class="nav-item me-lg-3 me-0 mt-md-2 mt-0 dropdown" data-itemid="<?php echo $menuitems[$i]->ID;?>" data-itemobject="<?php echo $menuitems[$i]->object;?>">
-				<a class="nav-link text-uppercase dropdown-toggle <?php echo (strtoupper($currentUrl) == '/'.strtoupper($menuitems[$i]->title).'/') ? 'current-menu-item' : '';?>" href="<?php echo $menuitems[$i]->url;?>" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+				<a class="nav-link text-uppercase dropdown-toggle <?php echo (strtoupper($currentUrl) == '/'.str_replace(" ","-",strtoupper($menuitems[$i]->title)).'/') ? 'current-menu-item' : '';?>" href="<?php echo $menuitems[$i]->url;?>" id="navbarDropdown" role="button" aria-expanded="false">
+					<img class="active-item-menu-icon" src="<?php echo get_stylesheet_directory_uri();?>/img/active-item-menu-icon.svg" alt="">
 					<span><?php echo $menuitems[$i]->title;?> <hr></span>
 				</a>
 				<ul class="dropdown-menu pb-3" aria-labelledby="navbarDropdown">
@@ -125,7 +126,8 @@ for( $i=0; $i < $services_dropdown_list_cnt; $i++ ){
 			</li>
 			<?php elseif( $menuitems[$i]->ID == $services_page_id ):?>
 			<li class="nav-item me-lg-3 me-0 mt-md-2 mt-0 dropdown" data-itemid="<?php echo $menuitems[$i]->ID;?>" data-itemobject="<?php echo $menuitems[$i]->object;?>">
-				<a class="nav-link text-uppercase dropdown-toggle <?php echo (strtoupper($currentUrl) == '/'.strtoupper($menuitems[$i]->title).'/') ? 'current-menu-item' : '';?>" href="<?php echo $menuitems[$i]->url;?>" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+				<a class="nav-link text-uppercase dropdown-toggle <?php echo (strtoupper($currentUrl) == '/'.strtoupper($menuitems[$i]->title).'/') ? 'current-menu-item' : '';?>" href="<?php echo $menuitems[$i]->url;?>" id="navbarDropdown" role="button" aria-expanded="false">
+					<img class="active-item-menu-icon" src="<?php echo get_stylesheet_directory_uri();?>/img/active-item-menu-icon.svg" alt="">
 					<span><?php echo $menuitems[$i]->title;?> <hr></span>
 				</a>
 				<ul class="dropdown-menu pb-3" aria-labelledby="navbarDropdown">
@@ -166,7 +168,10 @@ for( $i=0; $i < $services_dropdown_list_cnt; $i++ ){
 			</li>
 			<?php else:?>
 			<li class="nav-item me-lg-3 me-0 mt-md-2 mt-0" data-itemid="<?php echo $menuitems[$i]->ID;?>" data-itemobject="<?php echo $menuitems[$i]->object;?>">
-				<a class="nav-link text-uppercase <?php echo (strtoupper($currentUrl) == '/'.strtoupper($menuitems[$i]->title).'/') ? 'current-menu-item' : '';?>" href="<?php echo $menuitems[$i]->url;?>"><?php echo $menuitems[$i]->title;?></a>
+				<a class="nav-link text-uppercase <?php echo (strtoupper($currentUrl) == '/'.strtoupper($menuitems[$i]->title).'/') ? 'current-menu-item' : '';?>" href="<?php echo $menuitems[$i]->url;?>">
+					<img class="active-item-menu-icon" src="<?php echo get_stylesheet_directory_uri();?>/img/active-item-menu-icon.svg" alt="">
+					<?php echo $menuitems[$i]->title;?>
+				</a>
 			</li>
 			<?php endif;?>
 

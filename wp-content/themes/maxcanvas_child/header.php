@@ -22,10 +22,14 @@
 </head>
 
 <body <?php body_class(); ?>>
-<?php $get_queried_object = get_queried_object(); //dd($get_queried_object->post_name); ?>
+<?php
+$get_queried_object = get_queried_object(); //dd($get_queried_object->post_name);
+$address_1 = get_field('address_-1','options');
+$address_2 = get_field('address_-2','options');
+?>
 <mark id="breakpoint_check" style="display:none!important;"></mark>
 
-<div class="parallax-bg"></div>
+<?php if( is_front_page() ):?><div class="parallax-bg"></div><?php endif;?>
 
 	<!--banner-->
 	<?php if( get_field('supheader_text','options') ):?>
@@ -34,6 +38,7 @@
 			<div class="row">
 				<div class="col text-center mt-md-2 mt-sm-5 mt-5 my-2">
 					<?php echo get_field('supheader_text','options');?>
+					<a  class="text-decoration-none" href="tel:<?php echo get_numerics($address_2['phone_2']);?>"><strong><?php echo $address_2['phone_2'];?></strong></a>
 				</div>
 			</div>
 		</div>

@@ -19,15 +19,18 @@ document.addEventListener( 'DOMContentLoaded', function () { //console.log('init
 	//window.scroll({ top: 0, behavior: 'smooth' });
 	//const bodyDOM = document.getElementsByTagName("BODY")[0];
 
-	const parallax_bg = document.querySelector('.parallax-bg'); //console.log(parallax_bg);
-	const scrollPage = () => {
-		let variableY = 1;
-		variableY = variableY - (window.scrollY / 1000);
-		//console.log(window.scrollY); //Value of scroll Y in px
-		//console.log(variableY);
-		parallax_bg.setAttribute('style', `opacity:${variableY}`);
-	};
-	window.addEventListener("scroll", scrollPage);
+	const parallax_bg = document.querySelector('.parallax-bg');
+	if(parallax_bg){
+		const scrollPage = () => {
+			let variableY = 1;
+			variableY = variableY - (window.scrollY / 1000);
+			//console.log(window.scrollY); //Value of scroll Y in px
+			//console.log(variableY);
+			parallax_bg.setAttribute('style', `opacity:${variableY}`);
+		};
+		window.addEventListener("scroll", scrollPage);
+	}
+
 
 	/*Сustom PAUSE/PLAY button control for video <video source></video>*/
 	function playPauseVideo(video, btn){
