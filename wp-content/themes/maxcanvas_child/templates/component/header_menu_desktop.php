@@ -189,22 +189,22 @@ for( $i=0; $i < $services_dropdown_list_cnt; $i++ ){
 	<li class="nav-item nav-item-social-icons mt-md-0 mt-4 d-md-none d-block">
 		<span class="me-3">
 			<a href="#" class="" target="_blank">
-				<img src="<?php echo get_stylesheet_directory_uri();?>/img/social-icons/facebook-header-mobile-social-icon.png" alt="facebook">
+				<img src="<?php echo get_stylesheet_directory_uri();?>/img/social-icons/facebook-header-mobile-social-icon.png" alt="<?php echo get_bloginfo('name');?>">
 			</a>
 		</span>
 		<span class="me-3">
 			<a href="#" class="" target="_blank">
-				<img src="<?php echo get_stylesheet_directory_uri();?>/img/social-icons/in-header-mobile-social-icon.png" alt="linkdin">
+				<img src="<?php echo get_stylesheet_directory_uri();?>/img/social-icons/in-header-mobile-social-icon.png" alt="<?php echo get_bloginfo('name');?>">
 			</a>
 		</span>
 		<span class="me-3">
 			<a href="#" class="" target="_blank">
-				<img src="<?php echo get_stylesheet_directory_uri();?>/img/social-icons/twitter-header-mobile-social-icon.png" alt="twitter">
+				<img src="<?php echo get_stylesheet_directory_uri();?>/img/social-icons/twitter-header-mobile-social-icon.png" alt="<?php echo get_bloginfo('name');?>">
 			</a>
 		</span>
 		<span class="me-3">
 			<a href="#" class="" target="_blank">
-				<img src="<?php echo get_stylesheet_directory_uri();?>/img/social-icons/insta-header-mobile-social-icon.png" alt="instagram">
+				<img src="<?php echo get_stylesheet_directory_uri();?>/img/social-icons/insta-header-mobile-social-icon.png" alt="<?php echo get_bloginfo('name');?>">
 			</a>
 		</span>
 	</li>

@@ -23,7 +23,7 @@
 								<a class="text-center button button--blue-gradient" href="#" target="_self">start now</a>
 							</div>
 							<div class="col-md col-12 text-md-end text-center">
-								<img src="<?php echo get_stylesheet_directory_uri();?>/img/gear.png" alt="gear" class="img-fluid">
+								<img src="<?php echo get_stylesheet_directory_uri();?>/img/gear.png" alt="<?php echo get_bloginfo('name');?>" class="img-fluid">
 							</div>
 						</div>
 					</div>
@@ -39,7 +39,7 @@
 								<a class="text-center button button--blue-gradient" href="#" target="_self">start now</a>
 							</div>
 							<div class="col-md col-12 text-md-end text-center">
-								<img src="<?php echo get_stylesheet_directory_uri();?>/img/gear-2.png" alt="gear" class="img-fluid">
+								<img src="<?php echo get_stylesheet_directory_uri();?>/img/gear-2.png" alt="<?php echo get_bloginfo('name');?>" class="img-fluid">
 							</div>
 						</div>
 					</div>
@@ -55,7 +55,7 @@
 								<a class="text-center button button--blue-gradient" href="#" target="_self">start now</a>
 							</div>
 							<div class="col-md col-12 text-md-end text-center">
-								<img src="<?php echo get_stylesheet_directory_uri();?>/img/gear-3.png" alt="gear" class="img-fluid">
+								<img src="<?php echo get_stylesheet_directory_uri();?>/img/gear-3.png" alt="<?php echo get_bloginfo('name');?>" class="img-fluid">
 							</div>
 						</div>
 					</div>
@@ -71,7 +71,7 @@
 								<a class="text-center button button--blue-gradient" href="#" target="_self">start now</a>
 							</div>
 							<div class="col-md col-12 text-md-end text-center">
-								<img src="<?php echo get_stylesheet_directory_uri();?>/img/gear-4.png" alt="gear" class="img-fluid">
+								<img src="<?php echo get_stylesheet_directory_uri();?>/img/gear-4.png" alt="<?php echo get_bloginfo('name');?>" class="img-fluid">
 							</div>
 						</div>
 					</div>
@@ -80,8 +80,8 @@
 		</div>
 	</div>
 
-	<img src="<?php echo get_stylesheet_directory_uri();?>/img/snake.svg" alt="snake" class="snake-img--desktop img-fluid m-auto d-md-block d-none">
-	<img src="<?php echo get_stylesheet_directory_uri();?>/img/snake-mobile.svg" alt="snake" class="snake-img--mobile img-fluid m-auto d-md-none d-block">
+	<img src="<?php echo get_stylesheet_directory_uri();?>/img/snake.svg" alt="<?php echo get_bloginfo('name');?>" class="snake-img--desktop img-fluid m-auto d-md-block d-none">
+	<img src="<?php echo get_stylesheet_directory_uri();?>/img/snake-mobile.svg" alt="<?php echo get_bloginfo('name');?>" class="snake-img--mobile img-fluid m-auto d-md-none d-block">
 </section>
 
 <section id="ourservices_section_fx_content" class="ourservices-section-fx-content mt-md-0 mt-4 mb-5">
@@ -94,12 +94,12 @@
 							<div class="col-md-7 col-12 mt-md-0 mt-5 order-md-1 order-2">
 								<div class="row">
 									<div class="col-7 d-flex justify-content-end pe-0">
-										<img class="--img1 img-fluid align-self-end" src="<?php echo get_stylesheet_directory_uri();?>/img/our-slider/_1.jpeg" alt="">
+										<img class="--img1 img-fluid align-self-end" src="<?php echo get_stylesheet_directory_uri();?>/img/our-slider/_1.jpeg" alt="<?php echo get_bloginfo('name');?>">
 									</div>
 									<div class="col-5 ps-0">
-										<img class="--img2 img-fluid" src="<?php echo get_stylesheet_directory_uri();?>/img/our-slider/_2.jpeg" alt="">
+										<img class="--img2 img-fluid" src="<?php echo get_stylesheet_directory_uri();?>/img/our-slider/_2.jpeg" alt="<?php echo get_bloginfo('name');?>">
 										<br>
-										<img class="--img3 img-fluid" src="<?php echo get_stylesheet_directory_uri();?>/img/our-slider/_3.jpeg" alt="">
+										<img class="--img3 img-fluid" src="<?php echo get_stylesheet_directory_uri();?>/img/our-slider/_3.jpeg" alt="<?php echo get_bloginfo('name');?>">
 									</div>
 								</div>
 							</div>
@@ -121,12 +121,12 @@
 							<div class="col-md-7 col-12 mt-md-0 mt-5 order-md-1 order-2">
 								<div class="row">
 									<div class="col-7 d-flex justify-content-end pe-0">
-										<img class="--img1 img-fluid align-self-end" src="https://via.placeholder.com/450x450/FF0000/FFFFFF?text= 1" alt="">
+										<img class="--img1 img-fluid align-self-end" src="https://via.placeholder.com/450x450/FF0000/FFFFFF?text= 1" alt="<?php echo get_bloginfo('name');?>">
 									</div>
 									<div class="col-5 ps-0">
-										<img class="--img2 img-fluid" src="https://via.placeholder.com/450x450/46bb46/FFFFFF?text= 2" alt="">
+										<img class="--img2 img-fluid" src="https://via.placeholder.com/450x450/46bb46/FFFFFF?text= 2" alt="<?php echo get_bloginfo('name');?>">
 										<br>
-										<img class="--img3 img-fluid" src="https://via.placeholder.com/450x450/4040a6/FFFFFF?text= 3" alt="">
+										<img class="--img3 img-fluid" src="https://via.placeholder.com/450x450/4040a6/FFFFFF?text= 3" alt="<?php echo get_bloginfo('name');?>">
 									</div>
 								</div>
 							</div>
@@ -148,12 +148,12 @@
 							<div class="col-md-7 col-12 mt-md-0 mt-5 order-md-1 order-2">
 								<div class="row">
 									<div class="col-7 d-flex justify-content-end pe-0">
-										<img class="--img1 img-fluid align-self-end" src="https://via.placeholder.com/450x450/4040a6/FFFFFF?text= 1" alt="">
+										<img class="--img1 img-fluid align-self-end" src="https://via.placeholder.com/450x450/4040a6/FFFFFF?text= 1" alt="<?php echo get_bloginfo('name');?>">
 									</div>
 									<div class="col-5 ps-0">
-										<img class="--img2 img-fluid" src="https://via.placeholder.com/450x450/FF0000/FFFFFF?text= 2" alt="">
+										<img class="--img2 img-fluid" src="https://via.placeholder.com/450x450/FF0000/FFFFFF?text= 2" alt="<?php echo get_bloginfo('name');?>">
 										<br>
-										<img class="--img3 img-fluid" src="https://via.placeholder.com/450x450/46bb46/FFFFFF?text= 3" alt="">
+										<img class="--img3 img-fluid" src="https://via.placeholder.com/450x450/46bb46/FFFFFF?text= 3" alt="<?php echo get_bloginfo('name');?>">
 									</div>
 								</div>
 							</div>
@@ -188,10 +188,10 @@
 					MAXPlaces Marketing, LLC is dedicated to providing search engine optimization services of the highest quality to our clients. From Organic SEO to Social Media to Pay-Per-Click Advertising, we’ve got you covered so you can concentrate on being more productive and growing your own business...
 				</p>
 				<p>Our mission is to offer top-notch and reasonably priced digital marketing solutions to enable business owners to expand their online presence, generate leads, increase sales and improve levels of productivity.</p>
-				<a class="text-center button button--blue-gradient" href="#" target="_self">Learn more</a>
+				<a class="text-center button button--blue-gradient" href="<?php echo esc_url(home_url('/'));?>about-us/" target="_self">Learn more</a>
 			</div>
 			<div class="col-md-5 col-12 text-center mt-md-0 mt-5">
-				<img class="img-fluid" src="<?php echo get_stylesheet_directory_uri();?>/img/PC-55.png" alt="">
+				<img class="img-fluid" src="<?php echo get_stylesheet_directory_uri();?>/img/PC-55.png" alt="<?php echo get_bloginfo('name');?>">
 			</div>
 		</div>
 	</div>
@@ -207,24 +207,24 @@
 			<div class="col-md col-12 case-studies-icons">
 				<div class="row">
 					<div class="col-md col-6 text-center col-cst-case-studies--item">
-						<img src="<?php echo get_stylesheet_directory_uri();?>/img/case_studies/__1.svg" alt=""> <span class="d-block text-uppercase mt-2 mb-md-5 mb-4">Construction</span>
+						<img src="<?php echo get_stylesheet_directory_uri();?>/img/case_studies/__1.svg" alt="<?php echo get_bloginfo('name');?>"> <span class="d-block text-uppercase mt-2 mb-md-5 mb-4">Construction</span>
 						<div class="w-100"></div>
-						<img src="<?php echo get_stylesheet_directory_uri();?>/img/case_studies/__2.svg" alt=""> <span class="d-block text-uppercase mt-2 mb-md-5 mb-4">Technology</span>
+						<img src="<?php echo get_stylesheet_directory_uri();?>/img/case_studies/__2.svg" alt="<?php echo get_bloginfo('name');?>"> <span class="d-block text-uppercase mt-2 mb-md-5 mb-4">Technology</span>
 					</div>
 					<div class="col-md col-6 text-center col-cst-case-studies--item">
-						<img src="<?php echo get_stylesheet_directory_uri();?>/img/case_studies/__3.svg" alt=""> <span class="d-block text-uppercase mt-2 mb-md-5 mb-4">Medical</span>
+						<img src="<?php echo get_stylesheet_directory_uri();?>/img/case_studies/__3.svg" alt="<?php echo get_bloginfo('name');?>"> <span class="d-block text-uppercase mt-2 mb-md-5 mb-4">Medical</span>
 						<div class="w-100"></div>
-						<img src="<?php echo get_stylesheet_directory_uri();?>/img/case_studies/__4.svg" alt=""> <span class="d-block text-uppercase mt-2 mb-md-5 mb-4">Life Sciences</span>
+						<img src="<?php echo get_stylesheet_directory_uri();?>/img/case_studies/__4.svg" alt="<?php echo get_bloginfo('name');?>"> <span class="d-block text-uppercase mt-2 mb-md-5 mb-4">Life Sciences</span>
 					</div>
 					<div class="col-md col-6 text-center col-cst-case-studies--item">
-						<img src="<?php echo get_stylesheet_directory_uri();?>/img/case_studies/__5.svg" alt=""> <span class="d-block text-uppercase mt-2 mb-md-5 mb-4">Retail</span>
+						<img src="<?php echo get_stylesheet_directory_uri();?>/img/case_studies/__5.svg" alt="<?php echo get_bloginfo('name');?>"> <span class="d-block text-uppercase mt-2 mb-md-5 mb-4">Retail</span>
 						<div class="w-100"></div>
-						<img src="<?php echo get_stylesheet_directory_uri();?>/img/case_studies/__6.svg" alt=""> <span class="d-block text-uppercase mt-2 mb-md-5 mb-4">Home</span>
+						<img src="<?php echo get_stylesheet_directory_uri();?>/img/case_studies/__6.svg" alt="<?php echo get_bloginfo('name');?>"> <span class="d-block text-uppercase mt-2 mb-md-5 mb-4">Home</span>
 					</div>
 					<div class="col-md col-6 text-center col-cst-case-studies--item">
-						<img src="<?php echo get_stylesheet_directory_uri();?>/img/case_studies/__7.svg" alt=""> <span class="d-block text-uppercase mt-2 mb-md-5 mb-4">Food & Beverage</span>
+						<img src="<?php echo get_stylesheet_directory_uri();?>/img/case_studies/__7.svg" alt="<?php echo get_bloginfo('name');?>"> <span class="d-block text-uppercase mt-2 mb-md-5 mb-4">Food & Beverage</span>
 						<div class="w-100"></div>
-						<img src="<?php echo get_stylesheet_directory_uri();?>/img/case_studies/__8.svg" alt=""> <span class="d-block text-uppercase mt-2 mb-md-5 mb-4">Finance</span>
+						<img src="<?php echo get_stylesheet_directory_uri();?>/img/case_studies/__8.svg" alt="<?php echo get_bloginfo('name');?>"> <span class="d-block text-uppercase mt-2 mb-md-5 mb-4">Finance</span>
 					</div>
 				</div>
 			</div>
@@ -319,7 +319,7 @@
 						<ul class="splide__list">
 							<li class="splide__slide">
 								<a class="text-decoration-none" href="#">
-									<img class="img-fluid" src="<?php echo get_stylesheet_directory_uri();?>/img/blog-1.jpeg" alt="">
+									<img class="img-fluid" src="<?php echo get_stylesheet_directory_uri();?>/img/blog-1.jpeg" alt="<?php echo get_bloginfo('name');?>">
 								</a>
 								<div class="mt-3">
 									<span class="blog-article-date d-block text-uppercase mb-2">august 2022</span>
@@ -330,7 +330,7 @@
 							</li>
 							<li class="splide__slide">
 								<a class="text-decoration-none" href="#">
-									<img class="img-fluid" src="<?php echo get_stylesheet_directory_uri();?>/img/blog-2.jpeg" alt="">
+									<img class="img-fluid" src="<?php echo get_stylesheet_directory_uri();?>/img/blog-2.jpeg" alt="<?php echo get_bloginfo('name');?>">
 								</a>
 								<div class="mt-3">
 									<span class="blog-article-date d-block text-uppercase mb-2">september 2022</span>
@@ -341,7 +341,7 @@
 							</li>
 							<li class="splide__slide">
 								<a class="text-decoration-none" href="#">
-									<img class="img-fluid" src="<?php echo get_stylesheet_directory_uri();?>/img/blog-2.jpeg" alt="">
+									<img class="img-fluid" src="<?php echo get_stylesheet_directory_uri();?>/img/blog-2.jpeg" alt="<?php echo get_bloginfo('name');?>">
 								</a>
 								<div class="mt-3">
 									<span class="blog-article-date d-block text-uppercase mb-2">october 2022</span>
@@ -350,7 +350,6 @@
 									</span>
 								</div>
 							</li>
-
 						</ul>
 					</div>
 				</div>
@@ -409,6 +408,7 @@ $video_src = 'https://www.naecsol.com/wp-content/uploads/2022/09/sample-5s.mp4';
 
 	<div class="home-video-section-bg d-md-block d-none"></div>
 	<div class="home-video-section-mobile-bg d-md-none d-block"></div>
+
 </section>
 
 <?php get_footer(); ?>

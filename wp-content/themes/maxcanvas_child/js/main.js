@@ -263,6 +263,65 @@ document.addEventListener( 'DOMContentLoaded', function () { //console.log('init
 		/*__/Home Video*/
 	}
 	/*____________________________________________________________________/#HOME*/
+
+	/*__________________________________________________________________/#SERVICES*/
+	const servicesSectionDesktop = document.querySelector('.services-section.services-section--desktop');
+	if( servicesSectionDesktop ){
+		const cstHeightServicesBlock = servicesSectionDesktop.querySelector('#cst_height_services_block'),
+			imageAsy = servicesSectionDesktop.querySelector('#cst_height_services_block + img'),
+			asynchronousMadnessBlock = servicesSectionDesktop.querySelector('.asynchronous-madness-block');
+
+		let serviceItemLinkCollection = asynchronousMadnessBlock.parentElement.querySelectorAll('.service-item--link'); //7
+		let serviceItemLinkEvenCollection = [];
+		for(let i=0; i < serviceItemLinkCollection.length; i++){ if(i%2 === 0){ serviceItemLinkEvenCollection.push(serviceItemLinkCollection[i]); } }
+		let calcul = (228 * serviceItemLinkEvenCollection.length - 75);  //console.log(calcul);
+		cstHeightServicesBlock.style.height = `${calcul}px`;
+
+		asynchronousMadnessBlock.style.height = `${parseInt(imageAsy.style.height) + 60}px`;
+	}
+	const servicesSectionMobile = document.querySelector('.services-section.services-section--mobile');
+	if( servicesSectionMobile ){
+		let ssMmobileTextBlockDOM =  servicesSectionMobile.querySelector('.ss--mobile-text-block > div'); //console.log(ssMmobileTextBlockDOM);
+		let ssMmobileTextBlockDOM_height = ssMmobileTextBlockDOM.getBoundingClientRect().height; console.log(ssMmobileTextBlockDOM_height);
+		servicesSectionMobile.style.marginBottom = `${parseInt(ssMmobileTextBlockDOM_height) - 50}px`;
+	}
+	/*__________________________________________________________________/#SERVICES*/
+
+	/*__________________________________________________________________/#SINGLE-SERVICES*/
+	singleServicesPageWrapperDOM = document.querySelector('.single-services-page-wrapper');
+	if(singleServicesPageWrapperDOM){
+		/*Single Services Slider*/
+		let singleServicesSliderDOM = document.getElementById('__single_services_slider');
+		if(singleServicesSliderDOM){
+			var singleServicesSlider = new Splide( singleServicesSliderDOM,{ //All settings: https://splidejs.com/guides/options
+				type: 'loop', /*'slide'|'loop'|'fade'*/
+				pagination: false,
+				autoplay: false,
+				speed: 2000,
+				omitEnd: true,
+				perPage: 1,
+				gap: '1.5rem',
+				//keyboard: true,
+				//interval: 2000,
+				arrows: true,
+				breakpoints: {
+					575: {
+						perPage: 1,
+					}
+				},
+			} ); singleServicesSlider.mount();
+
+			let splideArrows = singleServicesSliderDOM.querySelector('.splide__arrows');
+			singleServicesSlider.on('move',function(destIndex) {
+				let currentNumSlide = (destIndex+1);
+				if( currentNumSlide < 10 ){ currentNumSlide = `0${currentNumSlide}` }
+				splideArrows.querySelector('span').innerHTML = currentNumSlide;
+			} );
+		}
+		/*__/Single Services Slider*/
+	}
+
+	/*__________________________________________________________________/#SINGLE-SERVICES*/
 });
 
 new WOW().init(); //initial the WOW animation library
