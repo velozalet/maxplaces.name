@@ -22,7 +22,7 @@ $faq_collection_cnt = count($faq_collection);
 			<?php for( $i=0; $i < $faq_collection_cnt; $i++ ):?>
 			<div class="accordion-item">
 				<h5 class="accordion-header" id="frequentlyAsked__<?php echo ($i+1);?>">
-					<button class="accordion-button collapsed px-0 pb-2" type="button" data-bs-toggle="collapse" data-bs-target="#afa_collapse__<?php echo ($i+1);?>" aria-expanded="false" aria-controls="afa_collapse__<?php echo ($i+1);?>">
+					<button class="accordion-button collapsed px-0 pt-4 pb-2" type="button" data-bs-toggle="collapse" data-bs-target="#afa_collapse__<?php echo ($i+1);?>" aria-expanded="false" aria-controls="afa_collapse__<?php echo ($i+1);?>">
 						<?php echo $faq_collection[$i]['tab'];?>
 					</button>
 				</h5>

@@ -320,8 +320,102 @@ document.addEventListener( 'DOMContentLoaded', function () { //console.log('init
 		}
 		/*__/Single Services Slider*/
 	}
-
 	/*__________________________________________________________________/#SINGLE-SERVICES*/
+
+	/*__________________________________________________________________#Industry Served Page*/
+	industryServedPageWrapperDOM = document.querySelector('.industry-served-page-wrapper');
+	if(industryServedPageWrapperDOM){
+		/*Industry Served Case Slider*/
+		let industryServedCaseSliderDOM = document.getElementById('__industry_served_case_slider');
+		if(industryServedCaseSliderDOM){
+			var industryServedCaseSlider = new Splide( industryServedCaseSliderDOM,{ //All settings: https://splidejs.com/guides/options
+				type: 'slide', /*'slide'|'loop'|'fade'*/
+				pagination: false,
+				autoplay: false,
+				speed: 1000,
+				omitEnd: true,
+				perPage: 1,
+				focus : 'center',
+				gap: '1.5rem',
+				/*padding: '20%', / padding: '5rem',*/
+				padding: '20%',
+				//keyboard: true,
+				//interval: 2000,
+				arrows: true,
+				breakpoints: {
+					767: {
+						perPage: 1,
+						padding: '',
+					}
+				},
+			} );
+			let bar = document.querySelector('.industry-served-case-slide--progress-bar');
+			let progressBarSlider__end = document.querySelector('.progress-bar-slider--end');
+			let progressBarSlider__start = document.querySelector('.progress-bar-slider--start');
+			let dynamic_contentDOM = document.getElementById('dynamic_content__industry_served_case_slider'),
+				industryServedCaseSliderContentSupTitle = dynamic_contentDOM.querySelector('div.sup-title'),
+				industryServedCaseSliderContentTitleH2 = dynamic_contentDOM.querySelector('h2'),
+				industryServedCaseSliderContentTitleH5 = dynamic_contentDOM.querySelector('.industry-served-case-slider-content h5'),
+				industryServedCaseSliderContentText = dynamic_contentDOM.querySelector('.industry-served-case-slider-content p');
+
+			const dataSliderCollectionDOM = dynamic_contentDOM.querySelectorAll('kbd ul > li');
+			const dataSliderCollection = [];
+			dataSliderCollectionDOM.forEach(
+				(item, index, collection) => {
+					dataSliderCollection.push( [item.querySelector('p:nth-of-type(1)').textContent, item.querySelector('p:nth-of-type(2)').textContent ] );
+				}
+			); console.log(dataSliderCollection);
+
+			industryServedCaseSlider.on( 'mounted move', function(destIndex) {
+				var end  = industryServedCaseSlider.Components.Controller.getEnd() + 1;
+				var rate = Math.min( ( industryServedCaseSlider.index + 1 ) / end, 1 );
+				bar.style.width = String( 100 * rate ) + '%';
+
+				let progressBarSlider__end_val = end;
+				if( progressBarSlider__end_val < 10 ){ progressBarSlider__end_val = `0${progressBarSlider__end_val}` }
+				progressBarSlider__end.innerHTML = progressBarSlider__end_val;
+
+				if( destIndex !== undefined ){
+					industryServedCaseSliderContentTitleH5.innerHTML = dataSliderCollection[destIndex][0];
+					industryServedCaseSliderContentText.innerHTML = dataSliderCollection[destIndex][1];
+				}
+			} );
+			industryServedCaseSlider.mount();
+
+			industryServedCaseSliderContentTitleH5.innerHTML = dataSliderCollection[0][0];
+			industryServedCaseSliderContentText.innerHTML = dataSliderCollection[0][1];
+
+			let splideArrowsDOM = industryServedCaseSliderDOM.querySelector('.splide__arrows');
+			let splideArrowNextBtn = splideArrowsDOM.querySelector('.splide__arrow.splide__arrow--next');
+			let splideArrowPrevBtn = splideArrowsDOM.querySelector('.splide__arrow.splide__arrow--prev');
+
+			progressBarSlider__end.addEventListener('click', () => splideArrowNextBtn.click() );
+			progressBarSlider__start.addEventListener('click', () => splideArrowPrevBtn.click() );
+		}
+		/*Industry Served Case Slider*/
+	}
+	/*__________________________________________________________________/#Industry Served Page*/
+
+	/*__________________________________________________________________#In The News Page*/
+	const inNewsPageWrapperDOM = document.querySelector('.in-news-page-wrapper');
+	if(inNewsPageWrapperDOM){
+		const inNewsPageCollection = inNewsPageWrapperDOM.querySelectorAll('.in-news-page--collection .wrapper > .wrapper-item.flip');
+		for( let item of inNewsPageCollection ){ item.addEventListener('mouseover', mouseoverInNewFlip); item.addEventListener('mouseout', mouseoutInNewFlip); }
+
+		function mouseoverInNewFlip(){ //console.log('mouseoverInNewFlip');
+			this.classList.add('flip--active');
+		}
+		function mouseoutInNewFlip(){
+			this.classList.remove('flip--active');
+		}
+
+		// console.log(parseInt(breakpointCheck));
+		// if( parseInt(breakpointCheck) <= 767){
+		// 	//for( let item of inNewsPageCollection ){ item.addEventListener('hover') }
+		// }
+	}
+
+	/*__________________________________________________________________/#In The News Page*/
 });
 
 new WOW().init(); //initial the WOW animation library

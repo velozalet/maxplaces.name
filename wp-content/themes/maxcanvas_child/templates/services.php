@@ -34,7 +34,7 @@
 								</div>
 							</a>
 							<a class="learn-more-link learn-more-link-pipirka text-uppercase text-decoration-none" href="#">
-								<img src="http://maxplaces.name/wp-content/themes/maxcanvas_child/img/pipirka.svg" alt=""> Learn More
+								<img src="<?php echo get_stylesheet_directory_uri();?>/img/pipirka.svg" alt=""> Learn More
 							</a>
 						</div>
 						<div class="col-lg-5 col-xl-4 col-6 mt-5 mb-5">
@@ -48,7 +48,7 @@
 								</div>
 							</a>
 							<a class="learn-more-link learn-more-link-pipirka text-uppercase text-decoration-none" href="#">
-								<img src="http://maxplaces.name/wp-content/themes/maxcanvas_child/img/pipirka.svg" alt=""> Learn More
+								<img src="<?php echo get_stylesheet_directory_uri();?>/img/pipirka.svg" alt=""> Learn More
 							</a>
 						</div>
 						<div class="w-100"></div>
@@ -63,7 +63,7 @@
 								</div>
 							</a>
 							<a class="learn-more-link learn-more-link-pipirka text-uppercase text-decoration-none" href="#">
-								<img src="http://maxplaces.name/wp-content/themes/maxcanvas_child/img/pipirka.svg" alt=""> Learn More
+								<img src="<?php echo get_stylesheet_directory_uri();?>/img/pipirka.svg" alt=""> Learn More
 							</a>
 						</div>
 						<div class="col-lg-5 col-xl-4 col-6 mt-5 mb-5">
@@ -77,7 +77,7 @@
 								</div>
 							</a>
 							<a class="learn-more-link learn-more-link-pipirka text-uppercase text-decoration-none" href="#">
-								<img src="http://maxplaces.name/wp-content/themes/maxcanvas_child/img/pipirka.svg" alt=""> Learn More
+								<img src="<?php echo get_stylesheet_directory_uri();?>/img/pipirka.svg" alt=""> Learn More
 							</a>
 						</div>
 						<div class="w-100"></div>
@@ -92,7 +92,7 @@
 								</div>
 							</a>
 							<a class="learn-more-link learn-more-link-pipirka text-uppercase text-decoration-none" href="#">
-								<img src="http://maxplaces.name/wp-content/themes/maxcanvas_child/img/pipirka.svg" alt=""> Learn More
+								<img src="<?php echo get_stylesheet_directory_uri();?>/img/pipirka.svg" alt=""> Learn More
 							</a>
 						</div>
 						<div class="col-lg-5 col-xl-4 col-6 mt-5 mb-5">
@@ -106,7 +106,7 @@
 								</div>
 							</a>
 							<a class="learn-more-link learn-more-link-pipirka text-uppercase text-decoration-none" href="#">
-								<img src="http://maxplaces.name/wp-content/themes/maxcanvas_child/img/pipirka.svg" alt=""> Learn More
+								<img src="<?php echo get_stylesheet_directory_uri();?>/img/pipirka.svg" alt=""> Learn More
 							</a>
 						</div>
 

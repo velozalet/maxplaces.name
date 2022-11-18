@@ -40,7 +40,7 @@
 						<div class="col-sm col-12 mb-sm-4 mb-3">
 							<a href="#" class="text-decoration-none">
 								<div class="d-flex align-items-start">
-									<img src="<?php echo get_stylesheet_directory_uri();?>/img/case_studies/__1.svg">
+									<img src="<?php echo get_stylesheet_directory_uri();?>/img/case_studies/__1.svg" alt="<?php echo get_bloginfo('name');?>">
 									<div class="ms-3">
 										<p class="text-uppercase mb-1"> <strong>Video Marketing</strong> </p>
 										<p class="mb-0">Like a traditional television commercial, a promotional web video helps to advertise your business to potential customers.</p>
@@ -51,7 +51,7 @@
 						<div class="col-sm col-12 mb-sm-4 mb-3">
 							<a href="#" class="text-decoration-none">
 								<div class="d-flex align-items-start">
-									<img src="<?php echo get_stylesheet_directory_uri();?>/img/case_studies/__2.svg">
+									<img src="<?php echo get_stylesheet_directory_uri();?>/img/case_studies/__2.svg" alt="<?php echo get_bloginfo('name');?>">
 									<div class="ms-3">
 										<p class="text-uppercase mb-1"> <strong>SEO Services</strong> </p>
 										<p class="mb-0">Let our Google Certified SEO specialists optimize your website for maximum visibility.</p>
@@ -63,7 +63,7 @@
 						<div class="col-sm col-12 mb-sm-4 mb-3">
 							<a href="#" class="text-decoration-none">
 								<div class="d-flex align-items-start">
-									<img src="<?php echo get_stylesheet_directory_uri();?>/img/case_studies/__3.svg">
+									<img src="<?php echo get_stylesheet_directory_uri();?>/img/case_studies/__3.svg" alt="<?php echo get_bloginfo('name');?>">
 									<div class="ms-3">
 										<p class="text-uppercase mb-1"> <strong>Reputation Management</strong> </p>
 										<p class="mb-0">Managing your online reputation isn’t shameless promotion, it’s a necessary means of self defense.</p>
@@ -74,7 +74,7 @@
 						<div class="col-sm col-12 mb-sm-4 mb-3">
 							<a href="#" class="text-decoration-none">
 								<div class="d-flex align-items-start">
-									<img src="<?php echo get_stylesheet_directory_uri();?>/img/case_studies/__4.svg">
+									<img src="<?php echo get_stylesheet_directory_uri();?>/img/case_studies/__4.svg" alt="<?php echo get_bloginfo('name');?>">
 									<div class="ms-3">
 										<p class="text-uppercase mb-1"> <strong>Pay Per Click</strong> </p>
 										<p class="mb-0">Increase the profitability of your digital advertising spend with our expert Pay-Per-Click and Remarketing Campaign services spend.</p>
@@ -86,7 +86,7 @@
 						<div class="col-sm col-12 mb-sm-4 mb-3">
 							<a href="#" class="text-decoration-none">
 								<div class="d-flex align-items-start">
-									<img src="<?php echo get_stylesheet_directory_uri();?>/img/case_studies/__5.svg">
+									<img src="<?php echo get_stylesheet_directory_uri();?>/img/case_studies/__5.svg" alt="<?php echo get_bloginfo('name');?>">
 									<div class="ms-3">
 										<p class="text-uppercase mb-1"> <strong>Social Media</strong> </p>
 										<p class="mb-0">Social marketing campaigns that generate results. Social branding, targeted audience building, content creation and much more.</p>
@@ -97,7 +97,7 @@
 						<div class="col-sm col-12 mb-sm-4 mb-3">
 							<a href="#" class="text-decoration-none">
 								<div class="d-flex align-items-start">
-									<img src="<?php echo get_stylesheet_directory_uri();?>/img/case_studies/__1.svg">
+									<img src="<?php echo get_stylesheet_directory_uri();?>/img/case_studies/__6.svg" alt="<?php echo get_bloginfo('name');?>">
 									<div class="ms-3">
 										<p class="text-uppercase mb-1"> <strong>Local Search</strong> </p>
 										<p class="mb-0">Geo-targeted SEO campaigns for better search engine rankings, increased local online visibility and a superior ROI.</p>
