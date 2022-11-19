@@ -11,7 +11,6 @@
 
 	<!--Desktop Only-->
 	<section class="services-section services-section--desktop mt-5 d-lg-block d-none">
-		<div class="a-w-c--bg"></div>
 		<div class="container-xl">
 			<div class="row">
 				<div class="col-lg-5 col-12 --s-section-col1">
@@ -129,7 +128,6 @@
 	<!--/Desktop Only-->
 	<!--Tablet & Mobile Only-->
 	<section class="services-section services-section--mobile mt-5 d-lg-none d-block">
-		<div class="a-w-c--bg"></div>
 		<div class="container-xl">
 			<div class="row">
 				<div class="col-lg col-12 ps-lg-5 ps-2 --s-section-col2" >

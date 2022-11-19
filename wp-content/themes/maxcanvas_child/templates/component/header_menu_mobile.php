@@ -19,7 +19,7 @@ $socialLinks = get_field('social_links','options');
 
 			<?php if( $menuitems[$i]->ID == $aboutus_page_id ):?>
 			<li class="nav-item me-lg-3 me-0 mt-md-2 mt-0 dropdown" data-itemid="<?php echo $menuitems[$i]->ID;?>" data-itemobject="<?php echo $menuitems[$i]->object;?>">
-				<a class="nav-link text-uppercase dropdown-toggle <?php echo (strtoupper($currentUrl) == '/'.strtoupper($menuitems[$i]->title).'/') ? 'current-menu-item' : '';?>" href="<?php echo $menuitems[$i]->url;?>" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><?php echo $menuitems[$i]->title;?></a>
+				<a class="nav-link text-uppercase dropdown-toggle <?php echo (strtoupper($currentUrl) == '/'.strtoupper($menuitems[$i]->title).'/') ? 'current-menu-item-mobile' : '';?>" href="<?php echo $menuitems[$i]->url;?>" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><?php echo $menuitems[$i]->title;?></a>
 				<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
 					<li data-itemid="<?php echo $menuitems[$i]->ID;?>" data-itemobject="<?php echo $menuitems[$i]->object;?>">
 						<a class="dropdown-item text-capitalize ps-0" href="<?php echo $menuitems[$i]->url;?>" style="letter-spacing:5px;"><?php echo $menuitems[$i]->title;?></a>
@@ -33,7 +33,7 @@ $socialLinks = get_field('social_links','options');
 			</li>
 			<?php elseif( $menuitems[$i]->ID == $services_page_id ):?>
 			<li class="nav-item me-lg-3 me-0 mt-md-2 mt-0 dropdown" data-itemid="<?php echo $menuitems[$i]->ID;?>" data-itemobject="<?php echo $menuitems[$i]->object;?>">
-				<a class="nav-link text-uppercase dropdown-toggle <?php echo (strtoupper($currentUrl) == '/'.strtoupper($menuitems[$i]->title).'/') ? 'current-menu-item' : '';?>" href="<?php echo $menuitems[$i]->url;?>" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><?php echo $menuitems[$i]->title;?></a>
+				<a class="nav-link text-uppercase dropdown-toggle <?php echo (strtoupper($currentUrl) == '/'.strtoupper($menuitems[$i]->title).'/') ? 'current-menu-item-mobile' : '';?>" href="<?php echo $menuitems[$i]->url;?>" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><?php echo $menuitems[$i]->title;?></a>
 				<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
 					<li data-itemid="<?php echo $menuitems[$i]->ID;?>" data-itemobject="<?php echo $menuitems[$i]->object;?>">
 						<a class="dropdown-item text-capitalize ps-0" href="<?php echo $menuitems[$i]->url;?>" style="letter-spacing:5px;"><?php echo $menuitems[$i]->title;?></a>

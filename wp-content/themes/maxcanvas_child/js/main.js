@@ -73,14 +73,14 @@ document.addEventListener( 'DOMContentLoaded', function () { //console.log('init
 			if( !event.currentTarget.classList.contains('collapsed') ){ //OPEN
 				navbarBrand.classList.toggle('invisible');
 				if(headerBanner){ headerBanner.classList.toggle('d-none'); }
-				parallaxBg.classList.toggle('d-none');
+				if(parallaxBg){ parallaxBg.classList.toggle('d-none'); }
 				//event.currentTarget.classList.toggle('pe-0');
 				//navbarCollapse.style.backgroundPositionY = '215px';
 				event.currentTarget.nextElementSibling.classList.add('vh-100');
 			}else{ //CLOSE
 				navbarBrand.classList.remove('invisible');
 				if(headerBanner){ headerBanner.classList.toggle('d-none'); }
-				parallaxBg.classList.toggle('d-none');
+				if(parallaxBg){ parallaxBg.classList.toggle('d-none'); }
 				//event.currentTarget.classList.toggle('pe-0');
 				//navbarCollapse.style.backgroundPositionY = '1px';
 				event.currentTarget.nextElementSibling.classList.remove('vh-100');
@@ -119,9 +119,9 @@ document.addEventListener( 'DOMContentLoaded', function () { //console.log('init
 			const navLinksCollection = navbarCollapsedMobile.querySelectorAll('.navbar-nav .nav-item.dropdown > a.nav-link');
 
 			navLinksCollection.forEach(
-				(item, index, collection) => {
+				(item,index,collection) => {
 					item.addEventListener('click', (event) => {
-						let cssObjDropdownListHeight = window.getComputedStyle(event.currentTarget.nextElementSibling, null).getPropertyValue('height');
+						let cssObjDropdownListHeight = window.getComputedStyle(event.currentTarget.nextElementSibling, null).getPropertyValue('height'); //console.log(cssObjDropdownListHeight);
 
 						for( let itemMenu  of collection ) {
 							itemMenu.classList.remove('current-menu-item-mobile');
@@ -408,11 +408,6 @@ document.addEventListener( 'DOMContentLoaded', function () { //console.log('init
 		function mouseoutInNewFlip(){
 			this.classList.remove('flip--active');
 		}
-
-		// console.log(parseInt(breakpointCheck));
-		// if( parseInt(breakpointCheck) <= 767){
-		// 	//for( let item of inNewsPageCollection ){ item.addEventListener('hover') }
-		// }
 	}
 
 	/*__________________________________________________________________/#In The News Page*/

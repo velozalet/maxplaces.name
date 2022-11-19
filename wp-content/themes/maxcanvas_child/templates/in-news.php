@@ -28,17 +28,17 @@
 				<div class="wrapper">
 					<div class="wrapper-item flip">
 						<div class="front">
-							<img src="<?=get_stylesheet_directory_uri();?>/img/in-news/databox-logo.png" alt="databox-logo">
+							<img src="<?php echo get_stylesheet_directory_uri();?>/img/in-news/databox-logo.png" alt="databox-logo">
 							<div>What Is Schema Markup and How Do You Use It for SEO?</div>
 							<a class="learn-more-link learn-more-link-pipirka text-uppercase text-decoration-none" href="#">
-								<img src="http://maxplaces.name/wp-content/themes/maxcanvas_child/img/pipirka.svg" alt=""> Learn More
+								<img src="<?php echo get_stylesheet_directory_uri();?>/img/pipirka.svg" alt=""> Learn More
 							</a>
 						</div>
 						<div class="back">
 							<img src="<?=get_stylesheet_directory_uri();?>/img/in-news/databox-logo.png" alt="databox-logo">
 							<div>What Is Schema Markup and How Do You Use It for SEO?</div>
 							<a class="learn-more-link learn-more-link-pipirka text-uppercase text-decoration-none" href="#">
-								<img src="http://maxplaces.name/wp-content/themes/maxcanvas_child/img/pipirka.svg" alt=""> Learn More
+								<img src="<?php echo get_stylesheet_directory_uri();?>/img/pipirka.svg" alt=""> Learn More
 							</a>
 						</div>
 					</div>
@@ -47,14 +47,14 @@
 							<img src="<?=get_stylesheet_directory_uri();?>/img/in-news/best-company-logo.png" alt="best-company-logo">
 							<div>How to Market in the Manufacturing Industry</div>
 							<a class="learn-more-link learn-more-link-pipirka text-uppercase text-decoration-none" href="#">
-								<img src="http://maxplaces.name/wp-content/themes/maxcanvas_child/img/pipirka.svg" alt=""> Learn More
+								<img src="<?php echo get_stylesheet_directory_uri();?>/img/pipirka.svg" alt=""> Learn More
 							</a>
 						</div>
 						<div class="back">
 							<img src="<?=get_stylesheet_directory_uri();?>/img/in-news/best-company-logo.png" alt="best-company-logo">
 							<div>How to Market in the Manufacturing Industry</div>
 							<a class="learn-more-link learn-more-link-pipirka text-uppercase text-decoration-none" href="#">
-								<img src="http://maxplaces.name/wp-content/themes/maxcanvas_child/img/pipirka.svg" alt=""> Learn More
+								<img src="<?php echo get_stylesheet_directory_uri();?>/img/pipirka.svg" alt=""> Learn More
 							</a>
 						</div>
 					</div>
@@ -63,14 +63,14 @@
 							<img src="<?=get_stylesheet_directory_uri();?>/img/in-news/fitsmallbiz-logo.png" alt="fitsmallbiz-logo">
 							<div>Why You Should Start Investing in Voice-Activated Content</div>
 							<a class="learn-more-link learn-more-link-pipirka text-uppercase text-decoration-none" href="#">
-								<img src="http://maxplaces.name/wp-content/themes/maxcanvas_child/img/pipirka.svg" alt=""> Learn More
+								<img src="<?php echo get_stylesheet_directory_uri();?>/img/pipirka.svg" alt=""> Learn More
 							</a>
 						</div>
 						<div class="back">
 							<img src="<?=get_stylesheet_directory_uri();?>/img/in-news/fitsmallbiz-logo.png" alt="fitsmallbiz-logo">
 							<div>Why You Should Start Investing in Voice-Activated Content</div>
 							<a class="learn-more-link learn-more-link-pipirka text-uppercase text-decoration-none" href="#">
-								<img src="http://maxplaces.name/wp-content/themes/maxcanvas_child/img/pipirka.svg" alt=""> Learn More
+								<img src="<?php echo get_stylesheet_directory_uri();?>/img/pipirka.svg" alt=""> Learn More
 							</a>
 						</div>
 					</div>
@@ -80,14 +80,14 @@
 							<img src="<?=get_stylesheet_directory_uri();?>/img/in-news/forbes-logo.png" alt="forbes-logo">
 							<div>What Is Schema Markup and How Do You Use It for SEO?</div>
 							<a class="learn-more-link learn-more-link-pipirka text-uppercase text-decoration-none" href="#">
-								<img src="http://maxplaces.name/wp-content/themes/maxcanvas_child/img/pipirka.svg" alt=""> Learn More
+								<img src="<?php echo get_stylesheet_directory_uri();?>/img/pipirka.svg" alt=""> Learn More
 							</a>
 						</div>
 						<div class="back">
 							<img src="<?=get_stylesheet_directory_uri();?>/img/in-news/forbes-logo.png" alt="forbes-logo">
 							<div>What Is Schema Markup and How Do You Use It for SEO?</div>
 							<a class="learn-more-link learn-more-link-pipirka text-uppercase text-decoration-none" href="#">
-								<img src="http://maxplaces.name/wp-content/themes/maxcanvas_child/img/pipirka.svg" alt=""> Learn More
+								<img src="<?php echo get_stylesheet_directory_uri();?>/img/pipirka.svg" alt=""> Learn More
 							</a>
 						</div>
 					</div>
@@ -96,14 +96,14 @@
 							<img src="<?=get_stylesheet_directory_uri();?>/img/in-news/fupping-logo.png" alt="fupping-logo">
 							<div>How to Market in the Manufacturing Industry</div>
 							<a class="learn-more-link learn-more-link-pipirka text-uppercase text-decoration-none" href="#">
-								<img src="http://maxplaces.name/wp-content/themes/maxcanvas_child/img/pipirka.svg" alt=""> Learn More
+								<img src="<?php echo get_stylesheet_directory_uri();?>/img/pipirka.svg" alt=""> Learn More
 							</a>
 						</div>
 						<div class="back">
 							<img src="<?=get_stylesheet_directory_uri();?>/img/in-news/fupping-logo.png" alt="fupping-logo">
 							<div>How to Market in the Manufacturing Industry</div>
 							<a class="learn-more-link learn-more-link-pipirka text-uppercase text-decoration-none" href="#">
-								<img src="http://maxplaces.name/wp-content/themes/maxcanvas_child/img/pipirka.svg" alt=""> Learn More
+								<img src="<?php echo get_stylesheet_directory_uri();?>/img/pipirka.svg" alt=""> Learn More
 							</a>
 						</div>
 					</div>
@@ -112,14 +112,14 @@
 							<img src="<?=get_stylesheet_directory_uri();?>/img/in-news/hubstaff-logo.png" alt="hubstaff-logo">
 							<div>Why You Should Start Investing in Voice-Activated Content</div>
 							<a class="learn-more-link learn-more-link-pipirka text-uppercase text-decoration-none" href="#">
-								<img src="http://maxplaces.name/wp-content/themes/maxcanvas_child/img/pipirka.svg" alt=""> Learn More
+								<img src="<?php echo get_stylesheet_directory_uri();?>/img/pipirka.svg" alt=""> Learn More
 							</a>
 						</div>
 						<div class="back">
 							<img src="<?=get_stylesheet_directory_uri();?>/img/in-news/hubstaff-logo.png" alt="hubstaff-logo">
 							<div>Why You Should Start Investing in Voice-Activated Content</div>
 							<a class="learn-more-link learn-more-link-pipirka text-uppercase text-decoration-none" href="#">
-								<img src="http://maxplaces.name/wp-content/themes/maxcanvas_child/img/pipirka.svg" alt=""> Learn More
+								<img src="<?php echo get_stylesheet_directory_uri();?>/img/pipirka.svg" alt=""> Learn More
 							</a>
 						</div>
 					</div>
@@ -129,14 +129,14 @@
 							<img src="<?=get_stylesheet_directory_uri();?>/img/in-news/newsday-logo.png" alt="newsday-logo">
 							<div>What Is Schema Markup and How Do You Use It for SEO?</div>
 							<a class="learn-more-link learn-more-link-pipirka text-uppercase text-decoration-none" href="#">
-								<img src="http://maxplaces.name/wp-content/themes/maxcanvas_child/img/pipirka.svg" alt=""> Learn More
+								<img src="<?php echo get_stylesheet_directory_uri();?>/img/pipirka.svg" alt=""> Learn More
 							</a>
 						</div>
 						<div class="back">
 							<img src="<?=get_stylesheet_directory_uri();?>/img/in-news/newsday-logo.png" alt="newsday-logo">
 							<div>What Is Schema Markup and How Do You Use It for SEO?</div>
 							<a class="learn-more-link learn-more-link-pipirka text-uppercase text-decoration-none" href="#">
-								<img src="http://maxplaces.name/wp-content/themes/maxcanvas_child/img/pipirka.svg" alt=""> Learn More
+								<img src="<?php echo get_stylesheet_directory_uri();?>/img/pipirka.svg" alt=""> Learn More
 							</a>
 						</div>
 					</div>
@@ -145,14 +145,14 @@
 							<img src="<?=get_stylesheet_directory_uri();?>/img/in-news/sharethis-logo.png" alt="sharethis-logo">
 							<div>How to Market in the Manufacturing Industry</div>
 							<a class="learn-more-link learn-more-link-pipirka text-uppercase text-decoration-none" href="#">
-								<img src="http://maxplaces.name/wp-content/themes/maxcanvas_child/img/pipirka.svg" alt=""> Learn More
+								<img src="<?php echo get_stylesheet_directory_uri();?>/img/pipirka.svg" alt=""> Learn More
 							</a>
 						</div>
 						<div class="back">
 							<img src="<?=get_stylesheet_directory_uri();?>/img/in-news/sharethis-logo.png" alt="sharethis-logo">
 							<div>How to Market in the Manufacturing Industry</div>
 							<a class="learn-more-link learn-more-link-pipirka text-uppercase text-decoration-none" href="#">
-								<img src="http://maxplaces.name/wp-content/themes/maxcanvas_child/img/pipirka.svg" alt=""> Learn More
+								<img src="<?php echo get_stylesheet_directory_uri();?>/img/pipirka.svg" alt=""> Learn More
 							</a>
 						</div>
 					</div>
@@ -161,14 +161,14 @@
 							<img src="<?=get_stylesheet_directory_uri();?>/img/in-news/SMElogo.png" alt="SMElogo">
 							<div>Why You Should Start Investing in Voice-Activated Content</div>
 							<a class="learn-more-link learn-more-link-pipirka text-uppercase text-decoration-none" href="#">
-								<img src="http://maxplaces.name/wp-content/themes/maxcanvas_child/img/pipirka.svg" alt=""> Learn More
+								<img src="<?php echo get_stylesheet_directory_uri();?>/img/pipirka.svg" alt=""> Learn More
 							</a>
 						</div>
 						<div class="back">
 							<img src="<?=get_stylesheet_directory_uri();?>/img/in-news/SMElogo.png" alt="SMElogo">
 							<div>Why You Should Start Investing in Voice-Activated Content</div>
 							<a class="learn-more-link learn-more-link-pipirka text-uppercase text-decoration-none" href="#">
-								<img src="http://maxplaces.name/wp-content/themes/maxcanvas_child/img/pipirka.svg" alt=""> Learn More
+								<img src="<?php echo get_stylesheet_directory_uri();?>/img/pipirka.svg" alt=""> Learn More
 							</a>
 						</div>
 					</div>
@@ -178,14 +178,14 @@
 							<img src="<?=get_stylesheet_directory_uri();?>/img/in-news/useproof-logo.png" alt="useproof-logo">
 							<div>Why You Should Start Investing in Voice-Activated Content</div>
 							<a class="learn-more-link learn-more-link-pipirka text-uppercase text-decoration-none" href="#">
-								<img src="http://maxplaces.name/wp-content/themes/maxcanvas_child/img/pipirka.svg" alt=""> Learn More
+								<img src="<?php echo get_stylesheet_directory_uri();?>/img/pipirka.svg" alt=""> Learn More
 							</a>
 						</div>
 						<div class="back">
 							<img src="<?=get_stylesheet_directory_uri();?>/img/in-news/useproof-logo.png" alt="useproof-logo">
 							<div>Why You Should Start Investing in Voice-Activated Content</div>
 							<a class="learn-more-link learn-more-link-pipirka text-uppercase text-decoration-none" href="#">
-								<img src="http://maxplaces.name/wp-content/themes/maxcanvas_child/img/pipirka.svg" alt=""> Learn More
+								<img src="<?php echo get_stylesheet_directory_uri();?>/img/pipirka.svg" alt=""> Learn More
 							</a>
 						</div>
 					</div>
@@ -204,14 +204,14 @@
 							<img src="<?=get_stylesheet_directory_uri();?>/img/in-news/databox-logo.png" alt="databox-logo">
 							<div>What Is Schema Markup and How Do You Use It for SEO?</div>
 							<a class="learn-more-link learn-more-link-pipirka text-uppercase text-decoration-none" href="#">
-								<img src="http://maxplaces.name/wp-content/themes/maxcanvas_child/img/pipirka.svg" alt=""> Learn More
+								<img src="<?php echo get_stylesheet_directory_uri();?>/img/pipirka.svg" alt=""> Learn More
 							</a>
 						</div>
 						<div class="back">
 							<img src="<?=get_stylesheet_directory_uri();?>/img/in-news/databox-logo.png" alt="databox-logo">
 							<div>What Is Schema Markup and How Do You Use It for SEO?</div>
 							<a class="learn-more-link learn-more-link-pipirka text-uppercase text-decoration-none" href="#">
-								<img src="http://maxplaces.name/wp-content/themes/maxcanvas_child/img/pipirka.svg" alt=""> Learn More
+								<img src="<?php echo get_stylesheet_directory_uri();?>/img/pipirka.svg" alt=""> Learn More
 							</a>
 						</div>
 					</div>
@@ -220,14 +220,14 @@
 							<img src="<?=get_stylesheet_directory_uri();?>/img/in-news/best-company-logo.png" alt="best-company-logo">
 							<div>How to Market in the Manufacturing Industry</div>
 							<a class="learn-more-link learn-more-link-pipirka text-uppercase text-decoration-none" href="#">
-								<img src="http://maxplaces.name/wp-content/themes/maxcanvas_child/img/pipirka.svg" alt=""> Learn More
+								<img src="<?php echo get_stylesheet_directory_uri();?>/img/pipirka.svg" alt=""> Learn More
 							</a>
 						</div>
 						<div class="back">
 							<img src="<?=get_stylesheet_directory_uri();?>/img/in-news/best-company-logo.png" alt="best-company-logo">
 							<div>How to Market in the Manufacturing Industry</div>
 							<a class="learn-more-link learn-more-link-pipirka text-uppercase text-decoration-none" href="#">
-								<img src="http://maxplaces.name/wp-content/themes/maxcanvas_child/img/pipirka.svg" alt=""> Learn More
+								<img src="<?php echo get_stylesheet_directory_uri();?>/img/pipirka.svg" alt=""> Learn More
 							</a>
 						</div>
 					</div>
@@ -236,14 +236,14 @@
 							<img src="<?=get_stylesheet_directory_uri();?>/img/in-news/fitsmallbiz-logo.png" alt="fitsmallbiz-logo">
 							<div>Why You Should Start Investing in Voice-Activated Content</div>
 							<a class="learn-more-link learn-more-link-pipirka text-uppercase text-decoration-none" href="#">
-								<img src="http://maxplaces.name/wp-content/themes/maxcanvas_child/img/pipirka.svg" alt=""> Learn More
+								<img src="<?php echo get_stylesheet_directory_uri();?>/img/pipirka.svg" alt=""> Learn More
 							</a>
 						</div>
 						<div class="back">
 							<img src="<?=get_stylesheet_directory_uri();?>/img/in-news/fitsmallbiz-logo.png" alt="fitsmallbiz-logo">
 							<div>Why You Should Start Investing in Voice-Activated Content</div>
 							<a class="learn-more-link learn-more-link-pipirka text-uppercase text-decoration-none" href="#">
-								<img src="http://maxplaces.name/wp-content/themes/maxcanvas_child/img/pipirka.svg" alt=""> Learn More
+								<img src="<?php echo get_stylesheet_directory_uri();?>/img/pipirka.svg" alt=""> Learn More
 							</a>
 						</div>
 					</div>
@@ -253,14 +253,14 @@
 							<img src="<?=get_stylesheet_directory_uri();?>/img/in-news/forbes-logo.png" alt="forbes-logo">
 							<div>What Is Schema Markup and How Do You Use It for SEO?</div>
 							<a class="learn-more-link learn-more-link-pipirka text-uppercase text-decoration-none" href="#">
-								<img src="http://maxplaces.name/wp-content/themes/maxcanvas_child/img/pipirka.svg" alt=""> Learn More
+								<img src="<?php echo get_stylesheet_directory_uri();?>/img/pipirka.svg" alt=""> Learn More
 							</a>
 						</div>
 						<div class="back">
 							<img src="<?=get_stylesheet_directory_uri();?>/img/in-news/forbes-logo.png" alt="forbes-logo">
 							<div>What Is Schema Markup and How Do You Use It for SEO?</div>
 							<a class="learn-more-link learn-more-link-pipirka text-uppercase text-decoration-none" href="#">
-								<img src="http://maxplaces.name/wp-content/themes/maxcanvas_child/img/pipirka.svg" alt=""> Learn More
+								<img src="<?php echo get_stylesheet_directory_uri();?>/img/pipirka.svg" alt=""> Learn More
 							</a>
 						</div>
 					</div>

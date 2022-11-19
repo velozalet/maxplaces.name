@@ -687,28 +687,38 @@ footer.site-footer {
     position: relative;
     top: -25px;
     width: 75%; }
-.aboutus-page-wrapper .aboutus-why-choose-section .--awc-section-col1 {
-  /*background: linear-gradient(0deg, #F6FAFF, #D3DAE2);*/
+.aboutus-page-wrapper .aboutus-why-choose-section {
+  margin-bottom: 135px; }
+  .aboutus-page-wrapper .aboutus-why-choose-section .--awc-section-col1 {
+    /*background: linear-gradient(0deg, #F6FAFF, #D3DAE2);
+    background: linear-gradient(180deg, rgba(10, 77, 124, 0.24), rgba(237, 248, 255, 0.1) 100%);*/
+    padding-top: 75px;
+    padding-right: 55px; }
+    .aboutus-page-wrapper .aboutus-why-choose-section .--awc-section-col1 p {
+      font-size: 0.94rem;
+      font-weight: 400; }
+  .aboutus-page-wrapper .aboutus-why-choose-section .--awc-section-col2 {
+    padding-top: 55px; }
+    .aboutus-page-wrapper .aboutus-why-choose-section .--awc-section-col2 a {
+      color: #000000; }
+      .aboutus-page-wrapper .aboutus-why-choose-section .--awc-section-col2 a img + div > p:nth-of-type(1) {
+        font-size: 0.94rem;
+        font-weight: 700; }
+      .aboutus-page-wrapper .aboutus-why-choose-section .--awc-section-col2 a img + div > p:nth-of-type(2) {
+        font-size: 0.94rem;
+        font-weight: 400;
+        line-height: 1.3; }
+.aboutus-page-wrapper .a-w-c--bg {
   background: linear-gradient(180deg, rgba(10, 77, 124, 0.24), rgba(237, 248, 255, 0.1) 100%);
-  padding: 75px 55px 0 55px; }
-  .aboutus-page-wrapper .aboutus-why-choose-section .--awc-section-col1 p {
-    font-size: 0.94rem;
-    font-weight: 400; }
-.aboutus-page-wrapper .aboutus-why-choose-section .--awc-section-col2 a {
-  color: #000000; }
-  .aboutus-page-wrapper .aboutus-why-choose-section .--awc-section-col2 a img + div > p:nth-of-type(1) {
-    font-size: 0.94rem;
-    font-weight: 700; }
-  .aboutus-page-wrapper .aboutus-why-choose-section .--awc-section-col2 a img + div > p:nth-of-type(2) {
-    font-size: 0.94rem;
-    font-weight: 400;
-    line-height: 1.3; }
+  height: 475px;
+  position: absolute;
+  width: 44%; }
 
 /*_________________________________________________________________________/#ABOUT US*/
 /*_________________________________________________________________________/#SERVICES*/
 .services-page-wrapper .services-section .--s-section-col1 {
-  background: linear-gradient(180deg, rgba(10, 77, 124, 0.24), rgba(237, 248, 255, 0.1) 100%);
-  padding: 75px 0 0 55px; }
+  /*background:linear-gradient(180deg, rgba(10, 77, 124, 0.24), rgba(237, 248, 255, 0.1) 100%);*/
+  padding-top: 75px; }
   .services-page-wrapper .services-section .--s-section-col1 img {
     width: 1000px; }
 .services-page-wrapper .services-section .--s-section-col2 {
@@ -747,6 +757,11 @@ footer.site-footer {
   background-repeat: no-repeat;
   background-size: initial;
   background-position: 86% 66%; }
+.services-page-wrapper .services-section .a-w-c--bg {
+  background: linear-gradient(180deg, rgba(10, 77, 124, 0.24), rgba(237, 248, 255, 0.1) 100%);
+  height: 775px;
+  position: absolute;
+  width: 43%; }
 .services-page-wrapper .services-section--mobile .--s-section-col1 {
   padding: 40px 15px 45px 15px; }
 .services-page-wrapper .services-section--mobile .ss--mobile-image-bg {
@@ -759,6 +774,11 @@ footer.site-footer {
   top: 75%;
   padding: 25px;
   background: linear-gradient(125.64deg, #FFFFFF 22.53%, rgba(255, 255, 255, 0.68) 68.55%); }
+.services-page-wrapper .services-section--mobile .a-w-c--bg {
+  background: linear-gradient(180deg, rgba(10, 77, 124, 0.24), rgba(237, 248, 255, 0.1) 100%);
+  height: 775px;
+  position: absolute;
+  width: 100%; }
 .services-page-wrapper .getintouch-section-contact-form .getintouch-section-contact-form-container {
   width: 50%; }
   .services-page-wrapper .getintouch-section-contact-form .getintouch-section-contact-form-container .text-center {
@@ -781,7 +801,8 @@ footer.site-footer {
   .single-services-page-wrapper .single-s-content-section h2 {
     font-size: 2.2rem; }
   .single-services-page-wrapper .single-s-content-section p {
-    font-size: 0.94rem; }
+    font-size: 0.94rem;
+    font-weight: 400; }
   .single-services-page-wrapper .single-s-content-section .--single-s-section-row1 {
     /*div:nth-of-type(1){ padding-top:0; }*/ }
     .single-services-page-wrapper .single-s-content-section .--single-s-section-row1 img {
@@ -869,6 +890,9 @@ footer.site-footer {
     /*background: linear-gradient(0deg, white, rgba(255, 255, 255, 0.6));*/
     background: linear-gradient(83deg, #FFFFFF 23.7%, rgba(255, 255, 255, 0.68) 40%);
     padding: 55px 40px 35px 55px; }
+    .cities-served-page-wrapper .cities-served-page-sub-banner .cities-served-page-sub-banner--bg aside p {
+      font-size: 0.94rem;
+      font-weight: 400; }
 .cities-served-page-wrapper .getintouch-section-contact-form .getintouch-section-contact-form-container {
   width: 50%; }
   .cities-served-page-wrapper .getintouch-section-contact-form .getintouch-section-contact-form-container .text-center {
@@ -1087,6 +1111,63 @@ footer.site-footer {
       font-weight: 600; }
 
 /*__________________________________________________________________/#In News Page*/
+/*__________________________________________________________________#Blog Page*/
+.blog-date-gradient {
+  background: -webkit-linear-gradient(0deg, #0A4D7C, #011536);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  font-size: 0.94rem;
+  font-weight: 600; }
+
+.blog-archive-sub-banner--title {
+  font-size: 1.31rem;
+  font-weight: 600;
+  line-height: 1.3; }
+  .blog-archive-sub-banner--title a {
+    text-decoration: none;
+    font-size: 1.31rem;
+    font-weight: 600;
+    line-height: 1.3;
+    color: #000000; }
+    .blog-archive-sub-banner--title a:hover, .blog-archive-sub-banner--title a:active {
+      background: -webkit-linear-gradient(0deg, #0A4D7C, #011536);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block; }
+
+.blog-archive-page-wrapper .blog-archive-sub-banner--bg {
+  min-height: 400px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%; }
+  .blog-archive-page-wrapper .blog-archive-sub-banner--bg > .row {
+    width: 50%; }
+  .blog-archive-page-wrapper .blog-archive-sub-banner--bg aside {
+    /*background: linear-gradient(0deg, white, rgba(255, 255, 255, 0.6));*/
+    background: linear-gradient(83deg, #FFFFFF 23.7%, rgba(255, 255, 255, 0.68) 40%);
+    padding: 35px 15px 35px 35px; }
+    .blog-archive-page-wrapper .blog-archive-sub-banner--bg aside .learn-more-link-pipirka {
+      background: -webkit-linear-gradient(0deg, #0A4D7C, #011536);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block;
+      font-size: 0.94rem;
+      font-weight: 600; }
+    .blog-archive-page-wrapper .blog-archive-sub-banner--bg aside .blog-archive-sub-banner--title {
+      font-size: 1.31rem;
+      font-weight: 600;
+      line-height: 1.3; }
+    .blog-archive-page-wrapper .blog-archive-sub-banner--bg aside p {
+      font-size: 0.94rem;
+      font-weight: 400; }
+.blog-archive-page-wrapper .blog-archive--articles .article .blog-archive--article-bg {
+  min-height: 295px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%; }
+
+/*__________________________________________________________________/#Blog Page*/
 /**
 	MEDIA QUERIES:
 */
@@ -1373,7 +1454,15 @@ footer.site-footer {
   .in-news-page-wrapper .in-news-page--collection .wrapper {
     grid-template-columns: 1fr 1fr; }
 
-  /*__________________________________________________________________/#In News Page*/ }
+  /*__________________________________________________________________/#In News Page*/
+  /*__________________________________________________________________#Blog Page*/
+  .blog-archive-page-wrapper .blog-archive-sub-banner--bg > .row {
+    width: 75%; }
+
+  /*__________________________________________________________________/#Blog Page*/
+  .aboutus-page-wrapper .a-w-c--bg {
+    height: 765px;
+    width: 100%; } }
 @media screen and (max-width: 891px) {
   /*_____________________________________________________#HEADER*/
   nav.navbar ul#desktop_tablet .nav-item.dropdown ul.dropdown-menu .container-desktop_tablet .dropdown-menu-col {
@@ -1694,6 +1783,15 @@ footer.site-footer {
   .aboutus-page-wrapper .aboutus-why-choose-section .--awc-section-col1 {
     padding: 45px 15px 0 15px; }
 
+  .aboutus-page-wrapper .aboutus-why-choose-section .--awc-section-col2 {
+    padding-top: 0; }
+
+  .aboutus-page-wrapper .a-w-c--bg {
+    height: 905px; }
+
+  .aboutus-page-wrapper .aboutus-why-choose-section {
+    margin-bottom: 65px; }
+
   /*_____________________________________________________/#ABOUT US*/
   /*________________________________________________________#SINGLE-SERVICES*/
   .single-services-page-wrapper .single-s-sub-banner {
@@ -1771,7 +1869,25 @@ footer.site-footer {
     .in-news-page-wrapper .in-news--filter-trigger-block .col:nth-of-type(2) .in-news--filter-trigger-item a {
       margin-left: 0 !important; }
 
-  /*__________________________________________________________________/#In News Page*/ }
+  /*__________________________________________________________________/#In News Page*/
+  /*__________________________________________________________________#Blog Page*/
+  .blog-archive-page-wrapper .blog-archive-sub-banner--bg > .row {
+    width: 100%; }
+
+  .blog-archive-page-wrapper .blog-archive-sub-banner--bg aside {
+    position: relative;
+    bottom: -185px;
+    padding: 35px 15px 35px 15px;
+    text-align: center;
+    margin-left: 11px !important; }
+
+  .blog-archive-page-wrapper .blog-archive-sub-banner {
+    margin-bottom: 245px; }
+
+  .blog-archive-page-wrapper .blog-archive-sub-banner .learn-more-link.learn-more-link-pipirka {
+    float: left; }
+
+  /*__________________________________________________________________/#Blog Page*/ }
 @media screen and (max-width: 455px) {
   /*_____________________________________________________#HOME*/
   /*Our Services Slider*/
@@ -1812,7 +1928,12 @@ footer.site-footer {
   .cities-served-page-wrapper .cities-served-page-map {
     max-height: 1111px; }
 
-  /*__________________________________________________________________/#Cities Served Page*/ }
+  /*__________________________________________________________________/#Cities Served Page*/
+  /*_____________________________________________________#ABOUT US*/
+  .aboutus-page-wrapper .a-w-c--bg {
+    height: 1105px; }
+
+  /*_____________________________________________________/#ABOUT US*/ }
 @media screen and (max-width: 379px) {
   /*_______________________________________________________#HOME*/
   /*Home Video*/

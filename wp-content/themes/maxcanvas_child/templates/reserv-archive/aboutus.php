@@ -24,7 +24,6 @@
 	</section>
 
 	<section class="aboutus-why-choose-section mt-5">
-		<div class="a-w-c--bg"></div>
 		<div class="container-lg">
 			<div class="row">
 				<div class="col-lg-5 col-12 mb-lg-0 mb-4 --awc-section-col1">
@@ -111,6 +110,7 @@
 			</div> <!--.row-->
 		</div> <!--.container-lg-->
 	</section>
+	<div class="section-divider-100"></div>
 
 	<?php get_template_part('templates/component/frequently_asked_section');?>
 
