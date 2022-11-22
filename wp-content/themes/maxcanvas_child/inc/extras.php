@@ -30,7 +30,6 @@ function custom_admin_bar_style_frontend() {
     }
 }
 
-/** Add the ability to set class for the <li> elements in the Menu - 'add_li_class' setting is now available */
 add_filter('nav_menu_css_class', 'add_additional_class_on_li', 1, 3);
 function add_additional_class_on_li($classes, $item, $args) {
 	if(isset($args->add_li_class)) {
@@ -38,7 +37,7 @@ function add_additional_class_on_li($classes, $item, $args) {
 	}
 	return $classes;
 }
-/** Add the ability to set class for the <a> elements in the Menu - 'link_class' setting is now available */
+
 add_filter( 'nav_menu_link_attributes', 'add_menu_link_class', 1, 3 );
 function add_menu_link_class( $atts, $item, $args ) {
 	if (property_exists($args, 'link_class')) {
@@ -62,30 +61,15 @@ function add_menu_link_class( $atts, $item, $args ) {
 	}
 */
 
-
-
-
-/** Var dump description
- * @param $data ( var_dump() )
- */
 function dd($data){
 	echo '<pre>', var_dump($data), '</pre>';
 }
 
-/** Get a numbers from string and implode result to new string
- * @param $str
- * @return string
- */
 function get_numerics($str) {
 	preg_match_all('/\d+/', $str, $matches);
 	return implode("",$matches[0]);
 }
 
-/** Сut a string to a specific length
-	@param $string(string) - incoming string
-	@param $length(int) - the length of the string you want to have
-	@return (string) - output string
- */
 function cut_string($string,$length){
 	$string = strip_tags($string);
 	$string = mb_substr($string, 0, $length,'UTF-8');
@@ -96,11 +80,6 @@ function cut_string($string,$length){
 	return $string;
 }
 
-/** Get All Menu from DB
- * @param $menu_slug (str) - slug/identificator for Menu when registering a menu register_nav_menus()
- * @param $order (str) - sorting direction - 'ASC' / 'DESC'
- * @return array
- */
 function get_all_menu($menu_slug, $order = 'ASC'){
 	$menu_name = $menu_slug; //menu slug
 	$locations = get_nav_menu_locations();
@@ -112,14 +91,8 @@ function get_all_menu($menu_slug, $order = 'ASC'){
 	}else{
 		return $menuitems;
 	}
-} //Call: get_all_menu('primary'); / get_all_menu('primary','DESC');
+}
 
-/** Get sub menu items for main menu item
- * @param  $all_menu_arr (arr) - All Menu from get_all_menu() function
- * @param $ID_menuitem (int) - ID menu item for which to needs sub-items
- * @param $order (str) - sorting direction - 'ASC' / 'DESC'
- * @return array
- */
 function get_subitems_for_menuitem($all_menu_arr, $ID_menuitem, $order= 'ASC'){
 	$result = [];
 	foreach( $all_menu_arr as $item_sub_menu ){
@@ -131,25 +104,12 @@ function get_subitems_for_menuitem($all_menu_arr, $ID_menuitem, $order= 'ASC'){
 	}else{
 		return $result;
 	}
-} //Call: get_subitems_for_menuitem($menuitems, 55); / get_subitems_for_menuitem($menuitems, 55, 'DESC');
+}
 
-/** Get embed link to YouTube video from original link YouTube video
- * @param $original_youtube_link (str)
- * @return str
- */
 function get_embed_link_youtube($original_youtube_link){
 	return str_replace("watch?v=","embed/", $original_youtube_link);
 }
 
-/** Get needs posts
- * @param $post_type(str) - slug of custom Post Type or simple posts
- * @param $numberposts(int) - number of posts shown
- * @param $category(int) - Category ID to get posts from
- * @param $category_name(str) - Show posts only from this category (the name or alternative name (slug) of the category is indicated)
- * @param $orderby(str) - Sort by: author/date/ID/rand/title/type....
- * @param $order(str) - Sort direction: 'ASC' - from smallest to largest; 'DESC' - from largest to smallest
- * @return array
- */
 function get_needs_posts($post_type, $numberposts, $category, $category_name, $orderby, $order){
 	$posts = get_posts( array(
 		'numberposts' => $numberposts,
@@ -165,19 +125,8 @@ function get_needs_posts($post_type, $numberposts, $category, $category_name, $o
 		'suppress_filters' => false,
 	) );
 	return $posts;
-} //Call: get_needs_posts('shows', -1, 0, '', 'date', 'DESC') / get_needs_posts('shows', -1, 0, '', 'date', 'ASC') / get_needs_posts('cases', 2, 0, '', 'date', 'DESC')
+}
 
-
-/** Get All posts for pagination
- * @param $post_type(str) - slug of custom Post Type or simple posts
- * @param $posts_per_page(int) - how many posts will be displayed on 1 page
- * @param $post_status(str) - status of Post( publish/privat... )
- * @param $category(int) - Category ID to get posts from
- * @param $category_name(str) - Show posts only from this category (the name or alternative name (slug) of the category is indicated)
- * @param $orderby(str) - Sort by: author/date/ID/rand/title/type....
- * @param $order(str) - Sort direction: 'ASC' - from smallest to largest; 'DESC' - from largest to smallest
- * @return array
- */
 function get_posts_for_pagination($post_type, $posts_per_page, $post_status, $category, $category_name, $orderby, $order){
 	$posts = get_posts( array(
 		'post_status' => $post_status,
@@ -193,16 +142,7 @@ function get_posts_for_pagination($post_type, $posts_per_page, $post_status, $ca
 	return $posts;
 } //Call: get_posts_for_pagination('post', 1, 'publish', 0, '', 'date', 'ASC') | get_posts_for_pagination('post', 1, 'publish', 0, '', 'date', 'DESC')
 
-
-/** Custom pagination for simple posts received via the method `get_posts()`
- * @param $posts_per_page(int) - how many posts will be displayed on 1 page
- * @param $post_type(str) - slug of custom Post Type or simple posts
- * @param $post_status(str) - status of Post( publish/privat... )
- * @param $orderby(str) - Sort by: author/date/ID/rand/title/type....
- * @param $order(str) - Sort direction: 'ASC' - from smallest to largest; 'DESC' - from largest to smallest
- * @param $page_pagination_part(str) - part of the URL that will participate in the formation of the URL pagination pages: /blog/ or /news/  --> DOMAIN/news/page/2/ | DOMAIN/news/page/3/ .. etc..
- */
-function posts_navigation($posts_per_page, $post_type, $post_status, $orderby, $order, $page_pagination_part) {
+function posts_navigation_simple($posts_per_page, $post_type, $post_status, $category, $category_name, $orderby, $order, $page_pagination_part){
 	echo '<ul class="pagination"> <!-- pagination-lg or pagination-sm -->';
 
 	//echo '<pre>';var_dump( count($all_posts) );echo '</pre>';
@@ -211,9 +151,11 @@ function posts_navigation($posts_per_page, $post_type, $post_status, $orderby, $
 		array(
 			'post_type' => $post_type,
 			'post_status' => $post_status,
+			'category'    => $category,
+			'category_name' => $category_name,
 			'orderby' => $orderby,
 			'order' => $order,
-			'posts_per_page' => -1
+			'posts_per_page' => $posts_per_page,
 		)
 	);
 	$all_posts_cnt = count($all_posts_for_count); //13 - total number of posts
@@ -273,4 +215,69 @@ function posts_navigation($posts_per_page, $post_type, $post_status, $orderby, $
 		);
 	endif;
 	echo '</ul>';
-} //Call: posts_navigation(1, 'post', 'publish', 'date', 'ASC', '/blog/') | posts_navigation(1, 'post', 'publish', 'date', 'DESC', '/news/')
+}
+
+function posts_navigation($posts_per_page, $post_type, $post_status, $category, $category_name, $orderby, $order){
+	$args =  array(
+		'post_type' => $post_type,
+		'post_status' => $post_status,
+		'category'    => $category,
+		'category_name' => $category_name,
+		'orderby' => $orderby,
+		'order' => $order,
+		'posts_per_page' => $posts_per_page,
+		'paged' => ( get_query_var('paged') ? get_query_var('paged') : 1 ),
+	);
+	$query = new WP_Query($args);
+	$max_num_pages = $query->max_num_pages;
+
+	/**Stop execution if there's only 1 page*/
+	if( $max_num_pages <= 1 ){ return; }
+	$paged = get_query_var( 'paged' ) ? absint( get_query_var( 'paged' ) ) : 1;
+	/** Add current page to the array */
+	if ( $paged >= 1 ){ $links[] = $paged; }
+	/**Add the pages around the current page to the array*/
+	if( $paged >= 3 ){
+		$links[] = $paged - 1;
+		$links[] = $paged - 2;
+	}
+	if( ( $paged + 2 ) <= $max_num_pages ) {
+		$links[] = $paged + 2;
+		$links[] = $paged + 1;
+	}
+
+	/*(!) printf() - outputs a formatted string:
+		%s -string;
+		%d -signed decimal number (negative,zero or positive);  %u -unsigned decimal number (equal to or greather than zero)
+		%f -floating-point number (local settings aware);  %F -floating-point number (not local settings aware)
+	*/
+	echo '<ul class="pagination"> <!-- pagination-lg or pagination-sm -->' . "\n";
+	/**Previous Post Link*/
+	if( get_previous_posts_link('Prev', $max_num_pages) ){ printf( '<li class="me-3">%s</li>' . "\n", get_previous_posts_link('<i class="fa fa-angle-left"></i>', $max_num_pages) ); }
+
+	/**Link to first page, plus ellipses if necessary*/
+	if ( !in_array( 1, $links ) ) {
+		$class = 1 == $paged ? ' class="active++"' : '';
+		printf( '<li class="page-item" %s><a class="page-link" href="%s">0%s</a></li>' . "\n", $class, esc_url( get_pagenum_link(1 ) ), '1' );
+		if ( ! in_array( 2, $links ) )
+			echo '<li style="margin:0 5px; font-size:1.2rem;">...</li>';
+	}
+
+	/**Link to current page, plus 2 pages in either direction if necessary*/
+	sort( $links );
+	foreach ( (array) $links as $link ) {
+		$class = $paged == $link ? ' class="page-item active"' : '';
+		printf( '<li %s><a class="page-link" href="%s">0%s</a></li>' . "\n", $class, esc_url( get_pagenum_link($link) ), $link );
+	}
+	/**Link to last page, plus ellipses if necessary*/
+	if ( ! in_array( $max_num_pages, $links ) ) {
+		if ( ! in_array( $max_num_pages - 1, $links ) )
+			echo '<li style="margin:0 5px; font-size:1.2rem;">...</li>' . "\n";
+		$class = $paged == $max_num_pages ? ' class="active"' : '';
+		printf( '<li class="page-item" %s><a class="page-link" href="%s">0%s</a></li>' . "\n", $class, esc_url( get_pagenum_link($max_num_pages) ), $max_num_pages );
+	}
+
+	/** Next Post Link */
+	if( get_next_posts_link('Next', $max_num_pages) ){ printf( '<li class="ms-3">%s</li>' . "\n", get_next_posts_link('<i class="fa fa-angle-right"></i>', $max_num_pages) ); }
+	echo '</ul>' . "\n";
+}

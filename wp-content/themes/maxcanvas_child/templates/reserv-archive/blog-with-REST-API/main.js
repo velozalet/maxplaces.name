@@ -415,41 +415,92 @@ document.addEventListener( 'DOMContentLoaded', function () { //console.log('init
 	/*_________________________________________________________________#Blog*/
 	const blogArchivePageWrapperDOM = document.querySelector('.blog-archive-page-wrapper');
 	if(blogArchivePageWrapperDOM){
-		let postsWithPagination =  document.querySelector('#postArticlesWithPagination'),
-			postsForSearch =  document.querySelector('#allPostArticlesForSearch'),
-			asideNotice =  postsForSearch.querySelector('aside'),
-			blogPagination =  document.querySelector('#blog_pagination'),
-			sortBySelect = document.querySelector('#sortBySelect'),
-			sortBySelectForm = document.querySelector('#sortBySelectForm');
-			document.querySelector('#postsSearchForm').addEventListener("submit", function(event){ event.preventDefault();	}, true);
 
-		/*Blog Articles(Posts) Searching*/
-		let postsSearchArticlesCollections = document.querySelectorAll('.blog-archive--articles #allPostArticlesForSearch> .article');
-		let searchPostArticleInput = blogArchivePageWrapperDOM.querySelector('#searchPostArticle');
+		/*Query to REST-API get all posts*/
+		const loadPostsContainer = document.querySelector('.blog-archive--articles .row');
+		const postArticleData = [];
+		let postArticleObj = {
+			id: null,
+			date: null,
+			slug: null,
+			status: null,
+			link: null,
+			titleRendered: null,
+			contentRendered: null,
+			excerptRendered: null,
+			featuredMedia: null,
+			featuredMediaSourceUrl: null
+		};
+
+		let getAllPosts = async(method, url) => { //В случае с GET-методом, можем его в fetch() вообще не указывать
+			let response = await fetch(url, {method: method}); //завершается с заголовками ответа  //OR: await fetch(url);
+			if(response.ok){ //проверяем статус ответа, через специальное поле `ok` на Объекте Response, если тут true,то данные получены
+				return await response.json();
+			}else{ console.error('Error no: ' + response.status); }
+		};
+
+		getAllPosts('GET', `${globalData.siteURL}/wp-json/wp/v2/posts?order=asc`).then( //myTestCustomData данные из PHP(`wp_localize_script()` by `functions.php`)
+			(data) => {
+				//return console.log(data);
+				data.forEach(
+					(item) => {
+						postArticleObj = {
+							id: item.id,
+							date: item.date,
+							slug: item.slug,
+							status: item.status,
+							link: item.link,
+							titleRendered: item.title.rendered,
+							contentRendered: item.content.rendered,
+							excerptRendered: item.excerpt.rendered,
+							featuredMedia: item.featured_media,
+							featuredMediaSourceUrl: item.fimg_url
+						};	postArticleData.push(postArticleObj);
+
+						loadPostsContainer.insertAdjacentHTML('beforeEnd', `
+						<div class="col-6 mb-3 article" data-postId="${postArticleObj.id}">
+							<a href="${postArticleObj.link}">
+								<div class="blog-archive--article-bg" style="background-image:url(${postArticleObj.featuredMediaSourceUrl});"></div>
+							</a>
+							<div class="blog-date-gradient text-uppercase mt-2 mb-2">${postArticleObj.date}</div>
+							<div class="blog-archive-sub-banner--title text-capitalize mb-3">
+								<a href="${postArticleObj.link}">${postArticleObj.titleRendered}</a>
+							</div>
+						</div>
+						`);
+					}
+				); //loadPostsContainer.textContent = data[0].link; loadPostsContainer.textContent = data[1].link;
+			}//OR: (data) => console.log(data)
+		).catch(
+			(error) => {
+				return console.error(error);
+			}//OR: (error) => console.error(error)
+		).finally(
+			() => {
+				return console.log('DONE');
+			}//OR: () => console.log('DONE')
+		); //console.log(postArticleData);
+		/*__/Query to REST-API get all posts*/
+
+
+		//let postArticlesCollections = document.querySelectorAll('.blog-archive--articles .row > .article'); console.log(postArticlesCollections);
+		//let searchPostArticleInput = blogArchivePageWrapperDOM.querySelector('#searchPostArticle'); console.log(searchPostArticleInput);
+		/*
 		function filterPosts(collection, elementSelectorContent){
 			return function(event) {
-				let inputValue = event.currentTarget.value.toUpperCase();
-				for( let i=0; i < collection.length; i++ ){
-					let title = collection[i].querySelectorAll(elementSelectorContent)[0];
-					if( title.innerHTML.toUpperCase().indexOf(inputValue) > -1 ){ collection[i].style.display = "block"; collection[i].classList.remove('--hd');}
-					else { collection[i].style.display = "none"; collection[i].classList.add('--hd'); }
-				}
+				let inputValue = event.currentTarget.value.toUpperCase(); //console.log(inputValue);
+				for( i=0; i < collection.length; i++ ){
+					//let summary = collection[i].querySelectorAll('.summary')[0]; //console.log(summary.innerHTML);
+					let title = collection[i].querySelectorAll('.filter-card__title')[0]; //console.log(summary.innerHTML);
 
-				if( inputValue.length !== 0 ){
-					postsWithPagination.classList.add('d-none'); blogPagination.classList.add('d-none'); postsForSearch.classList.remove('d-none'); sortBySelect.setAttribute('disabled','true');
-				}else{
-					postsWithPagination.classList.remove('d-none'); blogPagination.classList.remove('d-none'); postsForSearch.classList.add('d-none'); sortBySelect.removeAttribute('disabled');
+					//if( summary.innerHTML.toUpperCase().indexOf(inputValue) > -1 ){ collection[i].style.display = "block"; }
+					if( title.innerHTML.toUpperCase().indexOf(inputValue) > -1 ){ collection[i].style.display = "block"; }
+					else { collection[i].style.display = "none"; }
 				}
-
-				let hdClassCnt = 0;
-				for( let it of collection ){ if( it.classList.contains('--hd') ){ hdClassCnt++; } }
-				if( hdClassCnt === collection.length ){ asideNotice.classList.remove('d-none');	}else{ asideNotice.classList.add('d-none'); }
 			}
 		}
-		searchPostArticleInput.addEventListener( "input", filterPosts(postsSearchArticlesCollections, '.--posts-title-link') );
-		/*Blog Articles(Posts) Searching*/
+		*/
 
-		if(sortBySelectForm){ sortBySelect.onchange = function(event){ sortBySelectForm.submit(); } }
 	}
 	/*________________________________________________________________/#Blog*/
 
