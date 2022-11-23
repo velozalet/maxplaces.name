@@ -413,7 +413,7 @@ document.addEventListener( 'DOMContentLoaded', function () { //console.log('init
 	/*__________________________________________________________________/#In The News Page*/
 
 	/*_________________________________________________________________#Blog*/
-	const blogArchivePageWrapperDOM = document.querySelector('.blog-archive-page-wrapper');
+	const blogArchivePageWrapperDOM = document.querySelector('.blog-archive-page-wrapper.blog-list');
 	if(blogArchivePageWrapperDOM){
 		let postsWithPagination =  document.querySelector('#postArticlesWithPagination'),
 			postsForSearch =  document.querySelector('#allPostArticlesForSearch'),

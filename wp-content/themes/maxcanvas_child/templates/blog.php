@@ -12,7 +12,7 @@ if($_POST){ if( $_POST["sort_by_select"] ){ $sort_by_select = $_POST["sort_by_se
 if(!$sort_by_select){ $sort_by_select = ''; }
 //dd($sort_by_select);
 ?>
-<div class="blog-archive-page-wrapper">
+<div class="blog-archive-page-wrapper blog-list">
 	<?php get_template_part('templates/component/header_page_title_section');?>
 
 	<section class="blog-archive-sub-banner mt-5">

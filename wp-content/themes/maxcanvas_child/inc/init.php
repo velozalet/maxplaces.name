@@ -6,6 +6,11 @@
 define('THEME_URL', get_bloginfo('stylesheet_directory'));
 define('THEME_PATH', get_stylesheet_directory());
 
+/** Add `excerpt` for Posts & Pages*/
+add_post_type_support( 'page', 'excerpt' );
+add_post_type_support( 'post', 'excerpt' );
+/**__/Add `excerpt` for Posts & Pages*/
+
 /** Add featured image for Posts to REST API*/
 function register_rest_images(){
 	register_rest_field( array('post'),
@@ -25,6 +30,7 @@ function get_rest_featured_image( $object, $field_name, $request ) {
 	return false;
 }
 /**__/Add featured image for Posts to REST API*/
+
 
 /** ADD CPT "services" and taxonomy for them */
 	function services_cpt() {

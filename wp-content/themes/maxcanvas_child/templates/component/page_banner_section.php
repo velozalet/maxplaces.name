@@ -1,6 +1,5 @@
 <?php
 $get_queried_object = get_queried_object();
-
 ?>
 <section class="page-banner-section mt-3 mb-5">
 	<div class="container-lg">
