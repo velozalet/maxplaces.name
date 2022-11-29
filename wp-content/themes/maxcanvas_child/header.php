@@ -23,7 +23,7 @@
 
 <body <?php body_class(); ?>>
 <?php
-$get_queried_object = get_queried_object(); //dd($get_queried_object->post_name);
+$get_queried_object = get_queried_object(); if(!$get_queried_object){ $get_queried_object = (object) array('post_name' => 'undefined'); } //dd($get_queried_object->post_name);
 $address_1 = get_field('address_-1','options');
 $address_2 = get_field('address_-2','options');
 ?>

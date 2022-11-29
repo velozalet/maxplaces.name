@@ -420,7 +420,8 @@ document.addEventListener( 'DOMContentLoaded', function () { //console.log('init
 			asideNotice =  postsForSearch.querySelector('aside'),
 			blogPagination =  document.querySelector('#blog_pagination'),
 			sortBySelect = document.querySelector('#sortBySelect'),
-			sortBySelectForm = document.querySelector('#sortBySelectForm');
+			sortBySelectForm = document.querySelector('#sortBySelectForm'),
+			choiceListDropdown = document.querySelector('.choices__list--dropdown'); console.log(choiceListDropdown);
 			document.querySelector('#postsSearchForm').addEventListener("submit", function(event){ event.preventDefault();	}, true);
 
 		/*Blog Articles(Posts) Searching*/
@@ -436,9 +437,19 @@ document.addEventListener( 'DOMContentLoaded', function () { //console.log('init
 				}
 
 				if( inputValue.length !== 0 ){
-					postsWithPagination.classList.add('d-none'); blogPagination.classList.add('d-none'); postsForSearch.classList.remove('d-none'); sortBySelect.setAttribute('disabled','true');
+					postsWithPagination.classList.add('d-none');
+					blogPagination.classList.add('d-none');
+					postsForSearch.classList.remove('d-none');
+					sortBySelect.setAttribute('disabled','true');
+					sortBySelect.parentElement.parentElement.classList.add('is-disabled');
+					//choiceListDropdown.classList.add('d-none');
 				}else{
-					postsWithPagination.classList.remove('d-none'); blogPagination.classList.remove('d-none'); postsForSearch.classList.add('d-none'); sortBySelect.removeAttribute('disabled');
+					postsWithPagination.classList.remove('d-none');
+					blogPagination.classList.remove('d-none');
+					postsForSearch.classList.add('d-none');
+					sortBySelect.removeAttribute('disabled');
+					sortBySelect.parentElement.parentElement.classList.remove('is-disabled');
+					//choiceListDropdown.classList.remove('d-none');
 				}
 
 				let hdClassCnt = 0;
@@ -450,9 +461,9 @@ document.addEventListener( 'DOMContentLoaded', function () { //console.log('init
 		/*Blog Articles(Posts) Searching*/
 
 		if(sortBySelectForm){ sortBySelect.onchange = function(event){ sortBySelectForm.submit(); } }
+		const sortBySelectChoices = new Choices(sortBySelect);
 	}
 	/*________________________________________________________________/#Blog*/
 
 });
-
 new WOW().init(); //initial the WOW animation library

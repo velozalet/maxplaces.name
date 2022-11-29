@@ -6,11 +6,11 @@ $socialLinks = get_field('social_links','options');
 	<div class="container-lg">
 		<div class="row align-items-center">
 			<div class="col-md-9 col-12">
-				<h1 class="header-page-title"  data-itemid="<?php echo $get_queried_object->ID;?>" data-itemobject="<?php echo $get_queried_object->post_type;?>" >
-					<?php echo $get_queried_object->post_title;?> <!--wow--animate wow fadeInUp | data-wow-delay="1s" style="visibility:hidden;"-->
+				<h1 class="header-page-title wow fadeInUp" data-itemid="<?php echo $get_queried_object->ID;?>" data-itemobject="<?php echo $get_queried_object->post_type;?>" data-wow-delay="1s" style="visibility:hidden;">
+					<?php echo $get_queried_object->post_title;?>
 				</h1>
 			</div>
-			<div class="col text-end d-md-block d-none"> <!--wow--animate wow fadeInRigh | data-wow-delay="1s" style="visibility:hidden;"-->
+			<div class="col text-end d-md-block d-none wow fadeInRight" data-wow-delay="1s" style="visibility:hidden;">
 				<a href="<?php echo $socialLinks['facebook'];?>" class="text-decoration-none me-2" target="_blank">
 					<img src="<?php echo get_stylesheet_directory_uri();?>/img/social-icons/facebook-header-mobile-social-icon.png" alt="<?php echo get_bloginfo('name');?>">
 				</a>

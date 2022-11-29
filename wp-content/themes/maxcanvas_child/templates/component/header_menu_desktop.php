@@ -74,7 +74,7 @@ for( $i=0; $i < $services_dropdown_list_cnt; $i++ ){
 }
 
 ?>
-<ul id="desktop_tablet" class="navbar-nav mb-2 mb-lg-0 mx-md-0 mx-3 d-md-flex d-none">
+<ul id="desktop_tablet" class="navbar-nav mb-2 mb-lg-0 mx-md-0 mx-3 d-md-flex d-none <?php echo (is_404()) ? 'invisible' : '';?>">
 	<?php for( $i=0; $i < $menuitems_count; $i++ ):?>
 		<?php if( $menuitems[$i]->menu_item_parent == '0' && $menuitems[$i]->post_status == 'publish' ):?>
 
