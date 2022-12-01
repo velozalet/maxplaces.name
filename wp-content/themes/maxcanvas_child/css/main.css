@@ -1458,6 +1458,11 @@ footer.site-footer {
     background-position: 50% 50%; }
 
 /*_________________________________________________________/#Contact Us Page*/
+/*_________________________________________________________#Case Study*/
+.case-study-page-wrapper .case-study-sub-banner--bg {
+  min-height: 510px; }
+
+/*_________________________________________________________/#Case Study*/
 /**
 	MEDIA QUERIES:
 */

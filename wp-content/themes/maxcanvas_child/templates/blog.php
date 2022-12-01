@@ -33,7 +33,7 @@ if(!$sort_by_select){ $sort_by_select = ''; }
 					</div>
 				</div>
 			</div>
-		</div> <!--/.container-lg-->
+		</div> <!--/.container-xl-->
 	</section>
 
 	<section class="blog-archive--function-panel mt-5 mb-md-5 mb-4">

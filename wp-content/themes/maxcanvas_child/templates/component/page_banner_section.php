@@ -1,25 +1,21 @@
 <?php
 $get_queried_object = get_queried_object();
 ?>
-<section class="page-banner-section mt-3 mb-5">
+<section class="cities-served-page-sub-banner mt-5">
 	<div class="container-lg">
-		<div class="page-banner-bg" style="background-image: url(https://www.naecsol.com/wp-content/uploads/2022/10/1054349846_News_Banner.jpg);"></div>
-
-		<div class="row position-relative">
-			<div class="page-banner-content-wrapper col-xxl-6 col-xl-6 col-lg-7 col-md-8 col-12">
-				<div class="page-banner-content">
-					<div class="sup-title text-uppercase mb-3">who we are</div>
-					<h2>A Full-Service Digital Marketing Agency</h2>
-					<p class="mt-3">
-						<strong>MAXPlaces Marketing, LLC is dedicated to providing search engine optimization services of the highest quality to our clients.</strong> From Organic SEO to Social Media to Pay-Per-Click Advertising, we’ve got you covered so you can concentrate on being more productive and growing your own business...
-					</p>
-
-					<a class="learn-more-link learn-more-link-pipirka text-uppercase text-decoration-none" href="#" >
-						<img src="<?php echo get_stylesheet_directory_uri();?>/img/pipirka.svg" alt=""> Learn More
-					</a>
+		<div class="cities-served-page-sub-banner--bg d-flex" style="background-image: url(<?php echo get_stylesheet_directory_uri();?>/img/istockphoto-1286815179-2048x2048-4.jpg);">
+			<div class="row align-self-end">
+				<div class="col pe-0">
+					<aside class="">
+						<div class="sup-title text-uppercase mb-3"><?php echo $get_queried_object->post_title;?></div>
+						<h2><?php echo $get_queried_object->post_title;?></h2>
+						<p class="mt-3">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						</p>
+						<a class="text-center button button--blue-gradient" href="#" target="_self">Optional BTN</a>
+					</aside>
 				</div>
 			</div>
 		</div>
-
-	</div>
+	</div> <!--/.container-lg-->
 </section>

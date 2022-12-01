@@ -8,7 +8,7 @@
 <?php get_header();?>
 <div class="aboutus-page-wrapper">
 	<?php get_template_part('templates/component/header_page_title_section');?>
-	<?php get_template_part('templates/component/page_banner_section');?>
+	<?php get_template_part('templates/component/page_aboutus_banner_section');?>
 
 	<section class="aboutus-single-cst-section">
 		<div class="container-lg">
