@@ -1396,10 +1396,68 @@ footer.site-footer {
   position: absolute;
   width: 44%; }
 .request-quote-page-wrapper .request-quote--section1 .--awc-section-col1 {
-  padding-top: 75px;
+  padding-top: 135px;
   padding-right: 55px; }
+.request-quote-page-wrapper .request-quote--section1 .-awc-section-col2 ps-lg-5 {
+  padding-top: 30px; }
+.request-quote-page-wrapper .request-quote--services-include .request-quote--services-include--bg {
+  min-height: 550px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%; }
+  .request-quote-page-wrapper .request-quote--services-include .request-quote--services-include--bg > .row {
+    width: 60%; }
+  .request-quote-page-wrapper .request-quote--services-include .request-quote--services-include--bg aside {
+    background: linear-gradient(83deg, #FFFFFF 23.7%, rgba(255, 255, 255, 0.68) 40%);
+    padding: 45px 45px 45px 45px; }
+    .request-quote-page-wrapper .request-quote--services-include .request-quote--services-include--bg aside .services-include--title {
+      font-weight: 700;
+      font-size: 2.19rem;
+      line-height: 1; }
+    .request-quote-page-wrapper .request-quote--services-include .request-quote--services-include--bg aside ul {
+      list-style-image: url(/wp-content/themes/maxcanvas_child/img/marker_for_list.svg); }
+      .request-quote-page-wrapper .request-quote--services-include .request-quote--services-include--bg aside ul li {
+        margin-bottom: 5px; }
+        .request-quote-page-wrapper .request-quote--services-include .request-quote--services-include--bg aside ul li span, .request-quote-page-wrapper .request-quote--services-include .request-quote--services-include--bg aside ul li a {
+          text-decoration: none;
+          color: #000000;
+          position: relative;
+          top: 4px; }
 
 /*___________________________________________________________/#Request Quote Page*/
+/*_________________________________________________________#Contact Us Page*/
+.contactus-page-wrapper {
+  background-image: url(/wp-content/themes/maxcanvas_child/img/___478.svg);
+  background-repeat: no-repeat;
+  background-size: 30%;
+  background-position: 115% 36%; }
+  .contactus-page-wrapper .contactus--section1 .contactus-section-contact-form {
+    padding-top: 65px; }
+  .contactus-page-wrapper .contactus--office-locations .contactus--office-locations--bg {
+    background: linear-gradient(180deg, rgba(10, 77, 124, 0.24), rgba(237, 248, 255, 0.1) 100%);
+    padding-top: 75px;
+    padding-bottom: 75px; }
+  .contactus-page-wrapper .contactus--office-locations .office-locations--address {
+    list-style-type: none; }
+    .contactus-page-wrapper .contactus--office-locations .office-locations--address li:nth-of-type(1) {
+      font-size: 1.56rem;
+      font-weight: 700; }
+    .contactus-page-wrapper .contactus--office-locations .office-locations--address li {
+      margin-bottom: 15px;
+      line-height: 1.1; }
+      .contactus-page-wrapper .contactus--office-locations .office-locations--address li a {
+        background: -webkit-linear-gradient(0deg, #0A4D7C, #011536);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        display: inline-block;
+        text-decoration: none; }
+  .contactus-page-wrapper .contactus--office-locations .col-image--bg {
+    min-height: 420px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%; }
+
+/*_________________________________________________________/#Contact Us Page*/
 /**
 	MEDIA QUERIES:
 */
@@ -1590,7 +1648,13 @@ footer.site-footer {
   .single-article-page-wrapper {
     background-position: 150% 11%; }
 
-  /*___________________________________________________________/#Single Article Page*/ }
+  /*___________________________________________________________/#Single Article Page*/
+  /*_________________________________________________________#Contact Us Page*/
+  .contactus-page-wrapper {
+    background-size: 37%;
+    background-position: 115% 35%; }
+
+  /*_________________________________________________________/#Contact Us Page*/ }
 @media screen and (max-width: 991px) {
   /*from 991px till 768px (Class prefix .col-md-)*/
   #breakpoint_check {
@@ -1727,6 +1791,33 @@ footer.site-footer {
     background-position: 150% 11%; }
 
   /*___________________________________________________________/#Single Article Page*/
+  /*_________________________________________________________#Request Quote Page*/
+  .request-quote-page-wrapper .a-w-c--bg {
+    width: 100%; }
+
+  .request-quote-page-wrapper .request-quote--section1 .--awc-section-col1 {
+    padding-top: 45px;
+    padding-right: 10px; }
+
+  .request-quote-page-wrapper .request-quote--section1 + div.section-divider-100 {
+    display: none; }
+
+  .request-quote-page-wrapper .request-quote--services-include .request-quote--services-include--bg > .row {
+    width: 85%; }
+
+  /*_________________________________________________________/#Request Quote Page*/
+  /*_________________________________________________________#Contact Us Page*/
+  .contactus-page-wrapper .contactus--section1 .contactus-section-contact-form {
+    padding-top: 0; }
+
+  .contactus-page-wrapper .contactus--office-locations .office-locations--address li,
+  .contactus-page-wrapper .contactus--office-locations .office-locations--address li a {
+    font-size: 0.94rem; }
+
+  .contactus-page-wrapper .contactus--office-locations .office-locations--address li:nth-of-type(1) {
+    font-size: 1.25rem; }
+
+  /*_________________________________________________________/#Contact Us Page*/
   .aboutus-page-wrapper .a-w-c--bg {
     height: 765px;
     width: 100%; } }
@@ -1736,9 +1827,7 @@ footer.site-footer {
     height: auto;
     display: block; }
 
-  /*_______________________________________________________/#HEADER*/
-  /*_____________________________________________________#HOME*/
-  /*_______________________________________________________/#HOME*/ }
+  /*_______________________________________________________/#HEADER*/ }
 @media screen and (max-width: 767px) {
   /*from 767px till 576px (Class prefix .col-sm-)*/
   #breakpoint_check {
@@ -1991,8 +2080,6 @@ footer.site-footer {
     padding: 20px 15px; }
 
   /*__________________________________________________________________/#In News Page*/
-  /*__________________________________________________________________#Blog Page*/
-  /*__________________________________________________________________/#Blog Page*/
   /*__________________________________________________________________#404 Page*/
   .page-404-wrapper .section-divider-100 {
     display: none; }
@@ -2009,7 +2096,30 @@ footer.site-footer {
   .single-article-page-wrapper .single-article--post-content h1, .single-article-page-wrapper .single-article--post-content h2, .single-article-page-wrapper .single-article--post-content h3, .single-article-page-wrapper .single-article--post-content h4, .single-article-page-wrapper .single-article--post-content h5, .single-article-page-wrapper .single-article--post-content h6 {
     font-size: 1.62rem; }
 
-  /*___________________________________________________________/#Single Article Page*/ }
+  /*___________________________________________________________/#Single Article Page*/
+  /*_________________________________________________________#Request Quote Page*/
+  .request-quote-page-wrapper .request-quote--services-include .request-quote--services-include--bg > .row {
+    width: 100%; }
+
+  .request-quote-page-wrapper .request-quote--services-include .request-quote--services-include--bg aside {
+    padding: 35px 15px 15px 20px; }
+
+  .request-quote-page-wrapper .request-quote--services-include .request-quote--services-include--bg {
+    min-height: 0;
+    padding-top: 20px;
+    padding-bottom: 20px; }
+
+  .request-quote-page-wrapper .request-quote--services-include .request-quote--services-include--bg aside ul li span,
+  .request-quote-page-wrapper .request-quote--services-include .request-quote--services-include--bg aside ul li a {
+    font-size: 0.87rem; }
+
+  /*_________________________________________________________/#Request Quote Page*/
+  /*_________________________________________________________#Contact Us Page*/
+  .contactus-page-wrapper {
+    background-size: 37%;
+    background-position: 114% 61%; }
+
+  /*_________________________________________________________/#Contact Us Page*/ }
 @media screen and (max-width: 575px) {
   /*from 575px and less (Class prefix .col-)*/
   #breakpoint_check {
@@ -2198,7 +2308,16 @@ footer.site-footer {
   .single-article-page-wrapper .blog-archive-sub-banner.--single-article {
     margin-bottom: 185px; }
 
-  /*___________________________________________________________/#Single Article Page*/ }
+  /*___________________________________________________________/#Single Article Page*/
+  /*_________________________________________________________#Contact Us Page*/
+  .contactus-page-wrapper .contactus--office-locations .contactus--office-locations--bg {
+    padding-top: 45px;
+    padding-bottom: 25px; }
+
+  .contactus-page-wrapper .contactus--office-locations .col-image--bg {
+    min-height: 225px; }
+
+  /*_________________________________________________________/#Contact Us Page*/ }
 @media screen and (max-width: 455px) {
   /*_____________________________________________________#HOME*/
   /*Our Services Slider*/
@@ -2252,7 +2371,13 @@ footer.site-footer {
   .single-article-page-wrapper .single-article--info-post ul {
     text-align: left; }
 
-  /*___________________________________________________________/#Single Article Page*/ }
+  /*___________________________________________________________/#Single Article Page*/
+  /*_________________________________________________________#Contact Us Page*/
+  .contactus-page-wrapper {
+    background-size: 47%;
+    background-position: 114% 59%; }
+
+  /*_________________________________________________________/#Contact Us Page*/ }
 @media screen and (max-width: 379px) {
   /*_______________________________________________________#HOME*/
   /*Home Video*/

@@ -1,22 +1,27 @@
 <?php
 /**
- * Template Name: Request Quote
+ * Template Name: Contact
  *
  * @package maxcanvas
  */
 ?>
 <?php get_header();?>
-<div class="request-quote-page-wrapper">
+<?php
+$address_1 = get_field('address_-1','options');
+$address_2 = get_field('address_-2','options');
+$socialLinks = get_field('social_links','options');
+?>
+<div class="request-quote-page-wrapper contactus-page-wrapper">
 	<?php get_template_part('templates/component/header_page_title_section');?>
 
-	<section class="request-quote--section1 mt-5">
+	<section class="request-quote--section1 contactus--section1 mt-5">
 		<div class="a-w-c--bg"></div>
 		<div class="container-xl">
 			<div class="row">
 				<div class="col-lg-5 col-12 mb-lg-0 mb-4 --awc-section-col1">
 					<div class="">
 						<div class="sup-title text-uppercase mb-3">lorem ipsum</div>
-						<h2>Lorem Ipsum Title</h2>
+						<h2>Lorem Ipsum Contact US</h2>
 						<p class="mt-3">
 							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
 						</p>
@@ -24,29 +29,25 @@
 				</div> <!--col-n.--awc-section-col1-->
 				<div class="col-lg col-12 --awc-section-col2 ps-lg-5 ps-md-2 ps-0">
 					<div class="row">
-						<section class="requestquote-section-contact-form">
-							<div class="requestquote-section-contact-form-container">
+						<section class="requestquote-section-contact-form contactus-section-contact-form">
+							<div class="requestquote-section-contact-form-container contactus-section-contact-form-container">
 								<div class="text-center">
-									<div id="request_quote__form"> <!--https://eu.jotform.com/build/223132406993960--> <!--https://eu.jotform.com/myforms/-->
-
+									<div id="get_in_touch__form"> <!--https://eu.jotform.com/build/223132406993960--> <!--https://eu.jotform.com/myforms/-->
 										<iframe
-												id="JotFormIFrame-223323816992966"
-												title="Request a quote Form"
-												onload="window.parent.scrollTo(0,0)"
+												id="JotFormIFrame-223132406993960"
+												title="Get In Touch Form"
+
 												allowtransparency="true"
 												allowfullscreen="true"
 												allow="geolocation; microphone; camera"
-												src="https://form.jotform.com/223323816992966"
+												src="https://form.jotform.com/223132406993960"
 												frameborder="0"
-												style="
-      min-width: 100%;
-      height:539px;
-      border:none;"
+												style="min-width:100%; height:539px; border:none; background:transparent;"
 												scrolling="no"
 										>
 										</iframe>
 										<script type="text/javascript">
-											var ifr = document.getElementById("JotFormIFrame-223323816992966");
+											var ifr = document.getElementById("JotFormIFrame-223132406993960");
 											if (ifr) {
 												var src = ifr.src;
 												var iframeParams = [];
@@ -125,7 +126,7 @@
 												window.attachEvent("onmessage", handleIFrameMessage);
 											}
 										</script>
-									</div> <!--#request_quote__form-->
+									</div> <!--#get_in_touch__form-->
 								</div>
 							</div>
 						</section>
@@ -136,22 +137,22 @@
 	</section>
 	<div class="section-divider-100 --section1"></div>
 
-	<section class="request-quote--section2 mt-md-5 mt-4">
+	<section class="request-quote--section2 contactus--section2 mt-md-5 mt-4">
 		<div class="container-xl">
 			<div class="row d-flex align-items-center">
-				<div class="col-lg-5 col-12 order-md-1 order-2">
+				<div class="col-lg col-12">
+					<div class="">
+						<img class="img-fluid" src="<?=get_stylesheet_directory_uri();?>/img/istockphoto-1182777182.jpg" alt="">
+					</div>
+				</div>
+				<div class="col-lg-5 col-12">
 					<div class="">
 						<p class="mt-3">
 							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
 						</p>
 						<p>
-							Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+							Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est.
 						</p>
-					</div>
-				</div>
-				<div class="col-lg col-12 order-md-2 order-1">
-					<div class="">
-						<img class="img-fluid" src="<?=get_stylesheet_directory_uri();?>/img/istockphoto-1182777182.jpg" alt="">
 					</div>
 				</div>
 			</div> <!--.row-->
@@ -159,41 +160,45 @@
 	</section>
 	<div class="section-divider-100"></div>
 
-	<section class="request-quote--services-include">
-		<div class="container-xl">
-			<div class="request-quote--services-include--bg d-flex" style="background-image: url(<?=get_stylesheet_directory_uri();?>/img/istockphoto-1073656146-2048x2048_45.jpg);">
-				<div class="row align-self-center">
-					<div class="col pe-0">
-						<aside class="ms-md-5 ms-3">
-							<div class="sup-title text-uppercase mb-3">lorem ipsum</div>
-							<div class="services-include--title text-capitalize mb-3">Our Services Include</div>
-							<ul>
+	<section class="contactus--office-locations">
+		<div class="contactus--office-locations--bg">
+			<div class="container-xl">
+				<div class="row d-flex align-items-center">
+					<div class="col-sm-7 col-12 order-sm-1 order-2">
+						<aside class="">
+							<div class="sup-title text-uppercase mb-3 d-sm-block d-none">Contact</div>
+							<h2 class="d-sm-block d-none">Our Office Locations</h2>
+							<ul class="office-locations--address mt-5 ps-0">
 								<div class="row">
 									<div class="col-md col-12">
-										<li> <span>Lorem ipsum Item -1</span> </li>
-										<li> <a href="">Lorem ipsum Item -2</a> </li>
-										<li> <span>Lorem ipsum Item -3</span> </li>
+										<?php if($address_1):?>
+											<li class="mb-3"><?php echo $address_1['address_slot_1'];?></li>
+											<li><?php echo $address_1['address_slot_2'];?> <?php echo $address_1['address_slot_3'];?></li>
+											<li>Phone: <a href="tel:<?php echo get_numerics($address_1['phone']);?>"><strong><?php echo $address_1['phone'];?></strong></a> | <a href="tel:<?php echo get_numerics($address_1['phone_2']);?>"><strong><?php echo $address_1['phone_2'];?></strong></a> </li>
+											<li>E-mail: <a href="mailto:<?php echo $address_1['email'];?>"><strong><?php echo $address_1['email'];?></strong></a> </li>
+										<?php endif;?>
 									</div>
 									<div class="col-md col-12">
-										<li> <span>Lorem ipsum Item -4</span> </li>
-										<li> <span>Lorem ipsum Item -5</span> </li>
-										<li> <span>Lorem ipsum Item -6</span> </li>
+										<?php if($address_2):?>
+											<li class="mb-3"><?php echo $address_2['address_slot_1'];?></li>
+											<li><?php echo $address_2['address_slot_2'];?><?php echo $address_2['address_slot_3'];?></li>
+											<li>Phone: <a href="tel:<?php echo get_numerics($address_2['phone']);?>"><strong><?php echo $address_2['phone'];?></strong></a> | <a href="tel:<?php echo get_numerics($address_2['phone_2']);?>"><strong><?php echo $address_2['phone_2'];?></strong></a> </li>
+											<li>E-mail: <a href="mailto:<?php echo $address_2['email'];?>"><strong><?php echo $address_2['email'];?></strong></a> </li>
+										<?php endif;?>
 									</div>
 								</div>
-
-
 							</ul>
-							<p class="mt-2">
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo...
-							</p>
 						</aside>
 					</div>
+					<div class="sup-title text-uppercase mb-3 d-sm-none b-block">Contact</div>
+					<h2 class="d-sm-none b-block mb-4">Our Office Locations</h2>
+					<div class="col-sm col-12 order-sm-2 order-1">
+						<div class="col-image--bg" style="background-image: url(<?=get_stylesheet_directory_uri();?>/img/istockphoto-1134660371-2048x2048-5.jpg);"></div>
+					</div>
 				</div>
-			</div>
-		</div> <!--.container-lg-->
+			</div> <!--.container-xl-->
+		</div>
 	</section>
 
-
-	<div class="page-wrapper-bottom-bg"></div>
 </div> <!--/.request-quote-page-wrapper-->
 <?php get_footer();?>

@@ -1403,13 +1403,69 @@ footer.site-footer{
         background:linear-gradient(180deg, rgba(10, 77, 124, 0.24), rgba(237, 248, 255, 0.1) 100%);
         height:475px; position:absolute; width:44%;
     }
+
     .request-quote--section1{
         .--awc-section-col1{
-            padding-top:75px; padding-right:55px;
+            padding-top: 135px; padding-right:55px;
         }
+        .-awc-section-col2 ps-lg-5{ padding-top:30px; }
+    }
+
+    .request-quote--section2{}
+
+    .request-quote--services-include{
+        .request-quote--services-include--bg{
+            > .row{ width:60%; }
+            min-height:550px; background-size:cover; background-repeat:no-repeat; background-position:50% 50%;
+            aside{
+                background: linear-gradient(83deg, #FFFFFF 23.7%, rgba(255, 255, 255, 0.68) 40%);
+                padding:45px 45px 45px 45px;
+                .services-include--title{
+                    font-weight:$fontWeight-700; font-size:2.19rem; line-height:1;
+                }
+                ul{
+                    list-style-image: url(/wp-content/themes/maxcanvas_child/img/marker_for_list.svg);
+                    li{
+                        margin-bottom:5px;
+                        span, a{ text-decoration:none; color:$color-black; position:relative; top:4px; }
+                    }
+                }
+            }
+        }
+
     }
 }
 /*___________________________________________________________/#Request Quote Page*/
+
+
+/*_________________________________________________________#Contact Us Page*/
+.contactus-page-wrapper{
+    background-image:url(/wp-content/themes/maxcanvas_child/img/___478.svg); background-repeat:no-repeat; background-size:30%; background-position: 115% 36%;
+    .contactus--section1{
+        .contactus-section-contact-form{ padding-top:65px; }
+    }
+    .contactus--office-locations{
+        .contactus--office-locations--bg{
+            background: linear-gradient(180deg, rgba(10, 77, 124, 0.24), rgba(237, 248, 255, 0.1) 100%); padding-top: 75px; padding-bottom: 75px;
+        }
+        .office-locations--address{
+            list-style-type: none;
+            li:nth-of-type(1){
+                font-size:1.56rem; font-weight:$fontWeight-700;
+            }
+            li{
+                margin-bottom:15px; line-height:1.1;
+                a{ @include text-linear-gradient-blue; text-decoration:none; }
+            }
+        }
+        .col-image--bg{
+            min-height:420px; background-size: cover; background-repeat: no-repeat; background-position: 50% 50%;
+        }
+    }
+}
+/*_________________________________________________________/#Contact Us Page*/
+
+
 
 
 
@@ -1544,6 +1600,10 @@ footer.site-footer{
     /*___________________________________________________________#Single Article Page*/
     .single-article-page-wrapper { background-position: 150% 11%; }
     /*___________________________________________________________/#Single Article Page*/
+
+    /*_________________________________________________________#Contact Us Page*/
+    .contactus-page-wrapper { background-size:37%; background-position: 115% 35%; }
+    /*_________________________________________________________/#Contact Us Page*/
 }
 @media screen and (max-width: 991px){ /*from 991px till 768px (Class prefix .col-md-)*/
     #breakpoint_check{ width:991px; } /*100%|1400px|1199px|991px|767px|575px*/
@@ -1627,6 +1687,20 @@ footer.site-footer{
     .single-article-page-wrapper { background-size:82%; background-position:150% 11%; }
     /*___________________________________________________________/#Single Article Page*/
 
+    /*_________________________________________________________#Request Quote Page*/
+    .request-quote-page-wrapper .a-w-c--bg{ width:100%; }
+    .request-quote-page-wrapper .request-quote--section1 .--awc-section-col1 { padding-top:45px; padding-right:10px; }
+    .request-quote-page-wrapper .request-quote--section1 +div.section-divider-100{ display:none; }
+    .request-quote-page-wrapper .request-quote--services-include .request-quote--services-include--bg > .row { width:85%; }
+    /*_________________________________________________________/#Request Quote Page*/
+
+    /*_________________________________________________________#Contact Us Page*/
+    .contactus-page-wrapper .contactus--section1 .contactus-section-contact-form { padding-top:0; }
+    .contactus-page-wrapper .contactus--office-locations .office-locations--address li,
+    .contactus-page-wrapper .contactus--office-locations .office-locations--address li a{ font-size:0.94rem; }
+    .contactus-page-wrapper .contactus--office-locations .office-locations--address li:nth-of-type(1) { font-size: 1.25rem; }
+    /*_________________________________________________________/#Contact Us Page*/
+
     .aboutus-page-wrapper .a-w-c--bg { height:765px; width:100%; }
 }
 @media screen and (max-width: 891px){
@@ -1634,8 +1708,6 @@ footer.site-footer{
     nav.navbar ul#desktop_tablet .nav-item.dropdown ul.dropdown-menu .container-desktop_tablet .dropdown-menu-col { height:auto; display:block; }
     /*_______________________________________________________/#HEADER*/
 
-    /*_____________________________________________________#HOME*/
-    /*_______________________________________________________/#HOME*/
 }
 @media screen and (max-width: 767px){ /*from 767px till 576px (Class prefix .col-sm-)*/
     #breakpoint_check{ width:767px; } /*100%|1400px|1199px|991px|767px|575px*/
@@ -1785,10 +1857,6 @@ footer.site-footer{
     .in-news-page-wrapper .in-news-page--collection .flip > .front{ padding:20px 15px; }
     /*__________________________________________________________________/#In News Page*/
 
-    /*__________________________________________________________________#Blog Page*/
-
-    /*__________________________________________________________________/#Blog Page*/
-
     /*__________________________________________________________________#404 Page*/
     .page-404-wrapper .section-divider-100 { display:none; }
     /*__________________________________________________________________/#404 Page*/
@@ -1798,6 +1866,18 @@ footer.site-footer{
     .single-article-page-wrapper .single-article--post-content p { font-size:0.94rem; }
     .single-article-page-wrapper .single-article--post-content h1, .single-article-page-wrapper .single-article--post-content h2, .single-article-page-wrapper .single-article--post-content h3, .single-article-page-wrapper .single-article--post-content h4, .single-article-page-wrapper .single-article--post-content h5, .single-article-page-wrapper .single-article--post-content h6 { font-size:1.62rem; }
     /*___________________________________________________________/#Single Article Page*/
+
+    /*_________________________________________________________#Request Quote Page*/
+    .request-quote-page-wrapper .request-quote--services-include .request-quote--services-include--bg > .row { width:100%; }
+    .request-quote-page-wrapper .request-quote--services-include .request-quote--services-include--bg aside { padding:35px 15px 15px 20px; }
+    .request-quote-page-wrapper .request-quote--services-include .request-quote--services-include--bg { min-height:0; padding-top:20px;  padding-bottom:20px; }
+    .request-quote-page-wrapper .request-quote--services-include .request-quote--services-include--bg aside ul li span,
+    .request-quote-page-wrapper .request-quote--services-include .request-quote--services-include--bg aside ul li a{ font-size:0.87rem; }
+    /*_________________________________________________________/#Request Quote Page*/
+
+    /*_________________________________________________________#Contact Us Page*/
+    .contactus-page-wrapper { background-size:37%; background-position: 114% 61%; }
+    /*_________________________________________________________/#Contact Us Page*/
 }
 @media screen and (max-width: 575px) { /*from 575px and less (Class prefix .col-)*/
     #breakpoint_check{ width:575px; } /*100%|1400px|1199px|991px|767px|575px*/
@@ -1897,6 +1977,11 @@ footer.site-footer{
     .single-article-page-wrapper .blog-archive-sub-banner--bg { min-height:250px; }
     .single-article-page-wrapper .blog-archive-sub-banner.--single-article{ margin-bottom:185px; }
     /*___________________________________________________________/#Single Article Page*/
+
+    /*_________________________________________________________#Contact Us Page*/
+    .contactus-page-wrapper .contactus--office-locations .contactus--office-locations--bg { padding-top: 45px; padding-bottom: 25px; }
+    .contactus-page-wrapper .contactus--office-locations .col-image--bg { min-height:225px; }
+    /*_________________________________________________________/#Contact Us Page*/
 }
 @media screen and (max-width: 455px) {
     /*_____________________________________________________#HOME*/
@@ -1933,6 +2018,10 @@ footer.site-footer{
     .single-article-page-wrapper .single-article--info-post ul li{ display:block; }
     .single-article-page-wrapper .single-article--info-post ul{ text-align:left; }
     /*___________________________________________________________/#Single Article Page*/
+
+    /*_________________________________________________________#Contact Us Page*/
+    .contactus-page-wrapper { background-size:47%; background-position: 114% 59%; }
+    /*_________________________________________________________/#Contact Us Page*/
 }
 
 @media screen and (max-width: 379px){
