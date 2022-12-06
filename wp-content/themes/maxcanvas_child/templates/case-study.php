@@ -9,25 +9,7 @@
 <div class="blog-archive-page-wrapper blog-list cities-served-page-wrapper case-study-page-wrapper">
 	<?php get_template_part('templates/component/header_page_title_section');?>
 	<?php get_template_part('templates/component/page_banner_section');?>
-
-	<section class="blog-archive-sub-banner mt-5" style="display: none">
-		<div class="container-xl">
-			<div class="blog-archive-sub-banner--bg case-study-sub-banner--bg d-flex" style="background-image: url(<?php echo get_stylesheet_directory_uri();?>/img/istockphoto-1073656146-2048x2048_55.jpg);">
-				<div class="row align-self-end">
-					<div class="col pe-0">
-						<aside class="">
-							<div class="sup-title text-uppercase mb-3">Lorem ipsum</div>
-							<h2>Lorem ipsum dolor</h2>
-							<p class="mt-3">
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-							</p>
-							<a class="text-center button button--blue-gradient" href="#" target="_self">Optional BTN</a>
-						</aside>
-					</div>
-				</div>
-			</div>
-		</div> <!--/.container-xl-->
-	</section>
+	<div id="allPostArticlesForSearch" class="d-none"><aside></aside></div><div id="postsSearchForm" class="d-none"></div>
 
 	<section class="blog-archive--articles mt-md-5 mt-4 mb-md-5 mb-0">
 		<?php

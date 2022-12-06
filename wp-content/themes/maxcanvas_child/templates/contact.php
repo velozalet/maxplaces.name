@@ -139,6 +139,10 @@ $socialLinks = get_field('social_links','options');
 
 	<section class="request-quote--section2 contactus--section2 mt-md-5 mt-4">
 		<div class="container-xl">
+			<div class="text-center">
+				<div class="sup-title text-uppercase mb-3">lorem ipsum</div>
+				<h2 class="mb-md-5 mb-3">Lorem Ipsum Contact US</h2>
+			</div>
 			<div class="row d-flex align-items-center">
 				<div class="col-lg col-12">
 					<div class="">

@@ -605,7 +605,7 @@ footer.site-footer{
 
         .__testimonials-slider{
             .--testimonials-col--item{
-                .testimonials-author-img{ width:66px; height:66px; border:1px solid transparent; border-radius:50%; }
+                .testimonials-author-img{ width:66px; height:66px; border:1px solid transparent; border-radius:50%; -o-object-fit:cover; object-fit:cover; }
             }
             ul.splide__pagination{
                 li{
@@ -1049,7 +1049,7 @@ footer.site-footer{
                 &.is-active.is-visible{
                     .vual{ display:none; }
                 }
-                img{ width:100%; height:465px; }
+                img{ width:100%; height:465px; -o-object-fit: cover; object-fit: cover;}
             }
             .splide__arrows{ display:none; }
         }
@@ -1473,6 +1473,73 @@ footer.site-footer{
 }
 /*_________________________________________________________/#Case Study*/
 
+/*_____________________________________________________#Leadership Team*/
+.leadership-team-page-wrapper{
+    .leadteam-person-section{
+        h1{ font-size:3.5rem; font-weight:$fontWeight-700; line-height:1; margin-bottom:80px; }
+        .about-person--item{
+            cursor:pointer; position:relative;
+            .image-box{
+                /*background: linear-gradient(to bottom,#22d569,#00c9b1);*/
+                background: linear-gradient(90deg, #0794D6 0%, #002661 100%);
+                width: 100%;
+                padding-bottom: 100%;
+                /*position: absolute;*/
+                /*bottom: 0; z-index: -1; left: 0; right: 0; opacity: .2;*/
+                border-radius: 50%;
+                opacity:.4;
+
+            }
+            .image-box--before {
+                 width: 100%;
+                 padding-bottom: 106%;
+                 background-position: center;
+                 background-size: contain;
+                 background-repeat: no-repeat;
+                 transition: .5s linear all;
+                 position: absolute;
+                 /*overflow: hidden;*/
+                 border-radius: 50%;
+                 top:-25px;
+             }
+        }
+        .about-person--item-name{ font-size:1.37rem; font-weight:$fontWeight-600; }
+        .about-person--item-job{ line-height:1; }
+    }
+    .leadership-team-content-section{
+        padding: 95px 0; background: linear-gradient(180deg, rgba(10, 77, 124, 0.24), rgba(237, 248, 255, 0.1) 100%);
+    }
+    .leadership-team-companylogos-section{
+        padding-bottom:55px;
+        .__companylogos-slider{
+            .splide__slide{
+                .companylogos-slide--item{
+                    position:relative; min-height:150px; background-size:contain; background-repeat:no-repeat; background-position:50% 50%;
+                    .decor-br{
+                        height:75px; border-right:1px solid gray; display:inline-block; position:absolute; right:0; top:35px;
+                    }
+                }
+            }
+            .splide__arrows{
+                position: absolute; top:115%; left:50%;
+                .splide__arrow{
+                    background:transparent;
+                    &.splide__arrow--prev{ left:-100px; }
+                    &.splide__arrow--next{ right:-100px; }
+                    svg{ fill:$color-grey-light2; }
+                    &:hover{ svg{ fill:$color-red1; } }
+                    &:hover, &:active, &:focus{ outline:none !important; }
+                }
+
+            }
+        }
+    }
+}
+/*_____________________________________________________/#Leadership Team*/
+
+
+
+
 
 
 
@@ -1546,6 +1613,10 @@ footer.site-footer{
     /*__________________________________________________________________#Industry Served Page*/
     .industry-served-page-wrapper .industry-served-page--l-st .industry-served-page--l-st--content { padding-left:35%; }
     /*__________________________________________________________________/#Industry Served Page*/
+
+    /*_____________________________________________________#Leadership Team*/
+    .leadership-team-page-wrapper .leadteam-person-section .about-person--item .image-box{ padding-bottom:99%; }
+    /*_____________________________________________________/#Leadership Team*/
 }
 @media screen and (max-width: 1199px){ /*from 1199px till 992px (Class prefix .col-lg-)*/
     #breakpoint_check{ width:1199px; } /*100%|1400px|1199px|991px|767px|575px*/
@@ -1609,6 +1680,10 @@ footer.site-footer{
     /*_________________________________________________________#Contact Us Page*/
     .contactus-page-wrapper { background-size:37%; background-position: 115% 35%; }
     /*_________________________________________________________/#Contact Us Page*/
+
+    /*_____________________________________________________#Leadership Team*/
+    .leadership-team-page-wrapper .leadteam-person-section .about-person--item .image-box{ padding-bottom:98%; }
+    /*_____________________________________________________/#Leadership Team*/
 }
 @media screen and (max-width: 991px){ /*from 991px till 768px (Class prefix .col-md-)*/
     #breakpoint_check{ width:991px; } /*100%|1400px|1199px|991px|767px|575px*/
@@ -1705,6 +1780,10 @@ footer.site-footer{
     .contactus-page-wrapper .contactus--office-locations .office-locations--address li a{ font-size:0.94rem; }
     .contactus-page-wrapper .contactus--office-locations .office-locations--address li:nth-of-type(1) { font-size: 1.25rem; }
     /*_________________________________________________________/#Contact Us Page*/
+
+    /*_____________________________________________________#Leadership Team*/
+    .leadership-team-page-wrapper .leadteam-person-section .about-person--item .image-box{ padding-bottom:100%; }
+    /*_____________________________________________________/#Leadership Team*/
 
     .aboutus-page-wrapper .a-w-c--bg { height:765px; width:100%; }
 }
@@ -1883,6 +1962,11 @@ footer.site-footer{
     /*_________________________________________________________#Contact Us Page*/
     .contactus-page-wrapper { background-size:37%; background-position: 114% 61%; }
     /*_________________________________________________________/#Contact Us Page*/
+
+    /*_____________________________________________________#CLeadership Team*/
+    .leadership-team-page-wrapper .leadership-team-content-section { padding:45px 0;  }
+    .leadership-team-page-wrapper .leadteam-person-section h1{ font-size:2.12rem; }
+    /*_____________________________________________________/#Leadership Team*/
 }
 @media screen and (max-width: 575px) { /*from 575px and less (Class prefix .col-)*/
     #breakpoint_check{ width:575px; } /*100%|1400px|1199px|991px|767px|575px*/
@@ -1987,6 +2071,11 @@ footer.site-footer{
     .contactus-page-wrapper .contactus--office-locations .contactus--office-locations--bg { padding-top: 45px; padding-bottom: 25px; }
     .contactus-page-wrapper .contactus--office-locations .col-image--bg { min-height:225px; }
     /*_________________________________________________________/#Contact Us Page*/
+
+    /*_____________________________________________________#CLeadership Team*/
+    .leadership-team-page-wrapper .leadteam-person-section h1 { margin-bottom:55px; }
+    .leadership-team-page-wrapper .leadership-team-companylogos-section .__companylogos-slider .splide__slide .companylogos-slide--item .decor-br{ visibility:hidden; }
+    /*_____________________________________________________/#Leadership Team*/
 }
 @media screen and (max-width: 455px) {
     /*_____________________________________________________#HOME*/
@@ -2036,5 +2125,9 @@ footer.site-footer{
     .homevideo-section-fx-content .home-video-section-mobile-bg { min-height:375px; background-position:0 -175%; }
     /*__/Home Video*/
     /*_______________________________________________________/#HOME*/
+
+    /*_____________________________________________________#Leadership Team*/
+    .leadership-team-page-wrapper .leadteam-person-section .about-person--item .image-box{ padding-bottom:98%; }
+    /*_____________________________________________________/#Leadership Team*/
 }
 

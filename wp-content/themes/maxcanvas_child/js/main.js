@@ -457,13 +457,49 @@ document.addEventListener( 'DOMContentLoaded', function () { //console.log('init
 				if( hdClassCnt === collection.length ){ asideNotice.classList.remove('d-none');	}else{ asideNotice.classList.add('d-none'); }
 			}
 		}
-		searchPostArticleInput.addEventListener( "input", filterPosts(postsSearchArticlesCollections, '.--posts-title-link') );
+		if(searchPostArticleInput){ searchPostArticleInput.addEventListener( "input", filterPosts(postsSearchArticlesCollections, '.--posts-title-link') );	}
 		/*Blog Articles(Posts) Searching*/
 
-		if(sortBySelectForm){ sortBySelect.onchange = function(event){ sortBySelectForm.submit(); } }
-		const sortBySelectChoices = new Choices(sortBySelect);
+		if(sortBySelectForm){
+			sortBySelect.onchange = function(event){ sortBySelectForm.submit(); }
+			const sortBySelectChoices = new Choices(sortBySelect);
+		}
 	}
 	/*________________________________________________________________/#Blog*/
+
+	/*_____________________________________________________/Leadership Team*/
+	/*Company logos Slider*/
+	let companylogosSliderDOM = document.getElementById('__companylogos_slider'); //console.log(companylogosSliderDOM);
+	if(companylogosSliderDOM){
+		var companylogosSlider = new Splide( companylogosSliderDOM,{ //All settings: https://splidejs.com/guides/options
+			type: 'loop', /*'slide'|'loop'|'fade'*/
+			pagination: false,
+			autoplay: true,
+			speed: 2000,
+			omitEnd: true,
+			perPage: 4,
+			/*gap: '1.5rem',*/
+			//keyboard: true,
+			//interval: 2000,
+			arrows: true,
+			breakpoints: {
+				1199: {
+					perPage: 3,
+					autoplay: true,
+				},
+				767: {
+					perPage: 2,
+					autoplay: true,
+				},
+				575: {
+					perPage: 1,
+					autoplay: false,
+				}
+			},
+		} ); companylogosSlider.mount();
+	}
+	/*__/Company logos Slider*/
+	/*______________________________________________________/#Leadership Team*/
 
 });
 new WOW().init(); //initial the WOW animation library
