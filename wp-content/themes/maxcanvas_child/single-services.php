@@ -1,6 +1,4 @@
 <?php get_header();?>
-<?php
-?>
 <div class="single-services-page-wrapper">
 
 	<?php get_template_part('templates/component/header_page_title_section');?>

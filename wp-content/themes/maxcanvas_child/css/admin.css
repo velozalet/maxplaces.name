@@ -2,4 +2,10 @@
 .wp-admin #adminmenuwrap li#menu-posts-services .wp-menu-image.dashicons-before:before{ color:#ffff00; }
 .wp-admin #adminmenuwrap li#menu-posts-testimonials .wp-menu-image.dashicons-before:before{ color:#ffc26a; }
 .wp-admin #adminmenuwrap li#menu-posts-cases .wp-menu-image.dashicons-before:before{ color:#9933ff; }
+.wp-admin #adminmenuwrap li#menu-posts-cities .wp-menu-image.dashicons-before:before{ color: #02b01b; }
+
+.wp-admin #adminmenuwrap li#menu-posts-services .wp-menu-name,
+.wp-admin #adminmenuwrap li#menu-posts-testimonials .wp-menu-name,
+.wp-admin #adminmenuwrap li#menu-posts-cases .wp-menu-name,
+.wp-admin #adminmenuwrap li#menu-posts-cities .wp-menu-name{ text-transform:uppercase; }
 /*__/Dashicons custom color For Custom Posts Type*/

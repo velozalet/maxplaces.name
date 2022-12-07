@@ -1468,11 +1468,33 @@ footer.site-footer {
 
 /*_________________________________________________________/#Case Study*/
 /*_____________________________________________________#Leadership Team*/
+body.page-template-thank-you nav.navbar a.navbar-brand {
+  position: relative;
+  z-index: 2; }
+body.page-template-thank-you nav.navbar #desktop_tablet li.nav-item a {
+  position: relative;
+  z-index: 2; }
+body.page-template-thank-you nav.navbar #desktop_tablet .nav-item.dropdown ul.dropdown-menu .container-desktop_tablet hr {
+  opacity: 0; }
+body.page-template-thank-you nav.navbar .navbar-collapse .navbar-nav .nav-item.desktop-tablet .dropdown-menu {
+  top: 102px; }
+
+.thankyou-page--bg {
+  background: linear-gradient(180deg, rgba(10, 77, 124, 0.24), rgba(237, 248, 255, 0.1) 100%);
+  min-height: 500px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 0; }
+
 .leadership-team-page-wrapper .leadteam-person-section h1 {
   font-size: 3.5rem;
   font-weight: 700;
   line-height: 1;
   margin-bottom: 80px; }
+.leadership-team-page-wrapper .leadteam-person-section .about-person--item-col {
+  margin-bottom: 85px; }
 .leadership-team-page-wrapper .leadteam-person-section .about-person--item {
   cursor: pointer;
   position: relative; }
@@ -1513,12 +1535,10 @@ footer.site-footer {
     background-repeat: no-repeat;
     background-position: 50% 50%; }
     .leadership-team-page-wrapper .leadership-team-companylogos-section .__companylogos-slider .splide__slide .companylogos-slide--item .decor-br {
-      height: 75px;
-      border-right: 1px solid gray;
       display: inline-block;
       position: absolute;
       right: 0;
-      top: 35px; }
+      top: 45px; }
   .leadership-team-page-wrapper .leadership-team-companylogos-section .__companylogos-slider .splide__arrows {
     position: absolute;
     top: 115%;
@@ -1535,8 +1555,21 @@ footer.site-footer {
         fill: #E0154A; }
       .leadership-team-page-wrapper .leadership-team-companylogos-section .__companylogos-slider .splide__arrows .splide__arrow:hover, .leadership-team-page-wrapper .leadership-team-companylogos-section .__companylogos-slider .splide__arrows .splide__arrow:active, .leadership-team-page-wrapper .leadership-team-companylogos-section .__companylogos-slider .splide__arrows .splide__arrow:focus {
         outline: none !important; }
+.leadership-team-page-wrapper .leadership-team-lastcases-section {
+  padding: 95px 0;
+  background: linear-gradient(180deg, rgba(10, 77, 124, 0.24), rgba(237, 248, 255, 0.1) 100%); }
 
 /*_____________________________________________________/#Leadership Team*/
+/*_____________________________________________________#Thank You*/
+.thankyou-page-wrapper {
+  padding-top: 85px; }
+  .thankyou-page-wrapper .form-sub-title {
+    margin-top: 165px; }
+  .thankyou-page-wrapper .thankyou-form--jotform {
+    width: 45%;
+    margin: 0 auto; }
+
+/*_____________________________________________________/#Thank You*/
 /**
 	MEDIA QUERIES:
 */
@@ -2221,7 +2254,21 @@ footer.site-footer {
   .leadership-team-page-wrapper .leadteam-person-section h1 {
     font-size: 2.12rem; }
 
-  /*_____________________________________________________/#Leadership Team*/ }
+  /*_____________________________________________________/#Leadership Team*/
+  /*_____________________________________________________#Thank You*/
+  .thankyou-page--bg {
+    z-index: -2; }
+
+  .thankyou-page-wrapper .thankyou-form--jotform {
+    width: 100%; }
+
+  .thankyou-page-wrapper .form-sub-title {
+    margin-top: 65px; }
+
+  .thankyou-page-wrapper {
+    padding-top: 45px; }
+
+  /*_____________________________________________________/#Thank You*/ }
 @media screen and (max-width: 575px) {
   /*from 575px and less (Class prefix .col-)*/
   #breakpoint_check {
@@ -2426,6 +2473,12 @@ footer.site-footer {
 
   .leadership-team-page-wrapper .leadership-team-companylogos-section .__companylogos-slider .splide__slide .companylogos-slide--item .decor-br {
     visibility: hidden; }
+
+  .leadership-team-page-wrapper .leadership-team-lastcases-section {
+    padding: 45px 0; }
+
+  .leadership-team-page-wrapper .leadteam-person-section .about-person--item-col {
+    margin-bottom: 60px; }
 
   /*_____________________________________________________/#Leadership Team*/ }
 @media screen and (max-width: 455px) {
