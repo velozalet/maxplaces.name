@@ -501,5 +501,37 @@ document.addEventListener( 'DOMContentLoaded', function () { //console.log('init
 	/*__/Company logos Slider*/
 	/*______________________________________________________/#Leadership Team*/
 
+	/*______________________________________________________#Cities Single*/
+	const singleCitiesPageWrapperDOM = document.querySelector('.single-cities-page-wrapper');
+	if(singleCitiesPageWrapperDOM){
+		/*Testimonials for "City Single" Slider*/
+		let testimonialsCitySliderDOM = document.getElementById('__testimonials_city_slider'); //console.log(testimonialsCitySliderDOM);
+		if(testimonialsCitySliderDOM){
+			var testimonialsCitySlider = new Splide( testimonialsCitySliderDOM,{ //All settings: https://splidejs.com/guides/options
+				type: 'loop', /*'slide'|'loop'|'fade'*/
+				pagination: true,
+				autoplay: false,
+				speed: 2000,
+				omitEnd: true,
+				perPage: 3,
+				gap: '1.5rem',
+				//keyboard: true,
+				//interval: 2000,
+				arrows: true,
+				breakpoints: {
+					1199: {
+						perPage: 2,
+					},
+					767: {
+						perPage: 1,
+					}
+				},
+			} ); testimonialsCitySlider.mount();
+		}
+		/*__/Testimonials for "City Single" Slider*/
+	}
+	/*______________________________________________________/#Cities Single*/
+
+
 });
 new WOW().init(); //initial the WOW animation library

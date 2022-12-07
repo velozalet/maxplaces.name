@@ -72,7 +72,7 @@
 		<div class="container-xl">
 			<div class="row d-flex align-items-center">
 				<div class="col-lg-6 col-12 order-lg-1 order-2">
-					<div class="">
+					<div class="text-center">
 						<img class="img-fluid" src="<?=get_stylesheet_directory_uri();?>/img/istockphoto-1182777182.jpg" alt="">
 					</div>
 				</div>

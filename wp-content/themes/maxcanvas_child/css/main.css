@@ -1570,6 +1570,24 @@ body.page-template-thank-you nav.navbar .navbar-collapse .navbar-nav .nav-item.d
     margin: 0 auto; }
 
 /*_____________________________________________________/#Thank You*/
+/*_____________________________________________________/#Cities Single*/
+.single-cities-page-wrapper .single-cities-testimonials-section-fx-content {
+  background-image: none; }
+.single-cities-page-wrapper .single-cities--address-info {
+  padding: 95px 0;
+  background: linear-gradient(180deg, rgba(10, 77, 124, 0.24), rgba(237, 248, 255, 0.1) 100%); }
+  .single-cities-page-wrapper .single-cities--address-info .city-address-info h6 {
+    font-weight: 700;
+    font-size: 1.56rem; }
+  .single-cities-page-wrapper .single-cities--address-info .city-address-info a {
+    background: -webkit-linear-gradient(0deg, #0A4D7C, #011536);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    text-decoration: none;
+    line-height: 1.1; }
+
+/*_____________________________________________________/#Cities Single*/
 /**
 	MEDIA QUERIES:
 */
@@ -2268,7 +2286,12 @@ body.page-template-thank-you nav.navbar .navbar-collapse .navbar-nav .nav-item.d
   .thankyou-page-wrapper {
     padding-top: 45px; }
 
-  /*_____________________________________________________/#Thank You*/ }
+  /*_____________________________________________________/#Thank You*/
+  /*_____________________________________________________#Cities Single*/
+  .single-cities-page-wrapper .single-cities--address-info {
+    padding: 45px 0; }
+
+  /*_____________________________________________________/#Cities Single*/ }
 @media screen and (max-width: 575px) {
   /*from 575px and less (Class prefix .col-)*/
   #breakpoint_check {

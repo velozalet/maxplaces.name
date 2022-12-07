@@ -1572,6 +1572,24 @@ body.page-template-thank-you{
 }
 /*_____________________________________________________/#Thank You*/
 
+/*_____________________________________________________/#Cities Single*/
+.single-cities-page-wrapper{
+    .single-cities-testimonials-section-fx-content{
+        background-image:none;
+    }
+
+    .single-cities--address-info{
+        padding: 95px 0;
+        background: linear-gradient(180deg, rgba(10, 77, 124, 0.24), rgba(237, 248, 255, 0.1) 100%);
+        .city-address-info{
+            h6{ font-weight:$fontWeight-700; font-size: 1.56rem; }
+            a{ @include text-linear-gradient-blue; text-decoration:none; line-height: 1.1; }
+        }
+    }
+}
+/*_____________________________________________________/#Cities Single*/
+
+
 
 
 
@@ -2007,6 +2025,10 @@ body.page-template-thank-you{
     .thankyou-page-wrapper .form-sub-title { margin-top: 65px; }
     .thankyou-page-wrapper { padding-top: 45px; }
     /*_____________________________________________________/#Thank You*/
+
+    /*_____________________________________________________#Cities Single*/
+    .single-cities-page-wrapper .single-cities--address-info{ padding: 45px 0; }
+    /*_____________________________________________________/#Cities Single*/
 }
 @media screen and (max-width: 575px) { /*from 575px and less (Class prefix .col-)*/
     #breakpoint_check{ width:575px; } /*100%|1400px|1199px|991px|767px|575px*/
