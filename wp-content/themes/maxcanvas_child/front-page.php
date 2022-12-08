@@ -6,76 +6,31 @@
  */
 ?>
 <?php get_header(); ?>
-
+<?php
+$slider_banner = get_field('slider_home', get_the_ID() );
+?>
 <section id="section_gear_slider" class="section section-gear-slider">
 
 	<div id="__section_gear_slider" class="splide __section-gear-slider" aria-label="Gear Slider">
 		<div class="splide__track">
 			<ul class="splide__list">
+				<?php foreach( $slider_banner as $slideBanner):?>
 				<li class="splide__slide">
 					<div class="container-lg">
 						<div class="row d-flex align-items-center">
 							<div class="col-md col-12 text-start">
-								<div class="sup-title sup-title-slide text-uppercase mb-3">DIGITAL MARKETING MAXIMIZED</div>
-								<h1>A Creative Digital  Marketing Agency</h1>
-								<p class="mt-3">Read how we've helped clients in all industries get the results they needed
-									to show up first on Google and other search engines organically.</p>
+								<div class="sup-title sup-title-slide text-uppercase mb-3"><?php echo $slideBanner['sub_title_slide'];?></div>
+								<h1><?php echo $slideBanner['title_slide'];?></h1>
+								<p class="mt-3"><?php echo $slideBanner['text_slide'];?></p>
 								<a class="text-center button button--blue-gradient" href="#" target="_self">start now</a>
 							</div>
 							<div class="col-md col-12 text-md-end text-center">
-								<img src="<?php echo get_stylesheet_directory_uri();?>/img/gear.png" alt="<?php echo get_bloginfo('name');?>" class="img-fluid">
+								<img src="<?php echo $slideBanner['image_slide'];?>" alt="<?php echo get_bloginfo('name');?>" class="img-fluid">
 							</div>
 						</div>
 					</div>
 				</li>
-				<li class="splide__slide">
-					<div class="container-lg">
-						<div class="row d-flex align-items-center">
-							<div class="col-md col-12 text-start">
-								<div class="sup-title sup-title-slide text-uppercase mb-3">DIGITAL MARKETING MAXIMIZED</div>
-								<h1>A Creative Digital  Marketing Agency</h1>
-								<p class="mt-3">Read how we've helped clients in all industries get the results they needed
-									to show up first on Google and other search engines organically.</p>
-								<a class="text-center button button--blue-gradient" href="#" target="_self">start now</a>
-							</div>
-							<div class="col-md col-12 text-md-end text-center">
-								<img src="<?php echo get_stylesheet_directory_uri();?>/img/gear-2.png" alt="<?php echo get_bloginfo('name');?>" class="img-fluid">
-							</div>
-						</div>
-					</div>
-				</li>
-				<li class="splide__slide">
-					<div class="container-lg">
-						<div class="row d-flex align-items-center">
-							<div class="col-md col-12 text-start">
-								<div class="sup-title sup-title-slide text-uppercase mb-3">DIGITAL MARKETING MAXIMIZED</div>
-								<h1>A Creative Digital  Marketing Agency</h1>
-								<p class="mt-3">Read how we've helped clients in all industries get the results they needed
-									to show up first on Google and other search engines organically.</p>
-								<a class="text-center button button--blue-gradient" href="#" target="_self">start now</a>
-							</div>
-							<div class="col-md col-12 text-md-end text-center">
-								<img src="<?php echo get_stylesheet_directory_uri();?>/img/gear-3.png" alt="<?php echo get_bloginfo('name');?>" class="img-fluid">
-							</div>
-						</div>
-					</div>
-				</li>
-				<li class="splide__slide">
-					<div class="container-lg">
-						<div class="row d-flex align-items-center">
-							<div class="col-md col-12 text-start">
-								<div class="sup-title sup-title-slide text-uppercase mb-3">DIGITAL MARKETING MAXIMIZED</div>
-								<h1>A Creative Digital  Marketing Agency</h1>
-								<p class="mt-3">Read how we've helped clients in all industries get the results they needed
-									to show up first on Google and other search engines organically.</p>
-								<a class="text-center button button--blue-gradient" href="#" target="_self">start now</a>
-							</div>
-							<div class="col-md col-12 text-md-end text-center">
-								<img src="<?php echo get_stylesheet_directory_uri();?>/img/gear-4.png" alt="<?php echo get_bloginfo('name');?>" class="img-fluid">
-							</div>
-						</div>
-					</div>
-				</li>
+				<?php endforeach;?>
 			</ul>
 		</div>
 	</div>

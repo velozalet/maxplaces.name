@@ -21,12 +21,15 @@ document.addEventListener( 'DOMContentLoaded', function () { //console.log('init
 
 	const parallax_bg = document.querySelector('.parallax-bg');
 	if(parallax_bg){
+		const breakpoint_check = document.querySelector('.header-banner'); breakpoint_check.scrollIntoView();
+
 		const scrollPage = () => {
 			let variableY = 1;
 			variableY = variableY - (window.scrollY / 1000);
 			//console.log(window.scrollY); //Value of scroll Y in px
 			//console.log(variableY);
-			parallax_bg.setAttribute('style', `opacity:${variableY}`);
+			//parallax_bg.setAttribute('style', `opacity:${variableY}`);
+			parallax_bg.style.opacity = `${variableY}`;
 		};
 		window.addEventListener("scroll", scrollPage);
 	}

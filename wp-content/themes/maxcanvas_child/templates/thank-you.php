@@ -6,6 +6,9 @@
  */
 ?>
 <?php get_header();?>
+<?php
+$socialLinks = get_field('social_links','options');
+?>
 <div class="thankyou-page--bg"></div>
 <div class="thankyou-page-wrapper">
 	<div class="container-xl">
@@ -16,16 +19,16 @@
 		<div class="text-center">
 			For any concerns, email us as hello@maxplaces.com
 			<ul> <span class="me-3">Stay Connected</span>
-				<a href="<?php echo $socialLinks['facebook'];?>" class="text-decoration-none me-2" target="_blank">
+				<a href="<?php echo $socialLinks['facebook'];?>" class="text-decoration-none position-relative me-2" target="_blank" style="z-index:2;">
 					<img src="<?php echo get_stylesheet_directory_uri();?>/img/social-icons/facebook-header-mobile-social-icon.png" alt="<?php echo get_bloginfo('name');?>">
 				</a>
-				<a href="<?php echo $socialLinks['linkedin'];?>" class="text-decoration-none me-2" target="_blank">
+				<a href="<?php echo $socialLinks['linkedin'];?>" class="text-decoration-none position-relative me-2" target="_blank" style="z-index:2;">
 					<img src="<?php echo get_stylesheet_directory_uri();?>/img/social-icons/in-header-mobile-social-icon.png" alt="<?php echo get_bloginfo('name');?>">
 				</a>
-				<a href="<?php echo $socialLinks['twitter'];?>" class="text-decoration-none me-2" target="_blank">
+				<a href="<?php echo $socialLinks['twitter'];?>" class="text-decoration-none position-relative me-2" target="_blank" style="z-index:2;">
 					<img src="<?php echo get_stylesheet_directory_uri();?>/img/social-icons/twitter-header-mobile-social-icon.png" alt="<?php echo get_bloginfo('name');?>">
 				</a>
-				<a href="<?php echo $socialLinks['instagram'];?>" class="text-decoration-none me-2" target="_blank">
+				<a href="<?php echo $socialLinks['instagram'];?>" class="text-decoration-none position-relative me-2" target="_blank" style="z-index:2;">
 					<img src="<?php echo get_stylesheet_directory_uri();?>/img/social-icons/insta-header-mobile-social-icon.png" alt="<?php echo get_bloginfo('name');?>">
 				</a>
 			</ul>

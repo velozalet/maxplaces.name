@@ -63,9 +63,9 @@ body {
     }
 }
 .parallax-bg{
-    background-image: url("/wp-content/themes/maxcanvas_child/img/body-home-bg.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
+    /*background-image: url("/wp-content/themes/maxcanvas_child/img/body-home-bg.jpg");*/
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
     min-height: 730px;
     position:fixed; left:0; right:0;
     z-index: -1;
