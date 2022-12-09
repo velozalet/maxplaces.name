@@ -114,6 +114,7 @@
 
 	<?php get_template_part('templates/component/frequently_asked_section');?>
 
+
 	<div class="page-wrapper-bottom-bg"></div>
 </div> <!--/.aboutus-page-wrapper-->
 

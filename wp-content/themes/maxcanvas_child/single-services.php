@@ -120,7 +120,7 @@
 	</section>
 
 	<div class="section-divider-100"></div>
-	<?php get_template_part('templates/component/frequently_asked_section');?>
+	<?php get_template_part('templates/content/flexible-content');?>
 
 	<div class="page-wrapper-bottom-bg-center"></div>
 </div> <!--.single-services-page-wrapper-->
