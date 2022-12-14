@@ -650,6 +650,7 @@ footer.site-footer{
                             &:hover { @include text-linear-gradient-blue; }
                         }
                     }
+                    img{ height:313px; -o-object-fit:cover; object-fit:cover; }
                 }
             }
         }
@@ -1764,6 +1765,7 @@ body.page-template-thank-you{
 
     /*Blog*/
     .blog-section-fx-content .__blog-slider .splide__track .splide__list .splide__slide .blog-article-title a { font-size:1rem; }
+    .blog-section-fx-content .__blog-slider .splide__track .splide__list .splide__slide img{ height:250px; }
     /*__/Blog*/
 
     /*Home Video*/
@@ -2193,5 +2195,9 @@ body.page-template-thank-you{
     /*_____________________________________________________#Leadership Team*/
     .leadership-team-page-wrapper .leadteam-person-section .about-person--item .image-box{ padding-bottom:98%; }
     /*_____________________________________________________/#Leadership Team*/
+
+    /*___________________________________________#Blog*/
+    .blog-section-fx-content .__blog-slider .splide__track .splide__list .splide__slide img{ height:200px; }
+    /*___________________________________________/Blog*/
 }
 

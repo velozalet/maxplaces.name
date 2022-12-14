@@ -1,6 +1,6 @@
 <?php
 $testimonialPostID = get_sub_field('testimonial_post'); $testimonials_superscript_title = get_sub_field('testimonials_superscript_title'); $testimonials_title = get_sub_field('testimonials_title');
-$testimonialsData = get_field('testimonials', $testimonialPostID ); //dd($testimonialsData);
+$testimonialsData = get_field('testimonials', $testimonialPostID );
 ?>
 <section id="testimonials_section_for_city" class="casestudies_n_testimonials-section-fx-content single-cities-testimonials-section-fx-content mt-1">
 	<div class="container-xl text-center mt-md-0 mt-5 --testimonials">

@@ -10,6 +10,6 @@
 
 	<?php get_template_part('templates/content/flexible-city-content');?>
 	<div class="section-divider-100"></div>
-</div> <!--.single-cities-page-wrapper-->
+</div> <!--/.single-cities-page-wrapper-->
 
 <?php get_footer();?>

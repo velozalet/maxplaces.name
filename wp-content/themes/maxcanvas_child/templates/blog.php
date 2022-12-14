@@ -55,7 +55,7 @@ if(!$sort_by_select){ $sort_by_select = ''; }
 						</div>
 						<div class="col-auto">
 							<button type="submit" class="btn btn-primary mb-3 pe-0">
-								<img src="<?=get_stylesheet_directory_uri();?>/img/lens-icon.svg" alt="">
+								<img src="<?php echo get_stylesheet_directory_uri();?>/img/lens-icon.svg" alt="">
 							</button>
 						</div>
 					</form>
@@ -78,14 +78,14 @@ if(!$sort_by_select){ $sort_by_select = ''; }
 		<div class="container-xl">
 			<div id="postArticlesWithPagination" class="row justify-content-center">
 				<?php foreach( $all_posts as $post_i ):?>
-					<div class="col-md-6 col-12 mb-3 article" data-postId="<?=$post_i->ID;?>">
+					<div class="col-md-6 col-12 mb-3 article" data-postId="<?php echo $post_i->ID;?>">
 						<div class="label-blog">blog</div>
-						<a href="<?=$post_i->guid;?>">
-							<div class="blog-archive--article-bg" style="background-image:url(<?=wp_get_attachment_url( get_post_thumbnail_id($post_i->ID) );?>);"></div>
+						<a href="<?php echo $post_i->guid;?>">
+							<div class="blog-archive--article-bg" style="background-image:url(<?php echo wp_get_attachment_url( get_post_thumbnail_id($post_i->ID) );?>);"></div>
 						</a>
-						<div class="blog-date-gradient text-uppercase mt-2 mb-lg-2 mb-0"><?=date_format( date_create($post_i->post_date),"d M Y" );?></div>
+						<div class="blog-date-gradient text-uppercase mt-2 mb-lg-2 mb-0"><?php echo date_format( date_create($post_i->post_date),"d M Y" );?></div>
 						<div class="blog-archive-sub-banner--title text-capitalize mb-3">
-							<a class="--posts-title-link" href="<?=$post_i->guid;?>"><?=$post_i->post_title;?></a>
+							<a class="--posts-title-link" href="<?php echo $post_i->guid;?>"><?=$post_i->post_title;?></a>
 						</div>
 					</div>
 				<?php endforeach;?>

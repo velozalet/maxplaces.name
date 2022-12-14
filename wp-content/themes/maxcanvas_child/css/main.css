@@ -576,6 +576,10 @@ footer.site-footer {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     display: inline-block; }
+.blog-section-fx-content .__blog-slider .splide__track .splide__list .splide__slide img {
+  height: 313px;
+  -o-object-fit: cover;
+  object-fit: cover; }
 .blog-section-fx-content .__blog-slider .splide__arrows {
   position: absolute;
   top: 91%;
@@ -1844,6 +1848,9 @@ body.page-template-thank-you nav.navbar .navbar-collapse .navbar-nav .nav-item.d
   .blog-section-fx-content .__blog-slider .splide__track .splide__list .splide__slide .blog-article-title a {
     font-size: 1rem; }
 
+  .blog-section-fx-content .__blog-slider .splide__track .splide__list .splide__slide img {
+    height: 250px; }
+
   /*__/Blog*/
   /*Home Video*/
   .homevideo-section-fx-content .homevideo-section-container .section-video-content h2 {
@@ -2580,6 +2587,11 @@ body.page-template-thank-you nav.navbar .navbar-collapse .navbar-nav .nav-item.d
   .leadership-team-page-wrapper .leadteam-person-section .about-person--item .image-box {
     padding-bottom: 98%; }
 
-  /*_____________________________________________________/#Leadership Team*/ }
+  /*_____________________________________________________/#Leadership Team*/
+  /*___________________________________________#Blog*/
+  .blog-section-fx-content .__blog-slider .splide__track .splide__list .splide__slide img {
+    height: 200px; }
+
+  /*___________________________________________/Blog*/ }
 
 /*# sourceMappingURL=main.css.map */
