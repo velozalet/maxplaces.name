@@ -1591,6 +1591,37 @@ body.page-template-thank-you{
 /*_____________________________________________________/#Cities Single*/
 
 
+/*_____________________________________________________#Single Industry Served*/
+.single-industryserved-page-wrapper{
+    .single-industryserved-content-section{
+        padding: 95px 0; background: linear-gradient(180deg, rgba(10, 77, 124, 0.24), rgba(237, 248, 255, 0.1) 100%);
+    }
+    .single-industryserved-page--f-st{ max-height: 625px; }
+    .single-industryserved-content-section{
+        .row img{ min-height: 500px; -o-object-fit: cover; object-fit: cover; }
+    }
+    .getintouch-section-contact-form{
+        background: none;
+    }
+    .single-industryserved-sub-banner{
+        padding-top:25px; padding-bottom:45px;
+        .single-industryserved-sub-banner--bg{
+            min-height: 435px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            >.row{ width: 50%; }
+            aside{
+                /* background: linear-gradient(0deg, white, rgba(255, 255, 255, 0.6)); */
+                background:linear-gradient(360deg, #FFFFFF 23.7%, rgba(255, 255, 255, 0.68) 100%);
+                padding:35px 40px 35px 55px;
+            }
+        }
+    }
+}
+/*____________________________________________________/#Single Industry Served*/
+
+
 
 
 
@@ -1736,6 +1767,10 @@ body.page-template-thank-you{
     /*_____________________________________________________#Leadership Team*/
     .leadership-team-page-wrapper .leadteam-person-section .about-person--item .image-box{ padding-bottom:98%; }
     /*_____________________________________________________/#Leadership Team*/
+
+    /*_____________________________________________________#Single Industry Served*/
+    .single-industryserved-page-wrapper .single-industryserved-sub-banner .single-industryserved-sub-banner--bg > .row{ width: 75%; }
+    /*____________________________________________________/#Single Industry Served*/
 }
 @media screen and (max-width: 991px){ /*from 991px till 768px (Class prefix .col-md-)*/
     #breakpoint_check{ width:991px; } /*100%|1400px|1199px|991px|767px|575px*/
@@ -1837,6 +1872,11 @@ body.page-template-thank-you{
     /*_____________________________________________________#Leadership Team*/
     .leadership-team-page-wrapper .leadteam-person-section .about-person--item .image-box{ padding-bottom:100%; }
     /*_____________________________________________________/#Leadership Team*/
+
+    /*_____________________________________________________#Single Industry Served*/
+    .single-industryserved-page-wrapper .single-industryserved-page--f-st h2{ font-size: 2.12rem; }
+    .single-industryserved-page-wrapper .single-industryserved-content-section .row img{ min-height: inherit !important; }
+    /*____________________________________________________/#Single Industry Served*/
 
     .aboutus-page-wrapper .a-w-c--bg { height:765px; width:100%; }
 }
@@ -2031,6 +2071,12 @@ body.page-template-thank-you{
     /*_____________________________________________________#Cities Single*/
     .single-cities-page-wrapper .single-cities--address-info{ padding: 45px 0; }
     /*_____________________________________________________/#Cities Single*/
+
+    /*_____________________________________________________#Single Industry Served*/
+    .single-industryserved-page-wrapper .single-industryserved-content-section{ padding:45px 0; }
+    .single-industryserved-page-wrapper .single-industryserved-sub-banner .single-industryserved-sub-banner--bg > .row{ width: 100%; }
+    .industry-served-page-wrapper .industry-served-page--f-st .industry-served-page--f-st--bg{ min-height: 385px; }
+    /*____________________________________________________/#Single Industry Served*/
 }
 @media screen and (max-width: 575px) { /*from 575px and less (Class prefix .col-)*/
     #breakpoint_check{ width:575px; } /*100%|1400px|1199px|991px|767px|575px*/
@@ -2142,6 +2188,21 @@ body.page-template-thank-you{
     .leadership-team-page-wrapper .leadership-team-lastcases-section{ padding:45px 0; }
     .leadership-team-page-wrapper .leadteam-person-section .about-person--item-col { margin-bottom: 60px; }
     /*_____________________________________________________/#Leadership Team*/
+
+    /*_____________________________________________________#Single Industry Served*/
+    .single-industryserved-page-wrapper .single-industryserved-page--f-st aside{ padding: 40px 15px 0px 15px; }
+    .single-industryserved-page-wrapper .single-industryserved-page--f-st { max-height: initial; }
+    .single-industryserved-page-wrapper .single-industryserved-sub-banner .single-industryserved-sub-banner--bg { min-height: 250px; }
+    .single-industryserved-page-wrapper .single-industryserved-sub-banner .single-industryserved-sub-banner--bg > .row > div{ padding-right:0; }
+    .single-industryserved-page-wrapper .single-industryserved-sub-banner .single-industryserved-sub-banner--bg aside{
+        position: relative;
+        bottom: -185px;
+        padding: 35px 15px 35px 15px;
+        text-align: center;
+        margin-left: 11px !important;
+    }
+    .single-industryserved-page-wrapper .single-industryserved-sub-banner { padding-bottom: calc(45px + 185px); }
+    /*____________________________________________________/#Single Industry Served*/
 }
 @media screen and (max-width: 455px) {
     /*_____________________________________________________#HOME*/

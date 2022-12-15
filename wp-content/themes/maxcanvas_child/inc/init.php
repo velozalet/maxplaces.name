@@ -259,3 +259,60 @@ function cities_cpt_taxonomy() {
 	);
 } add_action( 'init', 'cities_cpt_taxonomy');
 /**__/ADD CPT "cities" and taxonomy for them */
+
+/**Custom Post Type "industry_served" adn taxonomy for them*/
+function industryserved_cpt() {
+	$labels = array(
+		'name'                => _x( 'Industry Served', 'Post Type General Name'),
+		'singular_name'       => _x( 'Industry Served', 'Post Type Singular Name'),
+		'menu_name'           => __( 'Industry Served'),
+		'parent_item_colon'   => __( 'Parent Industry Served'),
+		'all_items'           => __( 'All Industry Served'),
+		'view_item'           => __( 'View Industry Served'),
+		'add_new_item'        => __( 'Add New Industry Served'),
+		'add_new'             => __( 'Add New'),
+		'edit_item'           => __( 'Edit Industry Served'),
+		'update_item'         => __( 'Update Industry Served'),
+		'search_items'        => __( 'Search Industry Served'),
+		'not_found'           => __( 'Not Found'),
+		'not_found_in_trash'  => __( 'Not found in Trash'),
+	);
+	$args = array(
+		'label'               => __( 'Industry Served'),
+		'description'         => __( 'Industry Served'),
+		'labels'              => $labels,
+		'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions'),
+		'taxonomies'          => array( 'industryserved-taxonomy' ),
+		'hierarchical'        => false,
+		'public'              => true,
+		'show_ui'             => true,
+		'show_in_menu'        => true,
+		'show_in_nav_menus'   => true,
+		'show_in_admin_bar'   => true,
+		'menu_position'       => 3.6,
+		'can_export'          => true,
+		'has_archive'         => false,
+		'rewrite' => ['slug'=>'industry-served'],
+		'exclude_from_search' => false,
+		'publicly_queryable'  => true,
+		'capability_type'     => 'post',
+		'show_in_rest' => true,
+		'menu_icon' => 'dashicons-admin-generic',
+	);
+	register_post_type( 'industryserved', $args );
+} add_action( 'init', 'industryserved_cpt', 0 );
+function industryserved_cpt_taxonomy() {
+	register_taxonomy(
+		'industryserved-taxonomy',
+		'industryserved',
+		array(
+			'hierarchical' => true,
+			'label' => 'Industry Served Category',
+			'query_var' => true,
+			'has_archive' => false,
+			'exclude_from_search' => true,
+			'show_in_rest'  => true
+		)
+	);
+} add_action( 'init', 'industryserved_cpt_taxonomy');
+/**__/Custom Post Type "industry_served" adn taxonomy for them*/

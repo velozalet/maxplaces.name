@@ -123,5 +123,5 @@
 	<?php get_template_part('templates/content/flexible-content');?>
 
 	<div class="page-wrapper-bottom-bg-center"></div>
-</div> <!--.single-services-page-wrapper-->
+</div> <!--/.single-services-page-wrapper-->
 <?php get_footer();?>
