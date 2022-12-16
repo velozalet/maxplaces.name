@@ -187,6 +187,13 @@ h2{ @include titleH2; }
     background-position: 0 15%;
     min-height:245px;
 }
+.getintouch-section-contact-form{
+    .getintouch-section-contact-form-container{
+        .text-center{
+            p{ width:50%; font-size:0.94rem; font-weight:$fontWeight-400; margin: 0 auto; }
+        }
+    }
+}
 /*_______________________________________________________________________________/#GENERAL*/
 
 /*_______________________________________________________________________________#BANNER*/
@@ -1682,6 +1689,7 @@ body.page-template-thank-you{
     .services-page-wrapper .services-section .--s-section-col1 img { width:895px; }
     .services-page-wrapper .getintouch-section-contact-form .getintouch-section-contact-form-container,
     .cities-served-page-wrapper .getintouch-section-contact-form .getintouch-section-contact-form-container{ width:65%; }
+    .getintouch-section-contact-form .getintouch-section-contact-form-container .text-center p{ width:65%; }
     /*_________________________________________________________________________/#SERVICES*/
 
     /*__________________________________________________________________#SINGLE-SERVICES*/
@@ -1728,6 +1736,7 @@ body.page-template-thank-you{
     /*_________________________________________________________________________/#SERVICES*/
     .services-page-wrapper .getintouch-section-contact-form .getintouch-section-contact-form-container,
     .cities-served-page-wrapper .getintouch-section-contact-form .getintouch-section-contact-form-container{ width:75%; }
+    .getintouch-section-contact-form .getintouch-section-contact-form-container .text-center p{ width:75%; }
     /*_________________________________________________________________________/#SERVICES*/
 
     /*__________________________________________________________________#SINGLE-SERVICES*/
@@ -1813,6 +1822,7 @@ body.page-template-thank-you{
     .services-page-wrapper .services-section .--s-section-col2 { padding-top:0; }
     .services-page-wrapper .getintouch-section-contact-form .getintouch-section-contact-form-container,
     .cities-served-page-wrapper .getintouch-section-contact-form .getintouch-section-contact-form-container{ width:85%; }
+    .getintouch-section-contact-form .getintouch-section-contact-form-container .text-center p{ width:85%; }
     /*_______________________________________________________/#SERVICES*/
 
     /*__________________________________________________________________#SINGLE-SERVICES*/
@@ -1996,6 +2006,7 @@ body.page-template-thank-you{
     /*_______________________________________________________/#SERVICES*/
     .services-page-wrapper .getintouch-section-contact-form .getintouch-section-contact-form-container,
     .cities-served-page-wrapper .getintouch-section-contact-form .getintouch-section-contact-form-container{ width:100%; padding-right:0; padding-left:0; }
+    .getintouch-section-contact-form .getintouch-section-contact-form-container .text-center p{ width:100%; padding-left: 5px; padding-right: 5px; }
     /*_______________________________________________________/#SERVICES*/
 
     /*__________________________________________________________________#SINGLE-SERVICES*/
@@ -2202,6 +2213,7 @@ body.page-template-thank-you{
         margin-left: 11px !important;
     }
     .single-industryserved-page-wrapper .single-industryserved-sub-banner { padding-bottom: calc(45px + 185px); }
+    .single-industryserved-page-wrapper .getintouch-section-contact-form{ padding: 25px 0 15px 0; }
     /*____________________________________________________/#Single Industry Served*/
 }
 @media screen and (max-width: 455px) {
