@@ -9,7 +9,7 @@ $faq_collection = get_field('faq_all_question-answer', get_the_ID() ); $faq_coll
 		<p class="text-center mt-3"><?php echo $faq_text;?></p>
 
 		<div class="accordion accordion-flush mt-md-5 mt-3" id="accordionFrequentlyAsked">
-
+			<?php if($faq_collection):?>
 			<?php for( $i=0; $i < $faq_collection_cnt; $i++ ):?>
 				<div class="accordion-item">
 					<h5 class="accordion-header" id="frequentlyAsked__<?php echo ($i+1);?>">
@@ -24,7 +24,7 @@ $faq_collection = get_field('faq_all_question-answer', get_the_ID() ); $faq_coll
 					</div>
 				</div>
 			<?php endfor;?>
-
+			<?php endif;?>
 			<div class="accordion-item"></div>
 		</div>
 	</div>

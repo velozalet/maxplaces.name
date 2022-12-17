@@ -871,7 +871,6 @@ footer.site-footer{
 
     .getintouch-section-contact-form{
         .getintouch-section-contact-form-container{
-            width:50%;
             .text-center{ font-size:0.94rem; font-weight:$fontWeight-400; }
         }
     }
@@ -2166,6 +2165,12 @@ body.page-template-thank-you{
     }
     /*__________________________________________________________________/#In News Page*/
 
+    /*__________________________________________________________________/#Services*/
+    .services-page-wrapper .services-section--mobile .ss--mobile-image-bg{ min-height: 250px; }
+    .services-page-wrapper .services-section--mobile .ss--mobile-text-block{ padding:0; }
+    .services-page-wrapper .--as-124{ margin-bottom: 235px; }
+    /*__________________________________________________________________/#Services*/
+
     /*__________________________________________________________________#Blog Page*/
     .blog-archive-page-wrapper .blog-archive-sub-banner--bg > .row { width:100%; }
     .blog-archive-page-wrapper .blog-archive-sub-banner--bg aside{
@@ -2233,6 +2238,7 @@ body.page-template-thank-you{
 
     /*______________________________________________________#SERVICES*/
     .services-page-wrapper .services-section--mobile .service-item--link p { font-size: 0.87rem !important; }
+    .services-page-wrapper .--as-124{ margin-bottom: 275px; }
     /*_______________________________________________________/#SERVICES*/
 
     /*__________________________________________________________________#SINGLE-SERVICES*/
@@ -2272,5 +2278,10 @@ body.page-template-thank-you{
     /*___________________________________________#Blog*/
     .blog-section-fx-content .__blog-slider .splide__track .splide__list .splide__slide img{ height:200px; }
     /*___________________________________________/Blog*/
+
+    /*______________________________________________________#SERVICES*/
+    .services-page-wrapper .services-section--mobile .service-item--link p { font-size: 0.87rem !important; }
+    .services-page-wrapper .--as-124{ margin-bottom: 350px; }
+    /*_______________________________________________________/#SERVICES*/
 }
 

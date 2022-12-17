@@ -39,6 +39,7 @@ $services_services_posts = get_field('aboutus_services_services', get_the_ID() )
 						<?php if($services_text):?><p class="mt-3"><?php echo $services_text;?></p><?php endif;?>
 					</div>
 				</div> <!--col-n.--awc-section-col1-->
+				<?php if($services_services_posts):?>
 				<div class="col-lg col-12 --awc-section-col2 ps-lg-5 ps-2">
 					<div class="row">
 						<?php $ss_post_cnt = 0; foreach($services_services_posts as $ss_post):?>
@@ -57,13 +58,12 @@ $services_services_posts = get_field('aboutus_services_services', get_the_ID() )
 						<?php $ss_post_cnt++; endforeach;?>
 					</div>
 				</div> <!--col-n.--awc-section-col2-->
+				<?php endif;?>
 			</div> <!--.row-->
 		</div> <!--.container-lg-->
 	</section>
 
 	<?php get_template_part('templates/component/frequently_asked_section');?>
-
-
 	<div class="page-wrapper-bottom-bg"></div>
 </div> <!--/.aboutus-page-wrapper-->
 

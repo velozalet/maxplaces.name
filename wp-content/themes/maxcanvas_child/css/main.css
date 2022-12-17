@@ -791,11 +791,9 @@ footer.site-footer {
   height: 775px;
   position: absolute;
   width: 100%; }
-.services-page-wrapper .getintouch-section-contact-form .getintouch-section-contact-form-container {
-  width: 50%; }
-  .services-page-wrapper .getintouch-section-contact-form .getintouch-section-contact-form-container .text-center {
-    font-size: 0.94rem;
-    font-weight: 400; }
+.services-page-wrapper .getintouch-section-contact-form .getintouch-section-contact-form-container .text-center {
+  font-size: 0.94rem;
+  font-weight: 400; }
 
 /*_________________________________________________________________________/#SERVICES*/
 /*__________________________________________________________________#SINGLE-SERVICES*/
@@ -2517,6 +2515,17 @@ body.page-template-thank-you nav.navbar .navbar-collapse .navbar-nav .nav-item.d
       margin-left: 0 !important; }
 
   /*__________________________________________________________________/#In News Page*/
+  /*__________________________________________________________________/#Services*/
+  .services-page-wrapper .services-section--mobile .ss--mobile-image-bg {
+    min-height: 250px; }
+
+  .services-page-wrapper .services-section--mobile .ss--mobile-text-block {
+    padding: 0; }
+
+  .services-page-wrapper .--as-124 {
+    margin-bottom: 235px; }
+
+  /*__________________________________________________________________/#Services*/
   /*__________________________________________________________________#Blog Page*/
   .blog-archive-page-wrapper .blog-archive-sub-banner--bg > .row {
     width: 100%; }
@@ -2640,6 +2649,9 @@ body.page-template-thank-you nav.navbar .navbar-collapse .navbar-nav .nav-item.d
   .services-page-wrapper .services-section--mobile .service-item--link p {
     font-size: 0.87rem !important; }
 
+  .services-page-wrapper .--as-124 {
+    margin-bottom: 275px; }
+
   /*_______________________________________________________/#SERVICES*/
   /*__________________________________________________________________#SINGLE-SERVICES*/
   .single-services-page-wrapper .management-process-section .__single-services-slider .splide__track ul.splide__list li.splide__slide .col--background-image {
@@ -2691,6 +2703,14 @@ body.page-template-thank-you nav.navbar .navbar-collapse .navbar-nav .nav-item.d
   .blog-section-fx-content .__blog-slider .splide__track .splide__list .splide__slide img {
     height: 200px; }
 
-  /*___________________________________________/Blog*/ }
+  /*___________________________________________/Blog*/
+  /*______________________________________________________#SERVICES*/
+  .services-page-wrapper .services-section--mobile .service-item--link p {
+    font-size: 0.87rem !important; }
+
+  .services-page-wrapper .--as-124 {
+    margin-bottom: 350px; }
+
+  /*_______________________________________________________/#SERVICES*/ }
 
 /*# sourceMappingURL=main.css.map */
