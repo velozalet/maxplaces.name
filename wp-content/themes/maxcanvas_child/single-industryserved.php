@@ -14,10 +14,7 @@ $isi_slotcontent_is_display = get_field('industry_server_int_is_display_cf', get
 //__/Industry Served Internal: Jotform Contact Form
 
 //Industry Served Internal: Slot Content
-$isi_bgimage_subbanner = get_field('industry_server_int_bg_image_subbanner', get_the_ID() );
-$isi_superscript_title_subbanner = get_field('industry_server_int_superscript_title_subbanner', get_the_ID() );
-$isi_title_subbanner = get_field('industry_server_int_title_subbanner', get_the_ID() );
-$isi_text_subbanner = get_field('industry_server_int_text_subbanner', get_the_ID() );
+$isi_bgimage_subbanner = get_field('industry_server_int_bg_image_subbanner', get_the_ID() ); $isi_superscript_title_subbanner = get_field('industry_server_int_superscript_title_subbanner', get_the_ID() ); $isi_title_subbanner = get_field('industry_server_int_title_subbanner', get_the_ID() ); $isi_text_subbanner = get_field('industry_server_int_text_subbanner', get_the_ID() );
 //__/Industry Served Internal: Slot Content
 ?>
 <div class="industry-served-page-wrapper single-industryserved-page-wrapper">
