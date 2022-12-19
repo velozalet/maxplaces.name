@@ -8,10 +8,7 @@
 <?php get_header();?>
 <?php
 $get_queried_object = get_queried_object();
-$services_superscript_title = get_field('aboutus_services_superscript_title', get_the_ID() );
-$services_title = get_field('aboutus_services_title', get_the_ID() );
-$services_text = get_field('aboutus_services_text', get_the_ID() );
-$services_services_posts = get_field('aboutus_services_services', get_the_ID() );
+$services_superscript_title = get_field('aboutus_services_superscript_title', get_the_ID() ); $services_title = get_field('aboutus_services_title', get_the_ID() ); $services_text = get_field('aboutus_services_text', get_the_ID() ); $services_services_posts = get_field('aboutus_services_services', get_the_ID() );
 ?>
 <div class="aboutus-page-wrapper">
 	<?php get_template_part('templates/component/header_page_title_section');?>

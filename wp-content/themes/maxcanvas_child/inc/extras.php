@@ -140,13 +140,10 @@ function get_posts_for_pagination($post_type, $posts_per_page, $post_status, $ca
 		/*'suppress_filters' => false,*/
 	) );
 	return $posts;
-} //Call: get_posts_for_pagination('post', 1, 'publish', 0, '', 'date', 'ASC') | get_posts_for_pagination('post', 1, 'publish', 0, '', 'date', 'DESC')
+}
 
 function posts_navigation_simple($posts_per_page, $post_type, $post_status, $category, $category_name, $orderby, $order, $page_pagination_part){
-	echo '<ul class="pagination"> <!-- pagination-lg or pagination-sm -->';
-
-	//echo '<pre>';var_dump( count($all_posts) );echo '</pre>';
-	//1.total number of posts
+	echo '<ul class="pagination">';
 	$all_posts_for_count = get_posts(
 		array(
 			'post_type' => $post_type,
@@ -158,32 +155,18 @@ function posts_navigation_simple($posts_per_page, $post_type, $post_status, $cat
 			'posts_per_page' => $posts_per_page,
 		)
 	);
-	$all_posts_cnt = count($all_posts_for_count); //13 - total number of posts
+	$all_posts_cnt = count($all_posts_for_count);
 
-	//2.how many pages should total?
-	//(!)в $all_posts где основной цикл вывода постов, как раз таки установлен 'posts_per_page'=>'4' поэтому сосчитав эти посты я получу разбивку по кол-ву на 1 стр.
-	$pages_cnt_total = $all_posts_cnt/$posts_per_page; //3.25
-	//2.1.separate the decimal part of result
+	$pages_cnt_total = $all_posts_cnt/$posts_per_page;
+
 	$decimal_part = floor($pages_cnt_total); //3
 	if( $pages_cnt_total == $decimal_part ){
 		$pages_cnt_total = $decimal_part;
 	}elseif( $pages_cnt_total > $decimal_part && $pages_cnt_total < $decimal_part + 1 ){
 		$pages_cnt_total = $decimal_part + 1;
-	} /*(!)And now in $pages_cnt_total contains the estimated number of pages*/
+	}
+	$current_page_number = get_query_var('paged');
 
-	//3.берем параметр,который отвечает за страницу из query string,чтобы отслеживать текуций номер страницы
-	//var_dump( home_url( $_SERVER['REQUEST_URI'] ) ); //OR: get_pagenum_link(get_query_var('paged'))
-	/*Также можно брать от сюда информацию о текущем URL и запросе:
-		global $wp; $current_url = add_query_arg( $wp->query_string, '', home_url( $wp->request ) );
-	*//*Но в данном случае нам удобнее всего брать просто цифру из query string, - она находится тут: get_query_var('paged') */
-	$current_page_number = get_query_var('paged'); //var_dump($current_page_number)
-
-
-	/*(!) printf() - outputs a formatted string:
-		%s -string;
-		%d -signed decimal number (negative,zero or positive);  %u -unsigned decimal number (equal to or greather than zero)
-		%f -floating-point number (local settings aware);  %F -floating-point number (not local settings aware)
-	*/
 	if( $current_page_number > 1 ):
 		printf(
 			'<li class="page-item">
@@ -206,7 +189,6 @@ function posts_navigation_simple($posts_per_page, $post_type, $post_status, $cat
 		endif;
 	endfor;
 
-	//пока номер текущей страницы не превышает общее кол-во страниц, показываем элемент "Next"
 	if( $current_page_number < $pages_cnt_total ):
 		printf(
 			'<li class="page-item">
@@ -246,12 +228,7 @@ function posts_navigation($posts_per_page, $post_type, $post_status, $category, 
 		$links[] = $paged + 1;
 	}
 
-	/*(!) printf() - outputs a formatted string:
-		%s -string;
-		%d -signed decimal number (negative,zero or positive);  %u -unsigned decimal number (equal to or greather than zero)
-		%f -floating-point number (local settings aware);  %F -floating-point number (not local settings aware)
-	*/
-	echo '<ul class="pagination"> <!-- pagination-lg or pagination-sm -->' . "\n";
+	echo '<ul class="pagination">' . "\n";
 	/**Previous Post Link*/
 	if( get_previous_posts_link('Prev', $max_num_pages) ){ printf( '<li class="me-3">%s</li>' . "\n", get_previous_posts_link('<i class="fa fa-angle-left"></i>', $max_num_pages) ); }
 

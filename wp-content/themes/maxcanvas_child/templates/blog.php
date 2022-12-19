@@ -9,26 +9,54 @@
 <?php
 $sort_by_select = null;
 if($_POST){ if( $_POST["sort_by_select"] ){ $sort_by_select = $_POST["sort_by_select"]; } }
-if(!$sort_by_select){ $sort_by_select = ''; }
-//dd($sort_by_select);
+if(!$sort_by_select){ $sort_by_select = ''; } //dd($sort_by_select);
+
+$bg_image_billboard_banner = get_field('background_image_billboard_banner', get_the_ID() );
+$superscript_title_billboard_banner = get_field('superscript_title_billboard_banner', get_the_ID() );
+$title_billboard_banner = get_field('title_billboard_banner', get_the_ID() );
+$text_billboard_banner = get_field('text_billboard_banner', get_the_ID() );
+$optlBtnLink = get_field('optional_button_link', get_the_ID() ); //$optlBtnLink['title']// $optlBtnLink['url']// $optlBtnLink['target']
+
+$post_type = 'post'; $post_status = 'publish'; $category = 0; $category_name = ''; $orderby = 'date'; $order = 'DESC'; $posts_per_page = 1; $last_post = get_posts_for_pagination($post_type, $posts_per_page, $post_status, $category, $category_name, $orderby, $order)[0];
 ?>
 <div class="blog-archive-page-wrapper blog-list">
 	<?php get_template_part('templates/component/header_page_title_section');?>
 
 	<section class="blog-archive-sub-banner mt-5">
 		<div class="container-xl">
-			<div class="blog-archive-sub-banner--bg d-flex" style="background-image: url(<?php echo get_stylesheet_directory_uri();?>/img/istockphoto-1286815179-2048x2048-4.jpg);">
+			<?php if( !$bg_image_billboard_banner ){ $bg_image_billboard_banner = wp_get_attachment_url( get_post_thumbnail_id($last_post->ID) ); };?>
+			<div class="blog-archive-sub-banner--bg d-flex" style="background-image: url(<?php echo $bg_image_billboard_banner;?>)">
 				<div class="row align-self-end">
 					<div class="col pe-0">
 						<aside>
-							<div class="blog-date-gradient text-uppercase mb-3">august 2022</div>
-							<div class="blog-archive-sub-banner--title text-capitalize mb-1">Troubleshoot Your SEO Issues Using the	Wayback Machine</div>
-							<p class="mt-2">
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo...
-							</p>
-							<a class="learn-more-link learn-more-link-pipirka text-uppercase text-decoration-none" href="#">
-								<img src="<?php echo get_stylesheet_directory_uri();?>/img/pipirka.svg" alt=""> Learn More
-							</a>
+							<?php if($superscript_title_billboard_banner):?>
+								<div class="blog-date-gradient text-uppercase mb-3"><?php echo $superscript_title_billboard_banner;?></div>
+							<?php else:?>
+								<div class="blog-date-gradient text-uppercase mb-3"><?php echo date_format( date_create($last_post->post_date),"d M Y" );?></div>
+							<?php endif;?>
+
+							<?php if($title_billboard_banner):?>
+								<div class="blog-archive-sub-banner--title text-capitalize mb-1"><?php echo $title_billboard_banner;?></div>
+							<?php else:?>
+								<div class="blog-archive-sub-banner--title text-capitalize mb-1"><?php echo $last_post->post_title;?></div>
+							<?php endif;?>
+
+							<?php if($text_billboard_banner):?>
+								<p class="mt-2"><?php echo $text_billboard_banner;?></p>
+							<?php else:?>
+								<?php $_postText = ''; if($last_post->post_excerpt){ $_postText = $last_post->post_excerpt; }else{ $_postText = $last_post->post_content; };?>
+								<p class="mt-2"><?php echo cut_string($_postText,250);?></p>
+							<?php endif;?>
+
+							<?php if($optlBtnLink): $_target = ($optlBtnLink['target'] == '_blank') ? '_blank' : '_self';?>
+								<a class="learn-more-link learn-more-link-pipirka text-uppercase text-decoration-none" href="<?php echo $optlBtnLink['url'];?>" target="<?php echo $_target;?>">
+									<img src="<?php echo get_stylesheet_directory_uri();?>/img/pipirka.svg" alt=""> <?php echo $optlBtnLink['title'];?>
+								</a>
+							<?php else:?>
+								<a class="learn-more-link learn-more-link-pipirka text-uppercase text-decoration-none" href="<?php echo $last_post->guid;?>" target="_self">
+									<img src="<?php echo get_stylesheet_directory_uri();?>/img/pipirka.svg" alt=""> Learn more
+								</a>
+							<?php endif;?>
 						</aside>
 					</div>
 				</div>
