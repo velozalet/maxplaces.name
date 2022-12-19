@@ -42,7 +42,7 @@ $post_type = 'post'; $post_status = 'publish'; $category = 0; $category_name = '
 							<?php endif;?>
 
 							<?php if($text_billboard_banner):?>
-								<p class="mt-2"><?php echo $text_billboard_banner;?></p>
+								<p class="mt-2"><?php echo cut_string($text_billboard_banner,250);?></p>
 							<?php else:?>
 								<?php $_postText = ''; if($last_post->post_excerpt){ $_postText = $last_post->post_excerpt; }else{ $_postText = $last_post->post_content; };?>
 								<p class="mt-2"><?php echo cut_string($_postText,250);?></p>

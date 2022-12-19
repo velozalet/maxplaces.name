@@ -73,7 +73,7 @@ function get_numerics($str) {
 function cut_string($string,$length){
 	$string = strip_tags($string);
 	$string = mb_substr($string, 0, $length,'UTF-8');
-	$position = mb_strrpos($string, ' ', 'UTF-8');
+	$position = mb_strrpos($string, ' ', 0);
 	$string = mb_substr($string, 0, $position, 'UTF-8');
 	$string = rtrim($string, "?!,.-");
 	$string .= ' ...';
