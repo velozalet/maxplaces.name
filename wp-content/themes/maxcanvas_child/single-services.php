@@ -11,11 +11,7 @@ $services_cpt_slider_repeater_title = get_field('services_cpt_slider_repeater_ti
 //__/Slider
 
 //Sub Banner
-$services_cpt_bg_image_sub_banner = get_field('bg_image_sub_banner', get_the_ID() );
-$services_cpt_superscript_title_subbanner = get_field('services_cpt_superscript_title_subbanner', get_the_ID() );
-$services_cpt_title_subbanner = get_field('services_cpt_title_subbanner', get_the_ID() );
-$services_cpt_text_subbanner = get_field('services_cpt_text_subbanner', get_the_ID() );
-$optlBtnLink = get_field('services_cpt_optional_button_link_subbanner', get_the_ID() ); //$optlBtnLink['title']// $optlBtnLink['url']// $optlBtnLink['target']
+$services_cpt_bg_image_sub_banner = get_field('bg_image_sub_banner', get_the_ID() ); $services_cpt_superscript_title_subbanner = get_field('services_cpt_superscript_title_subbanner', get_the_ID() ); $services_cpt_title_subbanner = get_field('services_cpt_title_subbanner', get_the_ID() ); $services_cpt_text_subbanner = get_field('services_cpt_text_subbanner', get_the_ID() ); $optlBtnLink = get_field('services_cpt_optional_button_link_subbanner', get_the_ID() );
 //_Sub Banner
 ?>
 <div class="single-services-page-wrapper">
