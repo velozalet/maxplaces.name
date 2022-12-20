@@ -1,88 +1,85 @@
 <?php get_header();?>
+<?php
+$get_queried_object = get_queried_object();
+//Slot Content
+$services_cpt_slotcontent1_image = get_field('services_cpt_slotcontent1_image', get_the_ID() ); $services_cpt_slotcontent1_superscript_title = get_field('services_cpt_slotcontent1_superscript_title', get_the_ID() ); $services_cpt_slotcontent1_title = get_field('services_cpt_slotcontent1_title', get_the_ID() ); $services_cpt_slotcontent1_text = get_field('services_cpt_slotcontent1_text', get_the_ID() );
+$services_cpt_slotcontent2_image = get_field('services_cpt_slotcontent2_image', get_the_ID() ); $services_cpt_slotcontent2_superscript_title = get_field('services_cpt_slotcontent2_superscript_title', get_the_ID() ); $services_cpt_slotcontent2_title = get_field('services_cpt_slotcontent2_title', get_the_ID() ); $services_cpt_slotcontent2_text = get_field('services_cpt_slotcontent2_text', get_the_ID() );
+//__/Slot Content
+
+//Slider
+$services_cpt_slider_repeater_title = get_field('services_cpt_slider_repeater_title', get_the_ID() ); $services_cpt_slider_repeater = get_field('services_cpt_slider_repeater', get_the_ID() );
+//__/Slider
+
+//Sub Banner
+$services_cpt_bg_image_sub_banner = get_field('bg_image_sub_banner', get_the_ID() );
+$services_cpt_superscript_title_subbanner = get_field('services_cpt_superscript_title_subbanner', get_the_ID() );
+$services_cpt_title_subbanner = get_field('services_cpt_title_subbanner', get_the_ID() );
+$services_cpt_text_subbanner = get_field('services_cpt_text_subbanner', get_the_ID() );
+$optlBtnLink = get_field('services_cpt_optional_button_link_subbanner', get_the_ID() ); //$optlBtnLink['title']// $optlBtnLink['url']// $optlBtnLink['target']
+//_Sub Banner
+?>
 <div class="single-services-page-wrapper">
-
 	<?php get_template_part('templates/component/header_page_title_section');?>
-
 
 	<section class="single-s-content-section">
 		<div class="single-s-content-section--bg" style="min-height:1139px;"></div> <!--for JS: 1139px = .container-lg(height) + 100px-->
 		<div class="container-lg">
-			<div class="row d-flex align-items-center mb-5 --single-s-section-row1">
+			<div class="row d-flex align-items-center mb-5 --single-s-section-row1" style="display: none">
 				<div class="col-md-6 col-12"> <!--order-md-1 order-2-->
 					<div class="text-md-start text-center">
-						<div class="sup-title text-uppercase mb-3">PROFESSIONAL, AFFORDABLE & EFFICIEN</div>
-						<h2>It’s time to begin working with an SEO Agency that generates tangible and predictable results.</h2>
-						<p class="mt-3">Our goal is to help promote new and existing websites for businesses, organizations and individuals. Working hand-in-hand with you, we’ll create a powerful yet reasonably priced search engine optimization strategy that meets all of your expectations and needs while staying within your budget. Speak with us today to schedule a complimentary website audit and SEO consultation.</p>
+						<?php if( $services_cpt_slotcontent1_superscript_title ):?><div class="sup-title text-uppercase mb-3"><?php echo $services_cpt_slotcontent1_superscript_title;?></div><?php endif;?>
+						<?php if( $services_cpt_slotcontent1_title ):?><h2 class="mb-3"><?php echo $services_cpt_slotcontent1_title;?></h2><?php endif;?>
+						<?php if( $services_cpt_slotcontent1_text ):?><?php echo $services_cpt_slotcontent1_text;?><?php endif;?>
 					</div>
 				</div>
 				<div class="col-md-6 col-12 pe-md-0 pe-2 text-md-start text-center"> <!--order-md-2 order-1-->
-					<img class="img-fluid" src="<?php echo get_stylesheet_directory_uri();?>/img/__5455f_855.jpg" alt="<?php echo get_bloginfo('name');?>">
+					<?php if( $services_cpt_slotcontent1_image ):?>
+						<img class="img-fluid" src="<?php echo $services_cpt_slotcontent1_image;?>" alt="<?php echo get_bloginfo('name');?>">
+					<?php endif;?>
 				</div>
 			</div> <!--/.row-->
 			<div class="row d-flex align-items-center --single-s-section-row2">
 				<div class="col-md-6 col-12 order-md-1 order-2 text-md-start text-center">
-					<img class="img-fluid" src="<?php echo get_stylesheet_directory_uri();?>/img/__5455f_856.jpg" alt="<?php echo get_bloginfo('name');?>">
+					<?php if( $services_cpt_slotcontent2_image ):?>
+					<img class="img-fluid" src="<?php echo $services_cpt_slotcontent2_image;?>" alt="<?php echo get_bloginfo('name');?>">
+					<?php endif;?>
 				</div>
 				<div class="col-md-6 col-12 pe-md-0 pe-2 order-md-2 order-1">
 					<div class="text-md-start text-center">
-						<h2>SEO Consulting Services</h2>
-						<p class="mt-3">As a business owner, you’re well aware of the value of a properly optimized website. Greater visibility will ultimately mean more traffic, more clients and more sales. Call us for a free initial SEO and general digital marketing consultation.</p>
+						<?php if( $services_cpt_slotcontent2_superscript_title ):?><div class="sup-title text-uppercase mb-3"><?php echo $services_cpt_slotcontent2_superscript_title;?></div><?php endif;?>
+						<?php if( $services_cpt_slotcontent2_title ):?><h2 class="mb-3"><?php echo $services_cpt_slotcontent2_title;?></h2><?php endif;?>
+						<?php if( $services_cpt_slotcontent2_text ):?><?php echo $services_cpt_slotcontent2_text;?><?php endif;?>
 					</div>
 				</div>
 			</div> <!--/.row-->
 		</div> <!--/.container-lg-->
 	</section>
 
+	<?php if($services_cpt_slider_repeater):?>
 	<section class="management-process-section">
 		<div class="container-lg">
-			<h2 class="mb-md-5 mb-4">Our Reputation <br>Management Process</h2>
+			<?php if($services_cpt_slider_repeater_title):?><h2 class="mb-md-5 mb-4"><?php echo $services_cpt_slider_repeater_title;?></h2><?php endif;?>
 			<div class="row">
 				<div class="col-xxl-9 col-12 mx-auto">
 					<div id="__single_services_slider" class="splide __single-services-slider" aria-label="Single Services Slider">
 						<div class="splide__track">
 							<ul class="splide__list">
+								<?php $slide_cnt=0; foreach( $services_cpt_slider_repeater as $slide ):?>
 								<li class="splide__slide">
 									<div class="row d-flex align-items-center">
 										<div class="col-md-4 col-12 mt-md-0 mt-4 order-md-1 order-2">
 											<div class="single-services-slider-text-content">
-												<div class="sup-title text-uppercase mb-3">STEP <span>01</span></div>
-												<h4>Organizational Overview-1</h4>
-												<p>We’ll dig deep and explore how to best present your organization in the best possible light. Our discovery process is designed to formulate a method to proactively promote your brand in a positive manner.</p>
+												<div class="sup-title text-uppercase mb-3">STEP <span>0<?php echo ($slide_cnt+1);?></span></div>
+												<h4><?php echo $slide['services_cpt_slide_title'];?></h4>
+												<p><?php echo $slide['services_cpt_slide_text'];?></p>
 											</div>
 										</div>
-										<div class="col-md-8 col-12 order-md-2 order-1 col--background-image" style="background-image:url(/wp-content/themes/maxcanvas_child/img/__5455f_855.jpg);">
-											<span class="decor-number-for-slide d-md-block d-none">01</span>
+										<div class="col-md-8 col-12 order-md-2 order-1 col--background-image" style="background-image:url(<?php echo $slide['services_cpt_slide_image'];?>);">
+											<span class="decor-number-for-slide d-md-block d-none">0<?php echo ($slide_cnt+1);?></span>
 										</div>
 									</div>
 								</li>
-								<li class="splide__slide">
-									<div class="row d-flex align-items-center">
-										<div class="col-md-4 col-12 mt-md-0 mt-4 order-md-1 order-2">
-											<div class="single-services-slider-text-content">
-												<div class="sup-title text-uppercase mb-3">STEP <span>02</span></div>
-												<h4>Organizational Overview-2</h4>
-												<p>We’ll dig deep and explore how to best present your organization in the best possible light. Our discovery process is designed to formulate a method to proactively promote your brand in a positive manner.</p>
-											</div>
-										</div>
-										<div class="col-md-8 col-12 order-md-2 order-1 col--background-image" style="background-image:url(/wp-content/themes/maxcanvas_child/img/__5455f_856.jpg);">
-											<span class="decor-number-for-slide d-md-block d-none">02</span>
-										</div>
-									</div>
-								</li>
-								<li class="splide__slide">
-									<div class="row d-flex align-items-center">
-										<div class="col-md-4 col-12 mt-md-0 mt-4 order-md-1 order-2">
-											<div class="single-services-slider-text-content">
-												<div class="sup-title text-uppercase mb-3">STEP <span>03</span></div>
-												<h4>Organizational Overview-3</h4>
-												<p>We’ll dig deep and explore how to best present your organization in the best possible light. Our discovery process is designed to formulate a method to proactively promote your brand in a positive manner.</p>
-											</div>
-										</div>
-										<div class="col-md-8 col-12 order-md-2 order-1 col--background-image" style="background-image:url(/wp-content/themes/maxcanvas_child/img/dsd_df_52221.jpg);">
-											<span class="decor-number-for-slide d-md-block d-none">03</span>
-										</div>
-									</div>
-								</li>
+								<?php $slide_cnt++; endforeach;?>
 							</ul>
 							<div class="splide__arrows">
 								<button class="splide__arrow splide__arrow--prev">
@@ -99,20 +96,23 @@
 			</div>
 		</div>
 	</section>
+	<?php endif;?>
 
 	<section class="single-s-sub-banner mt-5">
 		<div class="container-lg">
-			<div class="single-s-sub-banner--bg d-flex" style="background-image: url(<?php echo get_stylesheet_directory_uri();?>/img/istockphoto-1286815179-2048x2048-3.jpg);">
+			<div class="single-s-sub-banner--bg d-flex" style="background-image: url(<?php echo $services_cpt_bg_image_sub_banner;?>);">
 				<div class="row align-self-center">
 					<div class="col">
+						<?php if( $services_cpt_title_subbanner || $services_cpt_text_subbanner ):?>
 						<aside class="ms-md-5 ms-sm-4 ms-0">
-							<div class="sup-title text-uppercase mb-3">Lorem ipsum</div>
-							<h2>Lorem ipsum</h2>
-							<p class="mt-3">
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-							</p>
-							<a class="text-center button button--blue-gradient" href="#" target="_self">Free consultation</a>
+							<?php if($services_cpt_superscript_title_subbanner):?><div class="sup-title text-uppercase mb-3"><?php echo $services_cpt_superscript_title_subbanner;?></div><?php endif;?>
+							<?php if($services_cpt_title_subbanner):?><h2 class="mb-3"><?php echo $services_cpt_title_subbanner;?></h2><?php endif;?>
+							<?php echo $services_cpt_text_subbanner;?>
+							<?php if($optlBtnLink): $_target = ($optlBtnLink['target'] == '_blank') ? '_blank' : '_self';?>
+								<a class="text-center button button--blue-gradient" href="<?php echo $optlBtnLink['url'];?>" target="<?php echo $_target;?>"><?php echo $optlBtnLink['title'];?></a>
+							<?php endif;?>
 						</aside>
+						<?php endif;?>
 					</div>
 				</div>
 			</div>
@@ -120,8 +120,7 @@
 	</section>
 
 	<div class="section-divider-100"></div>
-	<?php get_template_part('templates/content/flexible-content');?>
-
+	<?php get_template_part('templates/component/frequently_asked_section');?>
 	<div class="page-wrapper-bottom-bg-center"></div>
 </div> <!--/.single-services-page-wrapper-->
 <?php get_footer();?>
