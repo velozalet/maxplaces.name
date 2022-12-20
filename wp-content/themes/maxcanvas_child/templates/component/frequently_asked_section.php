@@ -1,6 +1,6 @@
 <?php
 $faq_superscript_title = get_field('faq_all_superscript_title', get_the_ID() ); $faq_title = get_field('faq_all_title', get_the_ID() ); $faq_text = get_field('faq_all_text', get_the_ID() );
-$faq_collection = get_field('faq_all_question-answer', get_the_ID() ); $faq_collection_cnt = count($faq_collection);
+$faq_collection = get_field('faq_all_question-answer', get_the_ID() ); if($faq_collection){ $faq_collection_cnt = count($faq_collection); }
 ?>
 <section id="frequently_asked_city_section" class="frequently-asked-section frequently-asked-city-section mt-5">
 	<div class="container-lg">
