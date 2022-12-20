@@ -39,7 +39,7 @@ $bg_image_billboard_banner = get_field('post_bg_image_banner', get_the_ID() );
 					<?php while ( have_posts() ) : the_post(); ?>
 						<h1 class="">
 						<?php the_content();?>
-						<?php if( has_post_thumbnail() ):?><img class="img-fluid mt-3" src="<?=get_the_post_thumbnail_url();?>" alt=""><?php endif;?>
+						<?php if( has_post_thumbnail() ):?><img class="img-fluid mt-3" src="<?php echo get_the_post_thumbnail_url();?>" alt=""><?php endif;?>
 
 						<!----><?php //echo get_the_excerpt();?>
 						<!----><?php //echo get_permalink();?>

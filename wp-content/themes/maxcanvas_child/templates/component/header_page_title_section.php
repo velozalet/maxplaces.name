@@ -6,7 +6,7 @@ $socialLinks = get_field('social_links','options');
 	<div class="container-lg">
 		<div class="row align-items-center">
 			<div class="col-md-9 col-12">
-				<h1 class="header-page-title wow fadeInUp" data-itemid="<?php echo $get_queried_object->ID;?>" data-itemobject="<?php echo $get_queried_object->post_type;?>" data-wow-delay="1s" style="visibility:hidden;">
+				<h1 class="header-page-title text-capitalize wow fadeInUp" data-itemid="<?php echo $get_queried_object->ID;?>" data-itemobject="<?php echo $get_queried_object->post_type;?>" data-wow-delay="1s" style="visibility:hidden;">
 					<?php echo $get_queried_object->post_title;?>
 				</h1>
 			</div>
