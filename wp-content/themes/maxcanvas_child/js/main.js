@@ -285,7 +285,7 @@ document.addEventListener( 'DOMContentLoaded', function () { //console.log('init
 	const servicesSectionMobile = document.querySelector('.services-section.services-section--mobile');
 	if( servicesSectionMobile ){
 		let ssMmobileTextBlockDOM =  servicesSectionMobile.querySelector('.ss--mobile-text-block > div'); //console.log(ssMmobileTextBlockDOM);
-		let ssMmobileTextBlockDOM_height = ssMmobileTextBlockDOM.getBoundingClientRect().height; console.log(ssMmobileTextBlockDOM_height);
+		let ssMmobileTextBlockDOM_height = ssMmobileTextBlockDOM.getBoundingClientRect().height; //console.log(ssMmobileTextBlockDOM_height);
 		servicesSectionMobile.style.marginBottom = `${parseInt(ssMmobileTextBlockDOM_height) - 50}px`;
 	}
 	/*__________________________________________________________________/#SERVICES*/
@@ -322,6 +322,13 @@ document.addEventListener( 'DOMContentLoaded', function () { //console.log('init
 			} );
 		}
 		/*__/Single Services Slider*/
+	}
+
+	if(singleServicesPageWrapperDOM){
+		const singleSContentSectionDOM = singleServicesPageWrapperDOM.querySelector('.single-s-content-section');
+		const singleSContentSectionBG = singleSContentSectionDOM.querySelector('.single-s-content-section--bg');
+		const heightContainer = singleSContentSectionDOM.querySelector('.container-lg').getBoundingClientRect().height; console.log(heightContainer);
+		singleSContentSectionBG.style.minHeight = `${parseInt(heightContainer) + 100}px`;
 	}
 	/*__________________________________________________________________/#SINGLE-SERVICES*/
 

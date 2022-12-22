@@ -907,11 +907,9 @@ footer.site-footer {
     .cities-served-page-wrapper .cities-served-page-sub-banner .cities-served-page-sub-banner--bg aside p {
       font-size: 0.94rem;
       font-weight: 400; }
-.cities-served-page-wrapper .getintouch-section-contact-form .getintouch-section-contact-form-container {
-  width: 50%; }
-  .cities-served-page-wrapper .getintouch-section-contact-form .getintouch-section-contact-form-container .text-center {
-    font-size: 0.94rem;
-    font-weight: 400; }
+.cities-served-page-wrapper .getintouch-section-contact-form .getintouch-section-contact-form-container .text-center {
+  font-size: 0.94rem;
+  font-weight: 400; }
 .cities-served-page-wrapper .cities-served-page-map {
   max-height: 1350px;
   background: linear-gradient(180deg, rgba(10, 77, 124, 0.1), rgba(10, 77, 124, 0) 100%); }
