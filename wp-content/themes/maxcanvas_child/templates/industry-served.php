@@ -25,10 +25,7 @@ $industryServedPageSliderSuperscriptTitleSection = get_field('industry_served_pa
 //__/Slider
 
 //Slot Content Tab
-$industryServedSlotcontentImage = get_field('industry_served_slotcontent_image', get_the_ID() );
-$industryServedSlotcontentSuperscriptTitle = get_field('industry_served_slotcontent_superscript_title', get_the_ID() );
-$industryServedSlotcontentTitle = get_field('industry_served_slotcontent_title', get_the_ID() );
-$industryServedSlotcontentText = get_field('industry_served_slotcontent_text', get_the_ID() );
+$industryServedSlotcontentImage = get_field('industry_served_slotcontent_image', get_the_ID() ); $industryServedSlotcontentSuperscriptTitle = get_field('industry_served_slotcontent_superscript_title', get_the_ID() ); $industryServedSlotcontentTitle = get_field('industry_served_slotcontent_title', get_the_ID() ); $industryServedSlotcontentText = get_field('industry_served_slotcontent_text', get_the_ID() );
 //__/Slot Content Tab
 ?>
 <div class="industry-served-page-wrapper">
