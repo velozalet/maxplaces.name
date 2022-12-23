@@ -790,7 +790,12 @@ footer.site-footer{
             padding-top:55px;
             a{
                 color:$color-black;
-                img + div > p:nth-of-type(1){ font-size:0.94rem; font-weight:$fontWeight-700; }
+                img + div > p:nth-of-type(1){
+                    font-size:0.94rem; font-weight:$fontWeight-700; display: inline-block;
+                    &:hover, &:active{
+                        @include text-linear-gradient-blue;
+                    }
+                }
                 img + div > p:nth-of-type(2){ font-size:0.94rem; font-weight:$fontWeight-400; line-height:1.3; }
             }
         }
@@ -1026,7 +1031,14 @@ footer.site-footer{
             width:85%; margin:0 auto; position:relative; top:-135px; background-color:white; padding:50px 40px 35px 55px;
             p{ font-size:0.94rem; font-weight:$fontWeight-400; }
             .industry-served--serveds{
-                span{ font-weight:$fontWeight-700; }
+                span{
+                    font-weight:$fontWeight-700;
+                    a{
+                        &:hover, &:active{
+                            @include text-linear-gradient-blue;
+                        }
+                    }
+                }
             }
         }
     }

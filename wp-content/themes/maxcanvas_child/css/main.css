@@ -719,7 +719,13 @@ footer.site-footer {
       color: #000000; }
       .aboutus-page-wrapper .aboutus-why-choose-section .--awc-section-col2 a img + div > p:nth-of-type(1) {
         font-size: 0.94rem;
-        font-weight: 700; }
+        font-weight: 700;
+        display: inline-block; }
+        .aboutus-page-wrapper .aboutus-why-choose-section .--awc-section-col2 a img + div > p:nth-of-type(1):hover, .aboutus-page-wrapper .aboutus-why-choose-section .--awc-section-col2 a img + div > p:nth-of-type(1):active {
+          background: -webkit-linear-gradient(0deg, #0A4D7C, #011536);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          display: inline-block; }
       .aboutus-page-wrapper .aboutus-why-choose-section .--awc-section-col2 a img + div > p:nth-of-type(2) {
         font-size: 0.94rem;
         font-weight: 400;
@@ -958,6 +964,11 @@ footer.site-footer {
     font-weight: 400; }
   .industry-served-page-wrapper .industry-served-page--f-st aside .industry-served--serveds span {
     font-weight: 700; }
+    .industry-served-page-wrapper .industry-served-page--f-st aside .industry-served--serveds span a:hover, .industry-served-page-wrapper .industry-served-page--f-st aside .industry-served--serveds span a:active {
+      background: -webkit-linear-gradient(0deg, #0A4D7C, #011536);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block; }
 .industry-served-page-wrapper .industry-served-page--case-slider {
   background: linear-gradient(180deg, rgba(10, 77, 124, 0.1), rgba(10, 77, 124, 0) 100%);
   /* opacity: 0.1; */
