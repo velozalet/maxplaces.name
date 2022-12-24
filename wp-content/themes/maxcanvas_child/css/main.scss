@@ -2243,6 +2243,10 @@ body.page-template-thank-you{
     .single-industryserved-page-wrapper .single-industryserved-sub-banner { padding-bottom: calc(45px + 185px); }
     .single-industryserved-page-wrapper .getintouch-section-contact-form{ padding: 25px 0 15px 0; }
     /*____________________________________________________/#Single Industry Served*/
+
+    /*_____________________________________________________#Request A Quote Page*/
+    .request-quote-page-wrapper .request-quote--services-include .request-quote--services-include--bg aside ul{ grid-template-columns: 1fr; }
+    /*_____________________________________________________/#Request A Quote Page*/
 }
 @media screen and (max-width: 455px) {
     /*_____________________________________________________#HOME*/

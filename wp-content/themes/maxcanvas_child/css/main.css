@@ -2648,7 +2648,12 @@ body.page-template-thank-you nav.navbar .navbar-collapse .navbar-nav .nav-item.d
   .single-industryserved-page-wrapper .getintouch-section-contact-form {
     padding: 25px 0 15px 0; }
 
-  /*____________________________________________________/#Single Industry Served*/ }
+  /*____________________________________________________/#Single Industry Served*/
+  /*_____________________________________________________#Request A Quote Page*/
+  .request-quote-page-wrapper .request-quote--services-include .request-quote--services-include--bg aside ul {
+    grid-template-columns: 1fr; }
+
+  /*_____________________________________________________/#Request A Quote Page*/ }
 @media screen and (max-width: 455px) {
   /*_____________________________________________________#HOME*/
   /*Our Services Slider*/
