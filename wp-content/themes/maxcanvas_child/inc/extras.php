@@ -80,6 +80,10 @@ function cut_string($string,$length){
 	return $string;
 }
 
+function get_featured_img_by_id($id){
+	return wp_get_attachment_url( get_post_thumbnail_id($id) );
+}
+
 function get_all_menu($menu_slug, $order = 'ASC'){
 	$menu_name = $menu_slug; //menu slug
 	$locations = get_nav_menu_locations();

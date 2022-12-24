@@ -543,5 +543,14 @@ document.addEventListener( 'DOMContentLoaded', function () { //console.log('init
 	/*______________________________________________________/#Cities Single*/
 
 
+	/*_____________________________________________________#Request A Quote Page*/
+	const requestQuotePageWrapperDOM = document.querySelector('.request-quote-page-wrapper');
+	if(requestQuotePageWrapperDOM){
+		const requestQuoteServicesIncludeSection = requestQuotePageWrapperDOM.querySelector('.request-quote--services-include');
+		let liItemsCollection = requestQuoteServicesIncludeSection.querySelectorAll('aside ul > li'); //console.log(liItemsCollection[1].textContent);
+		for(let item of liItemsCollection){ item.innerHTML = `<span>${item.textContent}</span>`; }
+	}
+	/*_____________________________________________________/#Request A Quote Page*/
+
 });
 new WOW().init(); //initial the WOW animation library
