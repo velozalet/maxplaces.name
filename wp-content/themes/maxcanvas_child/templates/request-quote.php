@@ -62,7 +62,9 @@ $optlBtnLink = get_field('optional_button_link', get_the_ID() ); //$optlBtnLink[
 				</div>
 				<div class="col-lg col-12 order-md-2 order-1">
 					<div class="">
-						<img class="img-fluid" src="<?php echo get_featured_img_by_id($get_queried_object->ID);?>" alt="<?php get_bloginfo('name');?>">
+						<?php if( get_featured_img_by_id($get_queried_object->ID) ):?>
+							<img class="img-fluid" src="<?php echo get_featured_img_by_id($get_queried_object->ID);?>" alt="<?php get_bloginfo('name');?>">
+						<?php endif;?>
 					</div>
 				</div>
 			</div> <!--.row-->
