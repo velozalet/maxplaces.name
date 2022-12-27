@@ -4,10 +4,13 @@
 .wp-admin #adminmenuwrap li#menu-posts-cases .wp-menu-image.dashicons-before:before{ color:#9933ff; }
 .wp-admin #adminmenuwrap li#menu-posts-cities .wp-menu-image.dashicons-before:before{ color: #02b01b; }
 .wp-admin #adminmenuwrap li#menu-posts-industryserved .wp-menu-image.dashicons-before:before{ color: #b0220d; }
+.wp-admin #adminmenuwrap li#menu-posts-news .wp-menu-image.dashicons-before:before{ color: #0000ff; }
+
 
 .wp-admin #adminmenuwrap li#menu-posts-services .wp-menu-name,
 .wp-admin #adminmenuwrap li#menu-posts-testimonials .wp-menu-name,
 .wp-admin #adminmenuwrap li#menu-posts-cases .wp-menu-name,
 .wp-admin #adminmenuwrap li#menu-posts-cities .wp-menu-name,
-.wp-admin #adminmenuwrap li#menu-posts-industryserved .wp-menu-name{ text-transform:uppercase; }
+.wp-admin #adminmenuwrap li#menu-posts-industryserved .wp-menu-name,
+.wp-admin #adminmenuwrap li#menu-posts-news .wp-menu-name{ text-transform:uppercase; }
 /*__/Dashicons custom color For Custom Posts Type*/

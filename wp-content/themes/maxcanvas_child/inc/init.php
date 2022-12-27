@@ -53,7 +53,7 @@ function get_rest_featured_image( $object, $field_name, $request ) {
 			'label'               => __( 'Services'),
 			'description'         => __( 'Service'),
 			'labels'              => $labels,
-			'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions'),
+			'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail'),
 			'taxonomies'          => array( 'services-taxonomy' ),
 			'hierarchical'        => false,
 			'public'              => true,
@@ -110,7 +110,7 @@ function testimonials_cpt() {
 		'label'               => __( 'Testimonials'),
 		'description'         => __( 'Testimonial'),
 		'labels'              => $labels,
-		'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions'),
+		'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail'),
 		'taxonomies'          => array( 'testimonials-taxonomy' ),
 		'hierarchical'        => false,
 		'public'              => true,
@@ -167,7 +167,7 @@ function case_cases_cpt() {
 		'label'               => __( 'Cases'),
 		'description'         => __( 'Case'),
 		'labels'              => $labels,
-		'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions'),
+		'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail'),
 		'taxonomies'          => array( 'cases-taxonomy' ),
 		'hierarchical'        => false,
 		'public'              => true,
@@ -224,7 +224,7 @@ function cities_cpt() {
 		'label'               => __( 'Cities'),
 		'description'         => __( 'City'),
 		'labels'              => $labels,
-		'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions'),
+		'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail'),
 		'taxonomies'          => array( 'cities-taxonomy' ),
 		'hierarchical'        => false,
 		'public'              => true,
@@ -281,7 +281,7 @@ function industryserved_cpt() {
 		'label'               => __( 'Industry Served'),
 		'description'         => __( 'Industry Served'),
 		'labels'              => $labels,
-		'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions'),
+		'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail'),
 		'taxonomies'          => array( 'industryserved-taxonomy' ),
 		'hierarchical'        => false,
 		'public'              => true,
@@ -316,3 +316,61 @@ function industryserved_cpt_taxonomy() {
 	);
 } add_action( 'init', 'industryserved_cpt_taxonomy');
 /**__/Custom Post Type "industry_served" adn taxonomy for them*/
+
+
+/** ADD CPT "news" and taxonomy for them */
+function news_cpt() {
+	$labels = array(
+		'name'                => _x( 'News', 'Post Type General Name'),
+		'singular_name'       => _x( 'News', 'Post Type Singular Name'),
+		'menu_name'           => __( 'News'),
+		'parent_item_colon'   => __( 'Parent Service'),
+		'all_items'           => __( 'All News'),
+		'view_item'           => __( 'View News'),
+		'add_new_item'        => __( 'Add New News'),
+		'add_new'             => __( 'Add New'),
+		'edit_item'           => __( 'Edit News'),
+		'update_item'         => __( 'Update News'),
+		'search_items'        => __( 'Search News'),
+		'not_found'           => __( 'Not Found'),
+		'not_found_in_trash'  => __( 'Not found in Trash'),
+	);
+	$args = array(
+		'label'               => __( 'News'),
+		'description'         => __( 'News'),
+		'labels'              => $labels,
+		'supports'            => array( 'title', 'editor', 'excerpt', 'thumbnail'),
+		'taxonomies'          => array( 'news-taxonomy' ),
+		'hierarchical'        => false,
+		'public'              => true,
+		'show_ui'             => true,
+		'show_in_menu'        => true,
+		'show_in_nav_menus'   => true,
+		'show_in_admin_bar'   => true,
+		'menu_position'       => 3.1,
+		'can_export'          => true,
+		'has_archive'         => false,
+		'rewrite' => ['slug'=>'news'],
+		'exclude_from_search' => false,
+		'publicly_queryable'  => true,
+		'capability_type'     => 'post',
+		'show_in_rest' => true,
+		'menu_icon' => 'dashicons-admin-site-alt3',
+	);
+	register_post_type( 'news', $args );
+} add_action( 'init', 'news_cpt', 0 );
+function news_cpt_taxonomy() {
+	register_taxonomy(
+		'news-taxonomy',
+		'news',
+		array(
+			'hierarchical' => true,
+			'label' => 'News Category',
+			'query_var' => true,
+			'has_archive' => false,
+			'exclude_from_search' => true,
+			'show_in_rest'  => true
+		)
+	);
+} add_action( 'init', 'news_cpt_taxonomy');
+/**__/ADD CPT "services" and taxonomy for them */

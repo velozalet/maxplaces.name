@@ -80,6 +80,10 @@ function cut_string($string,$length){
 	return $string;
 }
 
+function get_categories_of_cpt_by_id($post_id, $cpt_taxonomy_name){
+	return get_the_terms($post_id, $cpt_taxonomy_name );
+}
+
 function get_featured_img_by_id($id){
 	return wp_get_attachment_url( get_post_thumbnail_id($id) );
 }
@@ -261,4 +265,13 @@ function posts_navigation($posts_per_page, $post_type, $post_status, $category, 
 	/** Next Post Link */
 	if( get_next_posts_link('Next', $max_num_pages) ){ printf( '<li class="ms-3">%s</li>' . "\n", get_next_posts_link('<i class="fa fa-angle-right"></i>', $max_num_pages) ); }
 	echo '</ul>' . "\n";
+}
+
+function get_categories_of_cpt($taxonomy, $orderby, $order){
+	$args = array(
+		'taxonomy' => $taxonomy,
+		'orderby' => $orderby,
+		'order'   => $order
+	);
+	return get_categories($args);
 }
