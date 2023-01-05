@@ -31,7 +31,6 @@ function get_rest_featured_image( $object, $field_name, $request ) {
 }
 /**__/Add featured image for Posts to REST API*/
 
-
 /** ADD CPT "services" and taxonomy for them */
 	function services_cpt() {
 		$labels = array(
@@ -316,7 +315,6 @@ function industryserved_cpt_taxonomy() {
 	);
 } add_action( 'init', 'industryserved_cpt_taxonomy');
 /**__/Custom Post Type "industry_served" adn taxonomy for them*/
-
 
 /** ADD CPT "news" and taxonomy for them */
 function news_cpt() {

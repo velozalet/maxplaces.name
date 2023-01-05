@@ -28,6 +28,9 @@ $fontWeight-700: 700;
     -webkit-background-clip: border-box;
     -webkit-text-fill-color: transparent;
 }
+@mixin background-linear-gradient-blue{
+    background:linear-gradient(180deg, rgba(10, 77, 124, 0.24), rgba(237, 248, 255, 0.1) 100%);
+}
 
 @mixin titleH1{
     font-size:4rem; /*64px*/
@@ -1467,7 +1470,6 @@ footer.site-footer{
 }
 /*___________________________________________________________/#Request Quote Page*/
 
-
 /*_________________________________________________________#Contact Us Page*/
 .contactus-page-wrapper{
     background-image:url(/wp-content/themes/maxcanvas_child/img/___478.svg); background-repeat:no-repeat; background-size:30%; background-position: 115% 36%;
@@ -1650,7 +1652,130 @@ body.page-template-thank-you{
 }
 /*____________________________________________________/#Single Industry Served*/
 
+/*___________________________________________________________#Single Case Study Page*/
+.single-cases-page-wrapper{
+    .s-c-p--banner-section{
+        @include background-linear-gradient-blue;
+        .row{
+            >div:nth-of-type(1){
+                .case-study-tag{
+                    text-decoration: none; font-size:1.31rem; font-weight:$fontWeight-600; line-height:1.3; color:$color-black; display:inline-block;
+                    &:hover, &:active{
+                        @include text-linear-gradient-blue;
+                    }
+                    &:after{
+                        content: " |";
+                    }
+                }
+                .case-study-tag:last-of-type{
+                    &:after{
+                        content: "";
+                    }
+                }
+            }
+            >div:nth-of-type(2){
+                min-height:502px; background-size:cover; background-repeat:no-repeat;
+            }
+        }
+    }
+    .s-c-p--problem-section{
+        .s-c-p--problem-section--bg{
+            min-height:510px; background-size:cover; background-repeat:no-repeat;
+            .row{
+                >div:nth-of-type(1){
+                    background:linear-gradient(83deg, #FFFFFF 23.7%, rgba(255, 255, 255, 0.68) 40%); padding:55px 40px 35px 55px;
+                }
+                >div:nth-of-type(2){
+                    position:absolute; right:0; text-align:right; top:50%; transform: translate(0, -50%);
+                }
+            }
+        }
+    }
+    .s-c-p--analysis-section{
+        >div:nth-of-type(1){
 
+        }
+        >div:nth-of-type(2){
+
+        }
+    }
+    .s-c-p--solution-section{
+        .s-c-p--problem-section--content:nth-of-type(odd){
+            .row{
+                >div:nth-of-type(1){
+                    text-align:start;
+                    order:1;
+                }
+                >div:nth-of-type(2){
+                    order:2;
+                }
+            }
+        }
+        .s-c-p--problem-section--content:nth-of-type(even){
+            .row{
+                >div:nth-of-type(1){
+                    text-align:end;
+                    order:2;
+                }
+                >div:nth-of-type(2){
+                    order:1;
+                }
+            }
+        }
+    }
+    .s-c-p--gallery-new-design-section{
+        background: linear-gradient(180deg, rgba(10, 77, 124, 0.1), rgba(10, 77, 124, 0) 100%);
+        padding:85px 0 15px 0;
+        .s-c-p--gallery-new-design-item{
+            position:relative;
+            img{ outline:1px solid $color-blue1; border-radius:5px; }
+            a{
+                &:hover{
+                    &:after{
+                        font: normal normal normal 14px/1 FontAwesome;
+                        content: "\f00e";
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        font-size:6.25rem;
+                        color: #144089;
+                        opacity: .9;
+                        z-index: 3;
+                        cursor: pointer;
+                    }
+                }
+            }
+            >div{ display:none; transform:translateY(-50px); transition:all .33s; }
+            .fancybox-slide--current div{ transform: translateY(0); }
+        }
+    }
+
+    .all-cases-post-navigation-section{
+        .case-post{
+            position:relative;
+            min-height:295px; background-size:cover; background-repeat:no-repeat; background-position:50% 50%;
+            .--prev-post, .--next-post{
+                position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); font-size:2.25rem; line-height:1; color:$color-white; opacity:.6; z-index: 1;
+                &:hover, &:active{
+                    opacity:1;
+                }
+            }
+            .--prev-post-title, .--next-post-title{
+                position:absolute; bottom:-33px; left:0; color:$color-black; font-size:1.31rem; font-weight:$fontWeight-600; line-height:1.3;
+                &:hover, &:active{
+                    @include text-linear-gradient-blue;
+                }
+            }
+            &:after{
+                content: '';
+                background-color: rgba(0, 0, 0, .6);
+                position:absolute; width:100%; height:100%; top:0; left:0; z-index:0;
+            }
+        }
+    }
+}
+/*___________________________________________________________/#Single Case Study Page*/
 
 
 
@@ -1910,6 +2035,13 @@ body.page-template-thank-you{
     .single-industryserved-page-wrapper .single-industryserved-content-section .row img{ min-height: inherit !important; }
     /*____________________________________________________/#Single Industry Served*/
 
+    /*___________________________________________________________#Single Case Study Page*/
+    .single-cases-page-wrapper .s-c-p--banner-section .row > div:nth-of-type(2){
+        min-height:auto; background-size:auto; background-repeat:no-repeat; background-image:none !important;
+    }
+    .single-cases-page-wrapper .all-cases-post-navigation-section .case-post{ min-height:205px; }
+    /*___________________________________________________________/#Single Case Study Page*/
+
     .aboutus-page-wrapper .a-w-c--bg { height:765px; width:100%; }
 }
 @media screen and (max-width: 891px){
@@ -2110,6 +2242,14 @@ body.page-template-thank-you{
     .single-industryserved-page-wrapper .single-industryserved-sub-banner .single-industryserved-sub-banner--bg > .row{ width: 100%; }
     .industry-served-page-wrapper .industry-served-page--f-st .industry-served-page--f-st--bg{ min-height: 385px; }
     /*____________________________________________________/#Single Industry Served*/
+
+    /*___________________________________________________________#Single Case Study Page*/
+    .single-cases-page-wrapper .s-c-p--problem-section .s-c-p--problem-section--bg .row > div:nth-of-type(2){ position:static; transform:translate(0,0); }
+    .single-cases-page-wrapper .s-c-p--solution-section .s-c-p--problem-section--content:nth-of-type(odd) .row > div:nth-of-type(1){ text-align:center; order:2; }
+    .single-cases-page-wrapper .s-c-p--solution-section .s-c-p--problem-section--content:nth-of-type(odd) .row > div:nth-of-type(2){ order:1; }
+    .single-cases-page-wrapper .s-c-p--solution-section .s-c-p--problem-section--content:nth-of-type(even) .row > div:nth-of-type(1){ text-align:center; order:2; }
+    .single-cases-page-wrapper .s-c-p--solution-section .s-c-p--problem-section--content:nth-of-type(even) .row > div:nth-of-type(2){ order:1; }
+    /*___________________________________________________________/#Single Case Study Page*/
 }
 @media screen and (max-width: 575px) { /*from 575px and less (Class prefix .col-)*/
     #breakpoint_check{ width:575px; } /*100%|1400px|1199px|991px|767px|575px*/
@@ -2247,6 +2387,14 @@ body.page-template-thank-you{
     /*_____________________________________________________#Request A Quote Page*/
     .request-quote-page-wrapper .request-quote--services-include .request-quote--services-include--bg aside ul{ grid-template-columns: 1fr; }
     /*_____________________________________________________/#Request A Quote Page*/
+
+    /*___________________________________________________________#Single Case Study Page*/
+    .single-cases-page-wrapper .s-c-p--banner-section .row > div:nth-of-type(1) .case-study-tag:after { content: ""; }
+    .single-cases-page-wrapper .s-c-p--banner-section .row > div:nth-of-type(1) .case-study-tag:before { content: "| "; }
+    .single-cases-page-wrapper .s-c-p--problem-section .s-c-p--problem-section--bg .row > div:nth-of-type(1){ padding:45px 15px 25px 15px; }
+    .single-cases-page-wrapper .all-cases-post-navigation-section .case-post .--prev-post,
+    .single-cases-page-wrapper .all-cases-post-navigation-section .case-post .--next-post{ font-size:1.75rem; }
+    /*___________________________________________________________/#Single Case Study Page*/
 }
 @media screen and (max-width: 455px) {
     /*_____________________________________________________#HOME*/
@@ -2288,6 +2436,10 @@ body.page-template-thank-you{
     /*_________________________________________________________#Contact Us Page*/
     .contactus-page-wrapper { background-size:47%; background-position: 114% 59%; }
     /*_________________________________________________________/#Contact Us Page*/
+
+    /*___________________________________________________________#Single Case Study Page*/
+    .single-cases-page-wrapper .button.button--blue-gradient{ padding:15px 15px; display:block; }
+    /*___________________________________________________________/#Single Case Study Page*/
 }
 
 @media screen and (max-width: 379px){

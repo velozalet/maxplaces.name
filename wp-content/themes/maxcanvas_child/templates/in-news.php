@@ -11,7 +11,9 @@ $get_queried_object = get_queried_object();
 $new_categories = get_categories_of_cpt('news-taxonomy', 'title', 'ASC'); $news_posts = get_needs_posts('news', -1, 0, '', 'date', 'DESC');
 
 $in_new_page_see_current_ids = get_field('in_new_page_see_current', get_the_ID() ); $in_new_page_see_currents = [];
-for( $i=0,$cnt=count($news_posts); $i < $cnt; $i++ ){ if( in_array($news_posts[$i]->ID, $in_new_page_see_current_ids) ){ array_push($in_new_page_see_currents, $news_posts[$i]); } }
+if($in_new_page_see_current_ids){
+	for( $i=0,$cnt=count($news_posts); $i < $cnt; $i++ ){ if( in_array($news_posts[$i]->ID, $in_new_page_see_current_ids) ){ array_push($in_new_page_see_currents, $news_posts[$i]); } }
+}
 ?>
 <div class="in-news-page-wrapper">
 	<?php get_template_part('templates/component/header_page_title_section');?>
@@ -58,6 +60,7 @@ for( $i=0,$cnt=count($news_posts); $i < $cnt; $i++ ){ if( in_array($news_posts[$
 		</div> <!--/.container-xl -->
 	</section>
 
+	<?php if($in_new_page_see_current_ids):?>
 	<section class="in-news-page--collection mb-5">
 		<div class="container-xl">
 			<h2 class="header-page-title mt-5 mb-4">See current</h2>
@@ -85,6 +88,6 @@ for( $i=0,$cnt=count($news_posts); $i < $cnt; $i++ ){ if( in_array($news_posts[$
 			</div>
 		</div>
 	</section>
-
+	<?php endif;?>
 </div> <!--/.in-news-page-wrapper-->
 <?php get_footer();?>

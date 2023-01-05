@@ -577,5 +577,18 @@ document.addEventListener( 'DOMContentLoaded', function () { //console.log('init
 	}
 	/*_____________________________________________________/#Request A Quote Page*/
 
+	/*______________________________________________________/#Case Study Single*/
+	const singleCasesPageWrapperDOM = document.querySelector('.single-cases-page-wrapper');
+	if( singleCasesPageWrapperDOM ){
+		//Init fancyBox
+		jQuery().fancybox({
+			selector : '.fb',
+			hash     : false,
+			loop     : false,
+		});
+		//_________________/
+	}
+	/*______________________________________________________/#Case Study Single*/
+
 });
 new WOW().init(); //initial the WOW animation library

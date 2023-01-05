@@ -275,3 +275,40 @@ function get_categories_of_cpt($taxonomy, $orderby, $order){
 	);
 	return get_categories($args);
 }
+
+function navigation_bar_of_cpt($current_postId, $post_type, $taxonomy_name, $post_status, $category, $category_name, $orderby, $order){
+	$posts_per_page = -1;
+	$postlist_args = array(
+		'posts_per_page' => $posts_per_page,
+		'post_type'      => $post_type,
+		'taxonomy'       => $taxonomy_name,
+		'post_status'    => $post_status,
+		'category'       =>  $category,
+		'category_name'  => $category_name,
+		'orderby'        => $orderby,
+		'order'          => $order,
+		//'term'=>$termo,
+	); $postList = get_posts($postlist_args);
+
+	$ids = array();
+	foreach($postList as $thePost){ $ids[] = $thePost->ID; }
+	$thisIndex = array_search($current_postId, $ids);
+	if( $thisIndex ){ $prevId = $ids[$thisIndex-1]; }
+	if( ($thisIndex+1) < count($ids) ){ $nextId = $ids[$thisIndex+1]; }
+
+	//if( !empty($prevId) ){ echo '<a class="--prev-post" rel="prev" data-id="'.$prevId.'" href="'.get_permalink($prevId).'"><-- Prev </a>'; }
+	//if( !empty($nextId) ){ echo '<a class="--next-post" rel="next" data-id="'.$nextId.'" href="'.get_permalink($nextId).'"> Next --></a>'; }
+
+	if( !empty($prevId) ){
+		echo '<div class="col"><div class="case-post" data-id="'.$prevId.'" style="background-image:url('.get_featured_img_by_id($prevId).');">
+			<a class="--prev-post text-decoration-none" rel="prev" href="'.get_permalink($prevId).'">Prev Case</a>
+			<a class="--prev-post-title text-decoration-none" href="'.get_permalink($prevId).'">'.get_the_title($prevId).'</a>
+		</div></div>';
+	}
+	if( !empty($nextId) ){
+		echo '<div class="col"><div class="case-post" data-id="'.$nextId.'" style="background-image:url('.get_featured_img_by_id($nextId).');">
+			<a class="--next-post text-decoration-none" rel="next" href="'.get_permalink($nextId).'">Next Case</a>
+			<a class="--next-post-title text-decoration-none" href="'.get_permalink($nextId).'">'.get_the_title($nextId).'</a>
+		</div></div>';
+	}
+}
