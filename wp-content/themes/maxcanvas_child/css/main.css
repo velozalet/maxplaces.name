@@ -1781,6 +1781,12 @@ body.page-template-thank-you nav.navbar .navbar-collapse .navbar-nav .nav-item.d
 .single-cases-page-wrapper .s-c-p--3-section {
   background: linear-gradient(180deg, rgba(10, 77, 124, 0.24), rgba(237, 248, 255, 0.1) 100%);
   padding: 95px 0; }
+  .single-cases-page-wrapper .s-c-p--3-section .item-slot span {
+    font-weight: 600;
+    font-size: 0.94rem;
+    position: absolute;
+    left: 0;
+    top: 20px; }
 
 /*___________________________________________________________/#Single Case Study Page*/
 /**

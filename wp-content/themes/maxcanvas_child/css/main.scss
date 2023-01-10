@@ -1790,6 +1790,9 @@ body.page-template-thank-you{
     .s-c-p--3-section{
         @include background-linear-gradient-blue;
         padding: 95px 0;
+        .item-slot{
+            span{ font-weight:$fontWeight-600; font-size:0.94rem; position:absolute; left:0; top:20px; }
+        }
     }
 }
 /*___________________________________________________________/#Single Case Study Page*/
