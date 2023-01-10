@@ -91,7 +91,7 @@ document.addEventListener( 'DOMContentLoaded', function () { //console.log('init
 		});
 
 		/*Only Desktop/Tablet*/
-		if( parseInt(breakpointCheck) > 767 || breakpointCheck === 'auto' ){ console.log('Desktop/Tablet');
+		if( parseInt(breakpointCheck) > 767 || breakpointCheck === 'auto' ){
 			const navbarNavUlList = navbar.querySelector('#desktop_tablet');
 			const navLinksCollection = navbarNavUlList.querySelectorAll('li.nav-item.dropdown');
 
@@ -581,12 +581,20 @@ document.addEventListener( 'DOMContentLoaded', function () { //console.log('init
 	const singleCasesPageWrapperDOM = document.querySelector('.single-cases-page-wrapper');
 	if( singleCasesPageWrapperDOM ){
 		//Init fancyBox
-		jQuery().fancybox({
-			selector : '.fb',
-			hash     : false,
-			loop     : false,
-		});
-		//_________________/
+		/*
+			jQuery().fancybox({
+				selector : '.fb',
+				hash     : false,
+				loop     : false,
+			});
+		*/
+		let scpSectionDOM = singleCasesPageWrapperDOM.querySelector('.s-c-p--2-section');
+		let scpSectionDOM_container = scpSectionDOM.querySelector('.container-lg');
+		if( parseInt(breakpointCheck) === 575 || parseInt(breakpointCheck) < 575 ){ scpSectionDOM_container.classList.toggle('--correct'); }
+		if( scpSectionDOM_container.classList.contains('--correct') ){
+			let scpSectionDOM_container_height = window.getComputedStyle(scpSectionDOM_container, null).getPropertyValue('height');
+			scpSectionDOM_container.style.height = `${parseInt(scpSectionDOM_container_height) - 135}px`;
+		}
 	}
 	/*______________________________________________________/#Case Study Single*/
 
