@@ -38,7 +38,7 @@ $s4_SuperscriptTitle = get_field('case_study_int_superscript_title_sec4', get_th
 							<?php if($s1_cases_cnt !== 0 && $s1_cases_cnt%2 == 0):?><div class="w-100"></div><?php endif;?>
 							<div class="col-sm col-12 mb-sm-4 mb-3">
 								<div class="d-flex align-items-start">
-									<img src="<?php echo $s1_cases_i['cases_items _repeater_icon'];?>" alt="<?php echo get_bloginfo('name');?>">
+									<img src="<?php echo $s1_cases_i['cases_items _repeater_icon'];?>" alt="<?php echo get_bloginfo('name');?>" style="width:65px; height:auto;">
 									<div class="ms-3">
 										<p class="text-uppercase mb-1"> <strong><?php echo $s1_cases_i['cases_items _repeater_title'];?></strong> </p>
 										<p class="mb-0"><?php echo $s1_cases_i['cases_items _repeater_text'];?></p>
@@ -70,7 +70,7 @@ $s4_SuperscriptTitle = get_field('case_study_int_superscript_title_sec4', get_th
 		</div>
 	</section>
 
-	<section class="s-c-p--3-section s-c-p--analysis-section mt-md-5 mt-0 mb-md-5 mb-3">узн
+	<section class="s-c-p--3-section s-c-p--analysis-section mt-md-5 mt-0 mb-md-5 mb-3">
 		<div class="container-lg">
 			<div class="row row-cols-lg-2 row-cols-md-2 row-cols-1 d-flex align-items-center align-self-center">
 				<div class="order-md-1 mt-md-0 mt-4 order-2 text-md-start text-center">
